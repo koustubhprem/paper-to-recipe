@@ -84,6 +84,7 @@ def main():
     for family in FAMILIES:
         results = search_all(build_query(family))
         records = [to_record(r, family) for r in results if r.get("pmcid")]
+        records = list({p["pmcid"]: p for p in records}.values())
         licensed = [p for p in records if p["licence"] in ALLOWED_LICENCES]
         fresh = [p for p in licensed if p["pmcid"] not in seen]
 
