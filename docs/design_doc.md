@@ -14,9 +14,9 @@ Two layers:
 - Extraction: papers to recipe records (ingredients, amounts, steps, properties, test conditions), every value linked to the exact text it came from.
 - Grounded RAG: answers questions from the records, cites them, and says "no data" when there is none.
 
-The system compares and retrieves what papers report. It does not generate new recipes or give formulation advice. Recipes are exported "as reported" so they can be reproduced in a lab.
+The system compares and retrieves what papers report. It does not generate new recipes or give formulation advice. Recipes are exported "as reported", in a format compatible with the Materiom Commons recipe structure, so they can be reproduced in a lab.
 
-Why this framing: testing Materiom AI showed the weak point is the data layer (wrong or unsourced citations, different answers in different chats, generic recipes), not the text generation. A sourced dataset fixes the cause.
+Why this framing: LLM assistants answering materials questions often cite the wrong paper, give different numbers to the same question, and return generic recipes. The weak point is the data the model works from, not the text generation. A sourced dataset fixes the cause.
 
 In scope for the MVP:
 - 3 material families: starch, chitosan, alginate
@@ -52,14 +52,13 @@ Trade-off: Europe PMC is life-science focused, so some materials-science journal
 
 ## 3. Material families
 
-Changed from 8 families (bioplastic, alginate, chitosan, starch, pectin, gelatin, mycelium, cellulose) to 3: starch, chitosan, alginate.
+Three families: starch, chitosan, alginate.
 
 Reasons:
-- My 5 Materiom AI tests were on these 3 (potato starch, alginate, chitosan), so a head-to-head comparison needs them.
+- The evaluation questions are built around these 3 (e.g. potato starch with glycerol, chitosan with citric acid, alginate films), so the corpus has to cover them.
 - The gold set is labelled by hand. 3 families keeps it manageable.
 - All three are polysaccharides made into films the same way (dissolve, cast, dry) and tested with the same methods, so properties are comparable.
-- Mycelium and cellulose composites are not cast films, so they were out of scope anyway.
-- Measured accuracy on 3 families is a stronger result than unmeasured output on 8.
+- Measured accuracy on a few families is a stronger result than unmeasured output on many.
 
 Adding a family later is one line in queries.py plus a few more gold papers. Pectin and gelatin are the easiest next ones.
 
@@ -84,7 +83,7 @@ The query requires at least one of: tensile strength, elongation at break, water
 
 This is a gate, not the list of what gets extracted. It only checks the paper measured something. Extraction later takes every property the paper reports.
 
-Chosen because nearly every packaging-film paper reports them, they are standard tests (ASTM D882, ASTM E96), and my Materiom AI tests asked about them.
+Chosen because nearly every packaging-film paper reports them, they are standard tests (ASTM D882, ASTM E96), and the evaluation questions ask about them.
 
 Narrow vs wide gate (wide added Young's modulus, water solubility, contact angle, biodegradation):
 
@@ -163,7 +162,7 @@ The query lives in one file (queries.py) that every script imports, so there is 
 
 ### 5.1 Random sample instead of top results
 
-The API returns results in its own ranking order. The top titles were almost all recent active-packaging papers (films with extracts, oils, nanoparticles). Plain baseline films, which my Materiom AI tests asked about, were rare.
+The API returns results in its own ranking order. The top titles were almost all recent active-packaging papers (films with extracts, oils, nanoparticles). Plain baseline films, which the evaluation questions need, were rare.
 
 Decision: collect all matching papers, then pick at random with a fixed seed (42). Results are sorted by PMCID before sampling so the same sample comes out every run.
 
@@ -171,7 +170,7 @@ Year-based sampling (equal numbers per period) was considered and parked. Most p
 
 ### 5.2 How many
 
-- Changed from 80 to 100 per family (300 total).
+- 100 per family (300 total).
 - Expect to keep about 50 per family after relevance checks during extraction.
 - Equal numbers per family, not in proportion to the literature, so each family can be scored separately and none dominates answers.
 
@@ -327,7 +326,7 @@ Steps (papers mentioning in methods):
 | degassing | 72 (24%) |
 | neutralising / pH adjustment | 29 (10%) |
 
-Rule: a term gets its own label if it appears in at least 20% of papers, or it matters to Materiom regardless (biodegradation kept at 16% because end of life is central to their work). Neutralisation stays "other" at 10%; the ph field still records the value.
+Rule: a term gets its own label if it appears in at least 20% of papers, or it matters for bio-based materials regardless (biodegradation kept at 16% because end of life is a core question for these materials). Neutralisation stays "other" at 10%; the ph field still records the value.
 
 Counts are an upper bound: a mention in an introduction is not a measurement.
 
@@ -345,10 +344,10 @@ What the counts showed:
 | stage | ProcessStep | separate making an additive, making the film, and treatment after drying | clove oil emulsion = ingredient_preparation; CaCl2 bath = post_treatment |
 | test_details | Property | some values mean nothing without the organism or assay | "E. coli, disc diffusion", "DPPH" |
 | ph_adjuster | Role | acetic acid dissolves chitosan; it is not really a solvent | acetic acid 1% |
-| feedstock, from_waste | Ingredient | what an ingredient was made from, and whether it is a waste stream; central to Materiom | chitosan from lobster shell waste |
+| feedstock, from_waste | Ingredient | what an ingredient was made from, and whether it is a waste stream; key for circular, waste-based materials | chitosan from lobster shell waste |
 | best_recipes (list) | PaperExtraction | papers often name a different best film per property | F3 highest tensile strength, F5 lowest WVP |
 | n_samples | Property | a ± value means more from 10 specimens than from 3 | n = 5 |
-| intended_application | PaperExtraction | Materiom cares about the application | "fresh-cut fruit packaging" |
+| intended_application | PaperExtraction | lets records be filtered by use | "fresh-cut fruit packaging" |
 | duration_value + duration_unit | ProcessStep | store what the paper says; convert in code | 24 + "h", not 1440 |
 | applies_to | ProcessStep | some papers vary the process, not only the ingredients | see 9.6 |
 
@@ -457,15 +456,15 @@ Labelling rules:
 
 | Part | Tool | Why |
 |---|---|---|
-| schema and validation | Pydantic | Gemini accepts a Pydantic schema for structured output; named in Materiom's job ad |
+| schema and validation | Pydantic | Gemini accepts a Pydantic schema for structured output |
 | extraction | Gemini Python SDK directly | one call per paper; a framework adds layers and makes debugging harder |
-| RAG flow | LangGraph | retrieve, generate, check numbers, abstain if the check fails: a flow with a branch. Named in the job ad. Build a plain Python version first |
+| RAG flow | LangGraph | retrieve, generate, check numbers, abstain if the check fails: a flow with a branch. Build a plain Python version first |
 | LangChain | small parts only if useful (e.g. text splitters) | not the whole framework |
 | records | SQLite | single file, no server |
 | passages for RAG | Chroma | local vector store |
 | tests | pytest | unit tests for code; data checks kept separate |
 
-Training or fine-tuning a model is not part of this. The LLM reads papers (extraction) and answers from retrieved records (RAG). Training would blur facts and lose the link to sources, the same problem Materiom AI has.
+Training or fine-tuning a model is not part of this. The LLM reads papers (extraction) and answers from retrieved records (RAG). Training would blur facts and lose the link to sources.
 
 ---
 
@@ -498,65 +497,46 @@ To report: papers by journal, year and family, plus these points.
 
 | Work | What it does | Gap |
 |---|---|---|
-| Materiom Commons | community recipe library | properties often without test method or source |
+| Materiom Commons | community recipe library with ingredients, method and properties | test method and source of property values not always recorded |
 | Future Materials Bank, Koynē, Biomaterials Library Lithuania | design-focused material libraries | little measured, sourced data |
 | Polymer Scholar (Georgia Tech, 2023) | ~300k polymer property records from abstracts | abstracts only; authors state processing and measurement conditions are not captured |
 | ChemDataExtractor (Cambridge) | auto-generated property databases | properties, not recipes; not bio-based films |
 | text-mined synthesis recipes (Berkeley/MIT) | recipes for inorganic materials | inorganic only |
 | Dagdelen et al. 2024 | LLM structured extraction for materials | general method, not a dataset for this domain |
-| Materiom AI | Gemini chatbot with literature retrieval | my tests: wrong material cited, inconsistent answers, no database recipes |
+| Materiom AI | Gemini-based assistant with literature retrieval, on Materiom Commons | conversational guidance; this project focuses on a structured, sourced dataset with measured accuracy |
 
 I did not find an open tool that combines full-text recipe extraction, test conditions and per-value sources for bio-based films. Searched widely but not exhaustively, so I do not claim it is the first.
 
 ---
 
-## 15. What testing Materiom AI showed
+## 15. Evaluation approach
 
-| Test | Result |
+Two parts, both scored:
+- Extraction: compared field by field with the hand-labelled gold set.
+- Answers: the grounded RAG layer compared with a general-purpose LLM answering the same questions without retrieval.
+
+What the answer comparison measures:
+- numbers in answers match a cited record
+- cited sources actually support the claim, and are about the right material (e.g. potato, not corn starch)
+- the same question asked 5 times cites the same records
+- says "no data" when the corpus does not cover the question
+
+Failure patterns seen when testing LLM tools on materials questions, and the design response:
+
+| Pattern | Design response |
 |---|---|
-| potato starch film, 30% glycerol, with citations | cited a corn starch paper; said no tensile value exists although the cited paper tests 30% glycerol |
-| 3 alginate recipes from the Materiom database | generic recipes with round amounts, no recipe IDs or links |
-| chitosan WVP with and without citric acid | claimed a consistent reduction; studies actually split three ways |
-| same question as test 1 in a new chat | different numbers and different references; 1 of 3 references accurate |
-| fields of a Materiom recipe | generic structure, did not match the real record |
-| "what sources do you use?" | answered from a paper about another search engine (BASE) |
-
-The last one shows it answers from whatever retrieval returns, even a poor match. My RAG layer must abstain when the best match is weak and answer "what sources do you use" from a fixed description of the corpus.
-
----
-
-## 16. Timeline
-
-Planned 3 weeks; now about 4. Week 1 took longer because time went into query design, bias checks and finding the duplicates.
-
-| Week | Dates | Goal | Status |
-|---|---|---|---|
-| 1 | 19-25 Oct | corpus | done: 300 papers listed, downloaded, parsed |
-| 2 | 26 Oct-1 Nov | schema, gold set, model choice | schema done; gold set next |
-| 3 | 2-8 Nov | extraction on all papers, scored on gold set | |
-| 4 | 9-15 Nov | RAG, comparison with Materiom AI, README, report | |
-
-If week 3 slips, the RAG layer becomes a retrieval-only demo. Extraction quality is not cut.
-
----
-
-## 17. Open items
-
-- check headings of the 4 papers with no methods section
-- check year distribution of the 300 papers (data card, and whether year sampling is needed)
-- confirm Materiom Commons step types beyond Grinding, Mixing, Drying, Other
-- ask Materiom whether they have an import format for new records
-- choose extraction model after a 5-paper comparison
-- add check_data.py (duplicate, licence, missing-file and broken-XML checks)
-
----
+| a source about a different material cited (corn starch paper for a potato question) | base polymer and its source are required fields; retrieval filters on them |
+| different numbers and references for the same question | answers come from fixed records, not from the model's memory |
+| mixed results across studies presented as one consistent trend | store the direction of each effect per study and show it |
+| retrieval returns a weak match and the model answers from it anyway | abstain below a relevance threshold |
+| questions about the tool itself answered from an unrelated document | answer those from a fixed description of the corpus |
 
 ## Change log
 
 | Date | Change | Reason |
 |---|---|---|
 | 21 Oct | repo set up: Python template .gitignore, MIT licence | |
-| 22 Oct | 8 families → 3 | match Materiom AI tests, manageable gold set, comparable films |
+| 22 Oct | starch, chitosan, alginate chosen | match evaluation questions, manageable gold set, comparable films |
 | 22 Oct | broadened film words; added property gate | exact phrase found only 38 alginate papers |
 | 22 Oct | added BIOMED + PACKAGING (approach C) | ~50% of chitosan/alginate hits were medical |
 | 22 Oct | added SYNTHETIC, NOT_CAST, REVIEW | found by reading titles |
@@ -564,7 +544,6 @@ If week 3 slips, the RAG layer becomes a retrieval-only demo. Extraction quality
 | 22 Oct | random sample with seed, not top results | API ranking leans to recent active packaging |
 | 22 Oct | year sampling parked | recency is partly real; check after download |
 | 24 Oct | raw data kept locally | small and regenerable |
-| 25 Oct | 80 → 100 papers per family | more room for papers dropped later |
 | 25 Oct | deduplicate within family | 300 entries but only 263 unique papers |
 | 25 Oct | .gitignore: data/* and !data/papers.jsonl | data folder was not ignored |
 | 25 Oct | schema v1 | structure and principles |
