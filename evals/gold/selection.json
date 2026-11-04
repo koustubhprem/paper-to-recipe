@@ -1,0 +1,92 @@
+[
+  {
+    "order": 1,
+    "pmcid": "PMC13025781",
+    "family": "alginate",
+    "split": "dev"
+  },
+  {
+    "order": 2,
+    "pmcid": "PMC10934414",
+    "family": "chitosan",
+    "split": "dev"
+  },
+  {
+    "order": 3,
+    "pmcid": "PMC10422339",
+    "family": "starch",
+    "split": "dev"
+  },
+  {
+    "order": 4,
+    "pmcid": "PMC11083475",
+    "family": "alginate",
+    "split": "dev"
+  },
+  {
+    "order": 5,
+    "pmcid": "PMC7558937",
+    "family": "chitosan",
+    "split": "dev"
+  },
+  {
+    "order": 6,
+    "pmcid": "PMC7281565",
+    "family": "starch",
+    "split": "dev"
+  },
+  {
+    "order": 7,
+    "pmcid": "PMC13610544",
+    "family": "alginate",
+    "split": "dev"
+  },
+  {
+    "order": 8,
+    "pmcid": "PMC11241157",
+    "family": "chitosan",
+    "split": "dev"
+  },
+  {
+    "order": 9,
+    "pmcid": "PMC11717021",
+    "family": "starch",
+    "split": "dev"
+  },
+  {
+    "order": 10,
+    "pmcid": "PMC9266268",
+    "family": "alginate",
+    "split": "test"
+  },
+  {
+    "order": 11,
+    "pmcid": "PMC13209360",
+    "family": "chitosan",
+    "split": "test"
+  },
+  {
+    "order": 12,
+    "pmcid": "PMC10379064",
+    "family": "starch",
+    "split": "test"
+  },
+  {
+    "order": 13,
+    "pmcid": "PMC10380360",
+    "family": "alginate",
+    "split": "test"
+  },
+  {
+    "order": 14,
+    "pmcid": "PMC8124804",
+    "family": "chitosan",
+    "split": "test"
+  },
+  {
+    "order": 15,
+    "pmcid": "PMC10978958",
+    "family": "starch",
+    "split": "test"
+  }
+]
