@@ -1,0 +1,241 @@
+{
+  "in_scope": true,
+  "out_of_scope_reason": null,
+  "intended_application": "packaging films",
+  "process_steps": [
+    {
+      "order": 1,
+      "stage": "film_formation",
+      "type": "dissolving",
+      "description": "Mucic acid dissolved in deionized water with stirring",
+      "temperature_c": 100,
+      "duration_value": 20,
+      "duration_unit": "min",
+      "source": {
+        "section": "methods",
+        "quote": "a solution of 25 mL was prepared with MA (0.28 g/25 mL) and stirred for 20 min at 100 °C"
+      }
+    },
+    {
+      "order": 2,
+      "stage": "film_formation",
+      "type": "dissolving",
+      "description": "Chitosan added and stirred until fully dissolved",
+      "temperature_c": 50,
+      "duration_value": 20,
+      "duration_unit": "min",
+      "source": {
+        "section": "methods",
+        "quote": "chitosan (0.45 g/25 mL) was added followed by stirring for 20 min at 50 °C"
+      }
+    },
+    {
+      "order": 3,
+      "stage": "film_formation",
+      "type": "mixing",
+      "description": "Microcrystalline cellulose added and stirred to disperse",
+      "source": {
+        "section": "methods",
+        "quote": "An amount of MCC (1.125 g/25 mL) was added to the dissolved solution and stirred to disperse it evenly"
+      }
+    },
+    {
+      "order": 4,
+      "stage": "film_formation",
+      "type": "mixing",
+      "description": "Glycerol added",
+      "source": {
+        "section": "methods",
+        "quote": "glycerin (0.4 g/25 mL) was added in order to improve the plasticity of the film"
+      }
+    },
+    {
+      "order": 5,
+      "stage": "film_formation",
+      "type": "mixing",
+      "description": "Solution stirred overnight",
+      "source": {
+        "section": "methods",
+        "quote": "The polymer solution was kept under stirring overnight"
+      }
+    },
+    {
+      "order": 6,
+      "stage": "film_formation",
+      "type": "casting",
+      "description": "Poured into a glass Petri dish",
+      "source": {
+        "section": "methods",
+        "quote": "The well-dispersed mixture was poured into a glass Petri dish at 50 °C to evaporate the water"
+      }
+    },
+    {
+      "order": 7,
+      "stage": "film_formation",
+      "type": "drying",
+      "description": "Water evaporated at 50 °C",
+      "temperature_c": 50,
+      "source": {
+        "section": "methods",
+        "quote": "The well-dispersed mixture was poured into a glass Petri dish at 50 °C to evaporate the water"
+      }
+    }
+  ],
+  "recipes": [
+    {
+      "code": "Chit-MCC-Gly-MA",
+      "description": "Chitosan, microcrystalline cellulose and glycerol, with mucic acid replacing acetic acid (ca. 20/50/17.7/12.3 wt.%)",
+      "is_control": false,
+      "base_polymers": [
+        "chitosan",
+        "microcrystalline cellulose"
+      ],
+      "ingredients": [
+        {
+          "name": "chitosan",
+          "role": "matrix",
+          "amount": 0.45,
+          "unit": "g",
+          "basis": "g",
+          "origin": "bio_based",
+          "source": {
+            "section": "methods",
+            "quote": "chitosan (0.45 g/25 mL) was added followed by stirring for 20 min at 50 °C"
+          }
+        },
+        {
+          "name": "microcrystalline cellulose",
+          "role": "filler",
+          "amount": 1.125,
+          "unit": "g",
+          "basis": "g",
+          "origin": "bio_based",
+          "source": {
+            "section": "methods",
+            "quote": "An amount of MCC (1.125 g/25 mL) was added to the dissolved solution and stirred to disperse it evenly"
+          }
+        },
+        {
+          "name": "glycerol",
+          "role": "plasticizer",
+          "amount": 0.4,
+          "unit": "g",
+          "basis": "g",
+          "origin": "synthetic",
+          "source": {
+            "section": "methods",
+            "quote": "glycerin (0.4 g/25 mL) was added in order to improve the plasticity of the film"
+          }
+        },
+        {
+          "name": "mucic acid",
+          "role": "ph_adjuster",
+          "amount": 0.28,
+          "unit": "g",
+          "basis": "g",
+          "origin": "bio_based",
+          "source": {
+            "section": "methods",
+            "quote": "a solution of 25 mL was prepared with MA (0.28 g/25 mL) and stirred for 20 min at 100 °C"
+          }
+        },
+        {
+          "name": "deionized water",
+          "role": "solvent",
+          "amount": 25,
+          "unit": "mL",
+          "basis": "ml",
+          "origin": "unknown",
+          "source": {
+            "section": "methods",
+            "quote": "a solution of 25 mL was prepared with MA (0.28 g/25 mL) and stirred for 20 min at 100 °C"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "thickness",
+          "name_reported": "thickness",
+          "value": 100,
+          "unit": "µm",
+          "test_details": "approximate, stated for all films",
+          "source": {
+            "section": "methods",
+            "quote": "All the films created had thicknesses of about 100 μm"
+          }
+        },
+        {
+          "name": "opacity",
+          "name_reported": "opacity",
+          "value": 8.89,
+          "unit": "A mm−1",
+          "test_details": "absorbance at 600 nm divided by thickness",
+          "source": {
+            "section": "table",
+            "table_label": "Table 1",
+            "quote": "Chit-MCC-Gly-MA | 8.89 | 93.9 ± 2.3"
+          }
+        },
+        {
+          "name": "contact_angle",
+          "name_reported": "water contact angle",
+          "value": 93.9,
+          "std_dev": 2.3,
+          "unit": "°",
+          "test_details": "sessile drop, 6 μL, just after deposition",
+          "source": {
+            "section": "table",
+            "table_label": "Table 1",
+            "quote": "Chit-MCC-Gly-MA | 8.89 | 93.9 ± 2.3"
+          }
+        },
+        {
+          "name": "melting_temperature",
+          "name_reported": "Tm",
+          "value": 120.0,
+          "unit": "°C",
+          "test_details": "DSC first heating, 10 °C/min",
+          "source": {
+            "section": "table",
+            "table_label": "Table 2",
+            "quote": "Chit-MCC-Gly-MA film | 75.1 | 120.0 | 114.54"
+          }
+        },
+        {
+          "name": "other",
+          "name_reported": "Ton (onset melting temperature)",
+          "value": 75.1,
+          "unit": "°C",
+          "test_details": "DSC first heating, 10 °C/min",
+          "source": {
+            "section": "table",
+            "table_label": "Table 2",
+            "quote": "Chit-MCC-Gly-MA film | 75.1 | 120.0 | 114.54"
+          }
+        },
+        {
+          "name": "other",
+          "name_reported": "ΔH (fusion enthalpy)",
+          "value": 114.54,
+          "unit": "J/g",
+          "test_details": "DSC first heating, 10 °C/min",
+          "source": {
+            "section": "table",
+            "table_label": "Table 2",
+            "quote": "Chit-MCC-Gly-MA film | 75.1 | 120.0 | 114.54"
+          }
+        }
+      ]
+    }
+  ],
+  "best_recipes": [
+    {
+      "code": "Chit-MCC-Gly-MA",
+      "criterion": "better thermal behaviour and photo-oxidation resistance than the acetic acid film",
+      "source": {
+        "section": "other",
+        "quote": "the replacement of AA by MA was advantageous in terms of the thermal behavior and photo-oxidation resistance of the films"
+      }
+    }
+  ]
+}
