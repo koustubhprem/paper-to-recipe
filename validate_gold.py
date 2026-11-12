@@ -10,22 +10,26 @@ PROCESSED = Path("data") / "processed"
 GOLD_DIR = Path("evals") / "gold"
 
 
-# every quote in a label, with where it was used
-def all_quotes(label):
-    for step in label.process_steps:
-        yield f"step {step.order}", step.source.quote
-    for recipe in label.recipes:
-        for ing in recipe.ingredients:
-            yield f"{recipe.code} ingredient '{ing.name}'", ing.source.quote
-        for prop in recipe.properties:
-            yield f"{recipe.code} property '{prop.name}'", prop.source.quote
-    for best in label.best_recipes:
-        yield f"best recipe {best.code}", best.source.quote
+# check one label; returns a list of problems (empty means OK)
+def check(raw, text):
+    try:
+        label = PaperExtraction.model_validate(raw)
+    except ValidationError as e:
+        return [f"schema error: {e}"]
+
+    # V1 rule: only the authors' best recipe is labelled
+    if label.in_scope and (len(label.recipes) != 1 or len(label.best_recipes) != 1):
+        return ["V1 rule: needs exactly 1 recipe and 1 best_recipes entry"]
+
+    quotes = [s.source.quote for s in label.process_steps] + [b.source.quote for b in label.best_recipes]
+    for r in label.recipes:
+        quotes += [x.source.quote for x in r.ingredients + r.properties]
+    return [f'quote not found: "{q}"' for q in quotes if not quote_in_text(q, text)]
 
 
 def main():
     selection = json.loads((GOLD_DIR / "selection.json").read_text(encoding="utf-8"))
-    done, todo, problems = 0, 0, 0
+    counts = {"OK": 0, "TODO": 0, "FAIL": 0}
 
     for item in selection:
         pmcid = item["pmcid"]
@@ -33,32 +37,18 @@ def main():
 
         # an untouched template is not labelled yet
         if raw.get("in_scope") and not raw.get("recipes"):
-            print(f"[TODO] {pmcid}")
-            todo += 1
-            continue
-
-        try:
-            label = PaperExtraction.model_validate(raw)
-        except ValidationError as e:
-            print(f"[FAIL] {pmcid} schema error:\n{e}\n")
-            problems += 1
-            continue
-
-        paper = json.loads((PROCESSED / f"{pmcid}.json").read_text(encoding="utf-8"))
-        text = paper_as_text(paper)
-        missing = [(where, q) for where, q in all_quotes(label) if not quote_in_text(q, text)]
-
-        if missing:
-            print(f"[FAIL] {pmcid} quotes not found in the paper:")
-            for where, q in missing:
-                print(f"         {where}: \"{q}\"")
-            problems += 1
+            status, problems = "TODO", []
         else:
-            n_props = sum(len(r.properties) for r in label.recipes)
-            print(f"[ OK ] {pmcid}  {len(label.recipes)} recipes, {n_props} properties")
-            done += 1
+            paper = json.loads((PROCESSED / f"{pmcid}.json").read_text(encoding="utf-8"))
+            problems = check(raw, paper_as_text(paper))
+            status = "FAIL" if problems else "OK"
 
-    print(f"\nlabelled: {done}   to do: {todo}   with problems: {problems}")
+        counts[status] += 1
+        print(f"[{status:^4}] {pmcid}")
+        for p in problems:
+            print(f"         {p}")
+
+    print(f"\nlabelled: {counts['OK']}   to do: {counts['TODO']}   with problems: {counts['FAIL']}")
 
 
 if __name__ == "__main__":

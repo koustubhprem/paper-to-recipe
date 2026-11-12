@@ -32,6 +32,17 @@ Out of scope for the MVP:
 
 ---
 
+### Versions
+
+| Version | Scope |
+|---|---|
+| V1 | one best recipe per paper, LLM extraction on all 300 papers, scored on the gold set; a website to search and browse recipes with their sources |
+| V2 | all formulations per paper (including controls), unit normalisation, recipes grouped across studies, MLflow run tracking |
+| V3 | MCP server over the recipe database and a PydanticAI agent that answers questions through it, with agent evaluation |
+| later | property prediction with uncertainty, if time allows |
+
+---
+
 ## 2. Data source
 
 Chosen: Europe PMC REST API.
@@ -432,23 +443,32 @@ Common (e.g. potato starch + glycerol). Treated as useful: several labs measurin
 
 ---
 
-## 11. Gold set (next)
+## 11. Gold set
 
 - 15 papers at random, 5 per family (seed 7)
 - per family: 3 dev (used to improve the prompt), 2 test (held out until the final run)
+- labelling order goes round the families, dev papers first
 - labelled before writing any LLM prompt, so the labels are not shaped by the prompt
 - random means some may be out of scope; those are labelled in_scope false with a reason, which tests that part too
-- one function, paper_as_text(), produces the text I label from, the text the LLM will read, and the text quotes are checked against
-- validate_gold.py checks each label against the schema and checks every quote exists in the paper
-- start with 3 papers to measure my real pace (estimate 30-60 min per paper), then decide on 15 or fewer
+- one function, paper_as_text() in papers_text.py, produces the text I label from, the text the LLM will read, and the text quotes are checked against
+- validate_gold.py checks each label against the schema, the V1 rule, and that every quote exists in the paper
+- test papers are labelled entirely by hand; any LLM-assisted dev label is recorded in evals/gold/labelling-notes.md
 
-Labelling rules:
-1. one recipe per film formulation, including the control
-2. quotes copied exactly from the .md file, short; table rows with | separators
-3. not stated = null; unclear basis or origin = "unknown"
-4. values as reported (24 + "h"); units as written
-5. properties of the film only, not of the food it was tested on
-6. best_recipes only when the authors say so
+V1 scope: one recipe per paper, the formulation the authors say performed best.
+- Labelling all formulations took 2-3 hours for the first paper (18 films, most values only in figures). One recipe per paper brings this to about 20-30 minutes.
+- The best recipe is what a maker would try first, so it is the most useful single record for the V1 website.
+- Trade-off: no control and no intermediate formulations, so no "compared with the control" values and less data for comparison or prediction. Both come back in V2.
+- The schema is unchanged; validate_gold.py enforces the rule.
+
+Fields are labelled in two tiers: core fields always; secondary fields (steps, test conditions, feedstock, sample counts) only when clearly stated. The V1 score covers core fields.
+
+Detailed rules and per-paper decisions are in evals/gold/labelling-notes.md.
+
+Problems found while labelling the first paper:
+- two formulations with identical ingredients reported in different series; a value with a real quote can still be attached to the wrong film, which the quote check cannot catch, so scoring has to compare against human labels
+- the paper's tables, text and abstract give different numbers and codes for the same film
+- ± reported as standard error, not standard deviation
+- test conditions stated once in the methods, separate from the values
 
 ---
 
@@ -551,3 +571,7 @@ Failure patterns seen when testing LLM tools on materials questions, and the des
 | 25 Oct | feedstock, from_waste, best recipe | origin of materials and authors' best film were missing |
 | 25 Oct | applies_to, duration as reported, n_samples, best_recipes list, intended_application, scope consistency, code checks | process variation; LLM should not derive values; review of the design |
 | 25 Oct | schema frozen until gold set | |
+| 4 Nov | plan split into versions V1-V3; LangGraph replaced by MCP server + PydanticAI agent | deliver a usable website first; matches the current AI engineer role description |
+| 4 Nov | gold set: 15 papers, labelling order round the families, two field tiers | faster labelling; V1 score on core fields |
+| 12 Nov | V1 scope: one best recipe per paper; validate_gold.py enforces it | first paper took 2-3 hours with all 18 films |
+| 12 Nov | validate_gold.py simplified | removed unused configurability |
