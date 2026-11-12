@@ -1,0 +1,400 @@
+{
+  "in_scope": true,
+  "out_of_scope_reason": null,
+  "intended_application": "food packaging",
+  "process_steps": [
+    {
+      "order": 1,
+      "stage": "ingredient_preparation",
+      "type": "mixing",
+      "description": "VCO and Tween 80 stirred in distilled water",
+      "duration_value": 5,
+      "duration_unit": "min",
+      "source": {
+        "section": "methods",
+        "quote": "both materials were mixed in 100 mL of distilled water and stirred using a stirrer for 5 min"
+      }
+    },
+    {
+      "order": 2,
+      "stage": "ingredient_preparation",
+      "type": "sonicating",
+      "description": "Emulsion sonicated at 65% amplitude",
+      "duration_value": 5,
+      "duration_unit": "min",
+      "source": {
+        "section": "methods",
+        "quote": "The emulsion was then sonicated for 5 min with an amplitude of 65% to make it homogeneous"
+      }
+    },
+    {
+      "order": 3,
+      "stage": "film_formation",
+      "type": "mixing",
+      "description": "Starch and CMC dispersed in distilled water with a magnetic stirrer",
+      "source": {
+        "section": "methods",
+        "quote": "An amount of 7 g of starch and 0.5% w/v CMC were dispersed in 85 mL of distilled water using a magnetic stirrer"
+      }
+    },
+    {
+      "order": 4,
+      "stage": "ingredient_preparation",
+      "type": "mixing",
+      "description": "NCC dispersed in distilled water",
+      "source": {
+        "section": "methods",
+        "quote": "disperse NCC as much as 5 wt% in 15 mL of distilled water and stirred until homogeneous"
+      }
+    },
+    {
+      "order": 5,
+      "stage": "film_formation",
+      "type": "homogenising",
+      "description": "NCC dispersion and VCO emulsion poured slowly into the starch solution while homogenising",
+      "source": {
+        "section": "methods",
+        "quote": "The dispersed NCC and the VCO emulsion were poured slowly into the starch solution while homogenizing"
+      }
+    },
+    {
+      "order": 6,
+      "stage": "film_formation",
+      "type": "heating",
+      "description": "Heated to 62 °C",
+      "temperature_c": 62,
+      "source": {
+        "section": "methods",
+        "quote": "This dispersion was heated to a temperature of 62 °C, then 2% v/v sorbitol was added and continued to heat up to 80 °C"
+      }
+    },
+    {
+      "order": 7,
+      "stage": "film_formation",
+      "type": "mixing",
+      "description": "Sorbitol added",
+      "source": {
+        "section": "methods",
+        "quote": "This dispersion was heated to a temperature of 62 °C, then 2% v/v sorbitol was added and continued to heat up to 80 °C"
+      }
+    },
+    {
+      "order": 8,
+      "stage": "film_formation",
+      "type": "heating",
+      "description": "Heated further to 80 °C",
+      "temperature_c": 80,
+      "source": {
+        "section": "methods",
+        "quote": "This dispersion was heated to a temperature of 62 °C, then 2% v/v sorbitol was added and continued to heat up to 80 °C"
+      }
+    },
+    {
+      "order": 9,
+      "stage": "film_formation",
+      "type": "sonicating",
+      "description": "Sonicated at 40% amplitude",
+      "duration_value": 10,
+      "duration_unit": "min",
+      "source": {
+        "section": "methods",
+        "quote": "sonicated at 40% amplitude for 10 min"
+      }
+    },
+    {
+      "order": 10,
+      "stage": "film_formation",
+      "type": "degassing",
+      "description": "Degassed in an ultrasound bath",
+      "duration_value": 15,
+      "duration_unit": "min",
+      "source": {
+        "section": "methods",
+        "quote": "The film-forming material was degassed in an ultrasound bath for 15 min"
+      }
+    },
+    {
+      "order": 11,
+      "stage": "film_formation",
+      "type": "casting",
+      "description": "Poured into a 20 cm × 20 cm glass plate mould",
+      "source": {
+        "section": "methods",
+        "quote": "The nanocomposite dispersion film was poured into a glass plate mold with a size of 20 cm × 20 cm"
+      }
+    },
+    {
+      "order": 12,
+      "stage": "film_formation",
+      "type": "drying",
+      "description": "Dried in the mould",
+      "temperature_c": 45,
+      "duration_value": 20,
+      "duration_unit": "h",
+      "source": {
+        "section": "methods",
+        "quote": "The nanocomposite dispersion film was poured into a glass plate mold with a size of 20 cm × 20 cm and dried at 45 °C for 20 h"
+      }
+    }
+  ],
+  "recipes": [
+    {
+      "code": "VCO 3 wt%",
+      "description": "Corn starch film with CMC, 5 wt% NCC, sorbitol and 3 wt% virgin coconut oil emulsion; lowest WVTR of the three films",
+      "is_control": false,
+      "base_polymers": [
+        "corn starch"
+      ],
+      "ingredients": [
+        {
+          "name": "corn starch",
+          "role": "matrix",
+          "amount": 7,
+          "unit": "g",
+          "basis": "g",
+          "origin": "bio_based",
+          "feedstock": "corn",
+          "source": {
+            "section": "methods",
+            "quote": "An amount of 7 g of starch and 0.5% w/v CMC were dispersed in 85 mL of distilled water using a magnetic stirrer"
+          }
+        },
+        {
+          "name": "carboxymethyl cellulose (CMC)",
+          "role": "other",
+          "amount": 0.5,
+          "unit": "% w/v",
+          "basis": "pct_w_v",
+          "origin": "bio_based",
+          "source": {
+            "section": "methods",
+            "quote": "An amount of 7 g of starch and 0.5% w/v CMC were dispersed in 85 mL of distilled water using a magnetic stirrer"
+          }
+        },
+        {
+          "name": "nanocrystalline cellulose (NCC)",
+          "role": "filler",
+          "amount": 5,
+          "unit": "wt%",
+          "basis": "unknown",
+          "origin": "bio_based",
+          "source": {
+            "section": "methods",
+            "quote": "disperse NCC as much as 5 wt% in 15 mL of distilled water and stirred until homogeneous"
+          }
+        },
+        {
+          "name": "sorbitol",
+          "role": "plasticizer",
+          "amount": 2,
+          "unit": "% v/v",
+          "basis": "pct_v_v",
+          "origin": "synthetic",
+          "source": {
+            "section": "methods",
+            "quote": "This dispersion was heated to a temperature of 62 °C, then 2% v/v sorbitol was added and continued to heat up to 80 °C"
+          }
+        },
+        {
+          "name": "virgin coconut oil (VCO)",
+          "role": "other",
+          "amount": 3,
+          "unit": "wt%",
+          "basis": "unknown",
+          "origin": "bio_based",
+          "feedstock": "coconut",
+          "source": {
+            "section": "methods",
+            "quote": "VCO with various concentrations (0, 3, 5 wt%) was put into the beaker glass"
+          }
+        },
+        {
+          "name": "Tween 80",
+          "role": "emulsifier",
+          "amount": 50,
+          "unit": "% by weight of VCO",
+          "basis": "other",
+          "origin": "synthetic",
+          "source": {
+            "section": "methods",
+            "quote": "Tween 80, as much as 50% by weight of VCO, was added to the beaker glass"
+          }
+        },
+        {
+          "name": "distilled water (starch dispersion)",
+          "role": "solvent",
+          "amount": 85,
+          "unit": "mL",
+          "basis": "ml",
+          "origin": "unknown",
+          "source": {
+            "section": "methods",
+            "quote": "An amount of 7 g of starch and 0.5% w/v CMC were dispersed in 85 mL of distilled water using a magnetic stirrer"
+          }
+        },
+        {
+          "name": "distilled water (NCC dispersion)",
+          "role": "solvent",
+          "amount": 15,
+          "unit": "mL",
+          "basis": "ml",
+          "origin": "unknown",
+          "source": {
+            "section": "methods",
+            "quote": "disperse NCC as much as 5 wt% in 15 mL of distilled water and stirred until homogeneous"
+          }
+        },
+        {
+          "name": "distilled water (emulsion)",
+          "role": "solvent",
+          "amount": 100,
+          "unit": "mL",
+          "basis": "ml",
+          "origin": "unknown",
+          "source": {
+            "section": "methods",
+            "quote": "both materials were mixed in 100 mL of distilled water and stirred using a stirrer for 5 min"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "thickness",
+          "name_reported": "thickness",
+          "value": 0.219,
+          "std_dev": 0.02,
+          "unit": "mm",
+          "test_details": "micrometer, mean of 5 points",
+          "source": {
+            "section": "table",
+            "table_label": "Table 1",
+            "quote": "VCO 3 wt% | 0.219 ± 0.02 a | 98.77 ± 0.26 a | 0.23 ± 0.05 a | 1.60 ± 0.05 b"
+          }
+        },
+        {
+          "name": "colour",
+          "name_reported": "L*",
+          "value": 98.77,
+          "std_dev": 0.26,
+          "unit": "",
+          "source": {
+            "section": "table",
+            "table_label": "Table 1",
+            "quote": "VCO 3 wt% | 0.219 ± 0.02 a | 98.77 ± 0.26 a | 0.23 ± 0.05 a | 1.60 ± 0.05 b"
+          }
+        },
+        {
+          "name": "colour",
+          "name_reported": "a*",
+          "value": 0.23,
+          "std_dev": 0.05,
+          "unit": "",
+          "source": {
+            "section": "table",
+            "table_label": "Table 1",
+            "quote": "VCO 3 wt% | 0.219 ± 0.02 a | 98.77 ± 0.26 a | 0.23 ± 0.05 a | 1.60 ± 0.05 b"
+          }
+        },
+        {
+          "name": "colour",
+          "name_reported": "b*",
+          "value": 1.6,
+          "std_dev": 0.05,
+          "unit": "",
+          "source": {
+            "section": "table",
+            "table_label": "Table 1",
+            "quote": "VCO 3 wt% | 0.219 ± 0.02 a | 98.77 ± 0.26 a | 0.23 ± 0.05 a | 1.60 ± 0.05 b"
+          }
+        },
+        {
+          "name": "water_solubility",
+          "name_reported": "film solubility in water",
+          "value": 40.51,
+          "std_dev": 0.73,
+          "unit": "%",
+          "test_details": "distilled water, 24 h",
+          "temperature_c": 25,
+          "source": {
+            "section": "table",
+            "table_label": "Table 2",
+            "quote": "VCO 3 wt% | 40.51 ± 0.73 a | 4.721 ± 0.53 a"
+          }
+        },
+        {
+          "name": "other",
+          "name_reported": "WVTR",
+          "value": 4.721,
+          "std_dev": 0.53,
+          "unit": "g/m2·h",
+          "test_standard": "ASTM E96-80",
+          "test_details": "cup method, 0% RH inside, 75% RH outside",
+          "temperature_c": 25,
+          "source": {
+            "section": "table",
+            "table_label": "Table 2",
+            "quote": "VCO 3 wt% | 40.51 ± 0.73 a | 4.721 ± 0.53 a"
+          }
+        },
+        {
+          "name": "tensile_strength",
+          "name_reported": "tensile strength",
+          "value": 4.243,
+          "std_dev": 0.3,
+          "unit": "MPa",
+          "test_standard": "ASTM D882-10",
+          "rh_pct": 50,
+          "temperature_c": 23,
+          "source": {
+            "section": "table",
+            "table_label": "Table 3",
+            "quote": "VCO 3 wt% | 4.243 ± 0.3 a | 69.28 ± 1.83 b | 0.062 ± 0.01 a"
+          },
+          "test_details": "conditioned ±23 °C, ~50% RH, at least 24 h (methods 2.4.5)"
+        },
+        {
+          "name": "elongation_at_break",
+          "name_reported": "elongation",
+          "value": 69.28,
+          "std_dev": 1.83,
+          "unit": "%",
+          "test_standard": "ASTM D882-10",
+          "rh_pct": 50,
+          "temperature_c": 23,
+          "source": {
+            "section": "table",
+            "table_label": "Table 3",
+            "quote": "VCO 3 wt% | 4.243 ± 0.3 a | 69.28 ± 1.83 b | 0.062 ± 0.01 a"
+          },
+          "test_details": "conditioned ±23 °C, ~50% RH, at least 24 h (methods 2.4.5)"
+        },
+        {
+          "name": "youngs_modulus",
+          "name_reported": "modulus of elasticity",
+          "value": 0.062,
+          "std_dev": 0.01,
+          "unit": "MPa",
+          "test_standard": "ASTM D882-10",
+          "rh_pct": 50,
+          "temperature_c": 23,
+          "source": {
+            "section": "table",
+            "table_label": "Table 3",
+            "quote": "VCO 3 wt% | 4.243 ± 0.3 a | 69.28 ± 1.83 b | 0.062 ± 0.01 a"
+          },
+          "test_details": "conditioned ±23 °C, ~50% RH, at least 24 h (methods 2.4.5)"
+        }
+      ]
+    }
+  ],
+  "best_recipes": [
+    {
+      "code": "VCO 3 wt%",
+      "criterion": "lowest water vapour transmission rate",
+      "source": {
+        "section": "other",
+        "quote": "adding 3 wt% VCO could reduce the value of WVTR. This treatment had the lowest WVTR"
+      }
+    }
+  ]
+}

@@ -62,19 +62,6 @@
         "section": "methods",
         "quote": "Films were dried in a forced-air oven at 40 °C for 15 h"
       }
-    },
-    {
-      "order": 6,
-      "stage": "film_formation",
-      "type": "conditioning",
-      "description": "Conditioned before testing (tensile tests: 20 °C, 65% RH)",
-      "temperature_c": 20,
-      "duration_value": 24,
-      "duration_unit": "h",
-      "source": {
-        "section": "methods",
-        "quote": "The films were conditioned for 24 h at 20 ± 1 °C, 65 ± 4% relative humidity"
-      }
     }
   ],
   "recipes": [
@@ -154,7 +141,8 @@
             "section": "table",
             "table_label": "Table 2",
             "quote": "SA + Gly + MAX 2.5 | 6.63 ± 0.06 | 96.4 ± 9.9"
-          }
+          },
+          "test_details": "conditioned 20 ± 1 °C, 65 ± 4% RH, 24 h; 10 mm/min (methods 2.3)"
         },
         {
           "name": "elongation_at_break",
@@ -168,7 +156,8 @@
             "section": "table",
             "table_label": "Table 2",
             "quote": "SA + Gly + MAX 2.5 | 6.63 ± 0.06 | 96.4 ± 9.9"
-          }
+          },
+          "test_details": "conditioned 20 ± 1 °C, 65 ± 4% RH, 24 h; 10 mm/min (methods 2.3)"
         },
         {
           "name": "thickness",
