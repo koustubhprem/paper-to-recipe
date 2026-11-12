@@ -1,0 +1,241 @@
+{
+  "in_scope": true,
+  "out_of_scope_reason": null,
+  "intended_application": "food packaging (raw meat)",
+  "process_steps": [
+    {
+      "order": 1,
+      "stage": "film_formation",
+      "type": "dissolving",
+      "description": "Sodium alginate dissolved in deionized water with magnetic stirring",
+      "temperature_c": 23,
+      "duration_value": 2,
+      "duration_unit": "h",
+      "source": {
+        "section": "methods",
+        "quote": "under magnetic stirring at 300 rpm for 2 h at 23 ± 2 °C"
+      }
+    },
+    {
+      "order": 2,
+      "stage": "film_formation",
+      "type": "mixing",
+      "description": "Arabinoxylans sprinkled into the vortex and mixed",
+      "duration_value": 60,
+      "duration_unit": "min",
+      "source": {
+        "section": "methods",
+        "quote": "MAX/WAX (20–100 wt.%) was sprinkled into the vortex and mixed for 60 min"
+      }
+    },
+    {
+      "order": 3,
+      "stage": "film_formation",
+      "type": "mixing",
+      "description": "Glycerol added dropwise with further stirring",
+      "duration_value": 30,
+      "duration_unit": "min",
+      "source": {
+        "section": "methods",
+        "quote": "dropwise addition of glycerol (50.4 wt.%) with an additional 30 min of stirring"
+      }
+    },
+    {
+      "order": 4,
+      "stage": "film_formation",
+      "type": "casting",
+      "description": "25.0 g of solution cast into 9 cm polystyrene Petri dishes",
+      "source": {
+        "section": "methods",
+        "quote": "Exactly 25.0 g of the homogenized solution was weighed"
+      }
+    },
+    {
+      "order": 5,
+      "stage": "film_formation",
+      "type": "drying",
+      "description": "Dried in a forced-air oven",
+      "temperature_c": 40,
+      "duration_value": 15,
+      "duration_unit": "h",
+      "source": {
+        "section": "methods",
+        "quote": "Films were dried in a forced-air oven at 40 °C for 15 h"
+      }
+    },
+    {
+      "order": 6,
+      "stage": "film_formation",
+      "type": "conditioning",
+      "description": "Conditioned before testing (tensile tests: 20 °C, 65% RH)",
+      "temperature_c": 20,
+      "duration_value": 24,
+      "duration_unit": "h",
+      "source": {
+        "section": "methods",
+        "quote": "The films were conditioned for 24 h at 20 ± 1 °C, 65 ± 4% relative humidity"
+      }
+    }
+  ],
+  "recipes": [
+    {
+      "code": "SA2.5 − G1y − MAX1.5",
+      "description": "Sodium alginate, glycerol and 60 wt.% maize arabinoxylans; authors report tensile strength 4.9 times that of alginate alone",
+      "is_control": false,
+      "base_polymers": [
+        "sodium alginate",
+        "maize arabinoxylans"
+      ],
+      "ingredients": [
+        {
+          "name": "sodium alginate",
+          "role": "matrix",
+          "amount": 2.5,
+          "unit": "g",
+          "basis": "g",
+          "origin": "bio_based",
+          "feedstock": "brown algae",
+          "source": {
+            "section": "table",
+            "quote": "SA2.5 − G1y − MAX1.5 | 2.50 | 1.26 | 1.50 | – | MAX = 60 wt.%; Gly = 50.4 wt.%",
+            "table_label": "Table 1"
+          }
+        },
+        {
+          "name": "glycerol",
+          "role": "plasticizer",
+          "amount": 1.26,
+          "unit": "g",
+          "basis": "g",
+          "origin": "synthetic",
+          "source": {
+            "section": "table",
+            "quote": "SA2.5 − G1y − MAX1.5 | 2.50 | 1.26 | 1.50 | – | MAX = 60 wt.%; Gly = 50.4 wt.%",
+            "table_label": "Table 1"
+          }
+        },
+        {
+          "name": "maize arabinoxylans",
+          "role": "matrix",
+          "amount": 1.5,
+          "unit": "g",
+          "basis": "g",
+          "origin": "bio_based",
+          "feedstock": "maize bran",
+          "source": {
+            "section": "table",
+            "quote": "SA2.5 − G1y − MAX1.5 | 2.50 | 1.26 | 1.50 | – | MAX = 60 wt.%; Gly = 50.4 wt.%",
+            "table_label": "Table 1"
+          }
+        },
+        {
+          "name": "deionized water",
+          "role": "solvent",
+          "amount": 100,
+          "unit": "mL",
+          "basis": "ml",
+          "origin": "unknown",
+          "source": {
+            "section": "methods",
+            "quote": "SA was dissolved to 2.5% (w/v) in deionized water (2.5 g/100 mL)"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "tensile_strength",
+          "name_reported": "tensile strength",
+          "value": 6.63,
+          "std_dev": 0.06,
+          "unit": "MPa",
+          "rh_pct": 65,
+          "temperature_c": 20,
+          "source": {
+            "section": "table",
+            "table_label": "Table 2",
+            "quote": "SA + Gly + MAX 2.5 | 6.63 ± 0.06 | 96.4 ± 9.9"
+          }
+        },
+        {
+          "name": "elongation_at_break",
+          "name_reported": "elongation",
+          "value": 96.4,
+          "std_dev": 9.9,
+          "unit": "%",
+          "rh_pct": 65,
+          "temperature_c": 20,
+          "source": {
+            "section": "table",
+            "table_label": "Table 2",
+            "quote": "SA + Gly + MAX 2.5 | 6.63 ± 0.06 | 96.4 ± 9.9"
+          }
+        },
+        {
+          "name": "thickness",
+          "name_reported": "thickness",
+          "value": 0.17,
+          "unit": "mm",
+          "source": {
+            "section": "results",
+            "quote": "The film thickness increased from 0.120 mm to 0.170 mm with an increase in SA concentration from 20 wt.% to 100 wt.%"
+          }
+        },
+        {
+          "name": "swelling",
+          "name_reported": "water-holding capacity",
+          "value": 27.6,
+          "unit": "times dry weight",
+          "test_details": "deionized water, 50 min",
+          "source": {
+            "section": "results",
+            "quote": "The film SA + Gly + MAX 1.5 absorbed 27.6 times of water after soaking for 50 min"
+          }
+        },
+        {
+          "name": "degradation_temperature",
+          "name_reported": "Td5%",
+          "value": 75.2,
+          "unit": "°C",
+          "source": {
+            "section": "table",
+            "quote": "SA + Gly + MAX1.5 | 75.2 | 509.5 | 21.2",
+            "table_label": "Table 3"
+          }
+        },
+        {
+          "name": "degradation_temperature",
+          "name_reported": "Tmax",
+          "value": 509.5,
+          "unit": "°C",
+          "source": {
+            "section": "table",
+            "quote": "SA + Gly + MAX1.5 | 75.2 | 509.5 | 21.2",
+            "table_label": "Table 3"
+          }
+        },
+        {
+          "name": "other",
+          "name_reported": "residual mass",
+          "value": 21.2,
+          "unit": "%",
+          "test_details": "TGA residue at 600 °C",
+          "source": {
+            "section": "table",
+            "quote": "SA + Gly + MAX1.5 | 75.2 | 509.5 | 21.2",
+            "table_label": "Table 3"
+          }
+        }
+      ]
+    }
+  ],
+  "best_recipes": [
+    {
+      "code": "SA2.5 − G1y − MAX1.5",
+      "criterion": "highest tensile strength",
+      "source": {
+        "section": "results",
+        "quote": "Among all the films, SA2.5 G1y MAX1.5 had the highest tensile strength"
+      }
+    }
+  ]
+}
