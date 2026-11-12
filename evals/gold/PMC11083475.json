@@ -1,0 +1,373 @@
+{
+  "in_scope": true,
+  "out_of_scope_reason": null,
+  "intended_application": "active packaging and freshness indicator for meat and seafood",
+  "process_steps": [
+    {
+      "order": 1,
+      "stage": "film_formation",
+      "type": "mixing",
+      "description": "EWP, glycerol and alginate dispersed in distilled water",
+      "source": {
+        "section": "methods",
+        "quote": "EWP dispersions were obtained by dispersing 9 g of EWP in 300 mL of distilled water and adding 9 g of glycerol with different concentrations of Alg"
+      }
+    },
+    {
+      "order": 2,
+      "stage": "film_formation",
+      "type": "mixing",
+      "description": "Stirred at 400 rpm",
+      "temperature_c": 45,
+      "duration_value": 3,
+      "duration_unit": "h",
+      "source": {
+        "section": "methods",
+        "quote": "After stirring at 45 °C for 3 h under magnetic stirring at 400 rpm"
+      }
+    },
+    {
+      "order": 3,
+      "stage": "film_formation",
+      "type": "other",
+      "description": "Alkalised to pH 11.0 with NaOH and stirred",
+      "ph": 11.0,
+      "duration_value": 20,
+      "duration_unit": "min",
+      "source": {
+        "section": "methods",
+        "quote": "the dispersion was alkalized to pH of 11.0 with 2 mol/L NaOH followed by stirring of the mixture for 20 min"
+      }
+    },
+    {
+      "order": 4,
+      "stage": "film_formation",
+      "type": "mixing",
+      "description": "Curcumin added and stirred in the dark without oxygen",
+      "duration_value": 20,
+      "duration_unit": "min",
+      "source": {
+        "section": "methods",
+        "quote": "curcumin was added to the solution of EWP at a concentration of 2 mg/mL, after which the mixture was stirred for 20 min in an environment with no light source and under anaerobic conditions"
+      }
+    },
+    {
+      "order": 5,
+      "stage": "film_formation",
+      "type": "other",
+      "description": "Neutralised to pH 7.0 with HCl",
+      "ph": 7.0,
+      "source": {
+        "section": "methods",
+        "quote": "The mixture was then neutralized to pH 7.0 with 2 mol/L HCl"
+      }
+    },
+    {
+      "order": 6,
+      "stage": "film_formation",
+      "type": "centrifuging",
+      "description": "Centrifuged at 8000 rpm",
+      "duration_value": 10,
+      "duration_unit": "min",
+      "source": {
+        "section": "methods",
+        "quote": "this mixture was centrifuged at 8000 rpm for 10 min"
+      }
+    },
+    {
+      "order": 7,
+      "stage": "film_formation",
+      "type": "degassing",
+      "description": "Degassed in a vacuum dryer",
+      "duration_value": 30,
+      "duration_unit": "min",
+      "source": {
+        "section": "methods",
+        "quote": "All solution samples were evacuated in a vacuum dryer for 30 min to remove all foaming"
+      }
+    },
+    {
+      "order": 8,
+      "stage": "film_formation",
+      "type": "casting",
+      "description": "Cast onto a 200 mm × 200 mm PTFE plate",
+      "source": {
+        "section": "methods",
+        "quote": "cast onto a 200 mm × 200 mm × 6 mm PTFE plate, which was then dried at 50 °C for a continuous period of 12 h"
+      }
+    },
+    {
+      "order": 9,
+      "stage": "film_formation",
+      "type": "drying",
+      "description": "Dried",
+      "temperature_c": 50,
+      "duration_value": 12,
+      "duration_unit": "h",
+      "source": {
+        "section": "methods",
+        "quote": "cast onto a 200 mm × 200 mm × 6 mm PTFE plate, which was then dried at 50 °C for a continuous period of 12 h"
+      }
+    }
+  ],
+  "recipes": [
+    {
+      "code": "EDCA3",
+      "description": "Egg white protein and sodium alginate (2:1) with glycerol and curcumin loaded by the pH-driven method",
+      "is_control": false,
+      "base_polymers": [
+        "egg white protein",
+        "sodium alginate"
+      ],
+      "ingredients": [
+        {
+          "name": "egg white protein (EWP)",
+          "role": "matrix",
+          "amount": 9,
+          "unit": "g",
+          "basis": "g",
+          "origin": "bio_based",
+          "feedstock": "egg white",
+          "source": {
+            "section": "methods",
+            "quote": "EWP dispersions were obtained by dispersing 9 g of EWP in 300 mL of distilled water and adding 9 g of glycerol with different concentrations of Alg"
+          }
+        },
+        {
+          "name": "sodium alginate (Alg)",
+          "role": "matrix",
+          "amount": null,
+          "unit": "EWP:Alg = 2:1",
+          "basis": "other",
+          "origin": "bio_based",
+          "source": {
+            "section": "table",
+            "table_label": "Table 1",
+            "quote": "EDCA3 | 2:1 | 0.03 | pH-driven"
+          }
+        },
+        {
+          "name": "glycerol",
+          "role": "plasticizer",
+          "amount": 9,
+          "unit": "g",
+          "basis": "g",
+          "origin": "synthetic",
+          "source": {
+            "section": "methods",
+            "quote": "EWP dispersions were obtained by dispersing 9 g of EWP in 300 mL of distilled water and adding 9 g of glycerol with different concentrations of Alg"
+          }
+        },
+        {
+          "name": "curcumin",
+          "role": "active_agent",
+          "amount": 0.03,
+          "unit": "%, w/v",
+          "basis": "pct_w_v",
+          "origin": "bio_based",
+          "source": {
+            "section": "table",
+            "table_label": "Table 1",
+            "quote": "EDCA3 | 2:1 | 0.03 | pH-driven"
+          }
+        },
+        {
+          "name": "distilled water",
+          "role": "solvent",
+          "amount": 300,
+          "unit": "mL",
+          "basis": "ml",
+          "origin": "unknown",
+          "source": {
+            "section": "methods",
+            "quote": "EWP dispersions were obtained by dispersing 9 g of EWP in 300 mL of distilled water and adding 9 g of glycerol with different concentrations of Alg"
+          }
+        },
+        {
+          "name": "NaOH (2 mol/L)",
+          "role": "ph_adjuster",
+          "origin": "synthetic",
+          "source": {
+            "section": "methods",
+            "quote": "the dispersion was alkalized to pH of 11.0 with 2 mol/L NaOH followed by stirring of the mixture for 20 min"
+          }
+        },
+        {
+          "name": "HCl (2 mol/L)",
+          "role": "ph_adjuster",
+          "origin": "synthetic",
+          "source": {
+            "section": "methods",
+            "quote": "The mixture was then neutralized to pH 7.0 with 2 mol/L HCl"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "thickness",
+          "name_reported": "thickness",
+          "value": 94,
+          "std_dev": 2,
+          "unit": "μm",
+          "test_details": "mean of 10 points on 3 samples",
+          "source": {
+            "section": "table",
+            "table_label": "Table 2",
+            "quote": "EDCA3 | 94 ± 2 c | 5.68 ± 0.57 a | 103.56 ± 3.13 a | 1.25 ± 0.02 c"
+          }
+        },
+        {
+          "name": "tensile_strength",
+          "name_reported": "TS",
+          "value": 5.68,
+          "std_dev": 0.57,
+          "unit": "MPa",
+          "test_details": "15 mm/min, 50 mm gauge; conditioned 25 °C, 50% RH, at least 48 h (methods 2.2)",
+          "rh_pct": 50,
+          "temperature_c": 25,
+          "source": {
+            "section": "table",
+            "table_label": "Table 2",
+            "quote": "EDCA3 | 94 ± 2 c | 5.68 ± 0.57 a | 103.56 ± 3.13 a | 1.25 ± 0.02 c"
+          }
+        },
+        {
+          "name": "elongation_at_break",
+          "name_reported": "EB",
+          "value": 103.56,
+          "std_dev": 3.13,
+          "unit": "%",
+          "test_details": "15 mm/min, 50 mm gauge; conditioned 25 °C, 50% RH, at least 48 h (methods 2.2)",
+          "rh_pct": 50,
+          "temperature_c": 25,
+          "source": {
+            "section": "table",
+            "table_label": "Table 2",
+            "quote": "EDCA3 | 94 ± 2 c | 5.68 ± 0.57 a | 103.56 ± 3.13 a | 1.25 ± 0.02 c"
+          }
+        },
+        {
+          "name": "water_vapour_permeability",
+          "name_reported": "WVP",
+          "value": 1.25,
+          "std_dev": 0.02,
+          "unit": "×10−10 g·m/m2·Pa·s",
+          "test_details": "cup method, CaCl2 inside, 84% RH outside (KCl), 7 days",
+          "temperature_c": 24,
+          "source": {
+            "section": "table",
+            "table_label": "Table 2",
+            "quote": "EDCA3 | 94 ± 2 c | 5.68 ± 0.57 a | 103.56 ± 3.13 a | 1.25 ± 0.02 c"
+          }
+        },
+        {
+          "name": "other",
+          "name_reported": "UV-A blocking",
+          "value": 99.35,
+          "std_dev": 0.91,
+          "unit": "%",
+          "source": {
+            "section": "table",
+            "table_label": "Table 3",
+            "quote": "EDCA3 | 99.35 ± 0.91 a | 99.66 ± 0.71 a | 3.68 ± 0.17 a | 82.30 ± 0.75 c | 41.16 ± 5.21 a | 70.40 ± 1.36 ab | 70.88 ± 4.34 a | 130.31 ± 4.08 a"
+          }
+        },
+        {
+          "name": "other",
+          "name_reported": "UV-B blocking",
+          "value": 99.66,
+          "std_dev": 0.71,
+          "unit": "%",
+          "source": {
+            "section": "table",
+            "table_label": "Table 3",
+            "quote": "EDCA3 | 99.35 ± 0.91 a | 99.66 ± 0.71 a | 3.68 ± 0.17 a | 82.30 ± 0.75 c | 41.16 ± 5.21 a | 70.40 ± 1.36 ab | 70.88 ± 4.34 a | 130.31 ± 4.08 a"
+          }
+        },
+        {
+          "name": "opacity",
+          "name_reported": "opacity",
+          "value": 3.68,
+          "std_dev": 0.17,
+          "unit": "mm−1",
+          "test_details": "absorbance at 600 nm divided by thickness",
+          "source": {
+            "section": "table",
+            "table_label": "Table 3",
+            "quote": "EDCA3 | 99.35 ± 0.91 a | 99.66 ± 0.71 a | 3.68 ± 0.17 a | 82.30 ± 0.75 c | 41.16 ± 5.21 a | 70.40 ± 1.36 ab | 70.88 ± 4.34 a | 130.31 ± 4.08 a"
+          }
+        },
+        {
+          "name": "colour",
+          "name_reported": "L*",
+          "value": 82.3,
+          "std_dev": 0.75,
+          "unit": "",
+          "source": {
+            "section": "table",
+            "table_label": "Table 3",
+            "quote": "EDCA3 | 99.35 ± 0.91 a | 99.66 ± 0.71 a | 3.68 ± 0.17 a | 82.30 ± 0.75 c | 41.16 ± 5.21 a | 70.40 ± 1.36 ab | 70.88 ± 4.34 a | 130.31 ± 4.08 a"
+          }
+        },
+        {
+          "name": "colour",
+          "name_reported": "a*",
+          "value": 41.16,
+          "std_dev": 5.21,
+          "unit": "",
+          "source": {
+            "section": "table",
+            "table_label": "Table 3",
+            "quote": "EDCA3 | 99.35 ± 0.91 a | 99.66 ± 0.71 a | 3.68 ± 0.17 a | 82.30 ± 0.75 c | 41.16 ± 5.21 a | 70.40 ± 1.36 ab | 70.88 ± 4.34 a | 130.31 ± 4.08 a"
+          }
+        },
+        {
+          "name": "colour",
+          "name_reported": "b*",
+          "value": 70.4,
+          "std_dev": 1.36,
+          "unit": "",
+          "source": {
+            "section": "table",
+            "table_label": "Table 3",
+            "quote": "EDCA3 | 99.35 ± 0.91 a | 99.66 ± 0.71 a | 3.68 ± 0.17 a | 82.30 ± 0.75 c | 41.16 ± 5.21 a | 70.40 ± 1.36 ab | 70.88 ± 4.34 a | 130.31 ± 4.08 a"
+          }
+        },
+        {
+          "name": "colour",
+          "name_reported": "ΔE*",
+          "value": 70.88,
+          "std_dev": 4.34,
+          "unit": "",
+          "source": {
+            "section": "table",
+            "table_label": "Table 3",
+            "quote": "EDCA3 | 99.35 ± 0.91 a | 99.66 ± 0.71 a | 3.68 ± 0.17 a | 82.30 ± 0.75 c | 41.16 ± 5.21 a | 70.40 ± 1.36 ab | 70.88 ± 4.34 a | 130.31 ± 4.08 a"
+          }
+        },
+        {
+          "name": "colour",
+          "name_reported": "yellowness index (YI)",
+          "value": 130.31,
+          "std_dev": 4.08,
+          "unit": "",
+          "source": {
+            "section": "table",
+            "table_label": "Table 3",
+            "quote": "EDCA3 | 99.35 ± 0.91 a | 99.66 ± 0.71 a | 3.68 ± 0.17 a | 82.30 ± 0.75 c | 41.16 ± 5.21 a | 70.40 ± 1.36 ab | 70.88 ± 4.34 a | 130.31 ± 4.08 a"
+          }
+        }
+      ]
+    }
+  ],
+  "best_recipes": [
+    {
+      "code": "EDCA3",
+      "criterion": "headline film in the abstract: improved extensibility and water resistance",
+      "source": {
+        "section": "abstract",
+        "quote": "with an elongation at break (EB) of 103.56 ± 3.13%"
+      }
+    }
+  ]
+}
