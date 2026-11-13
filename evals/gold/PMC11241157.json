@@ -1,0 +1,255 @@
+{
+  "in_scope": true,
+  "out_of_scope_reason": null,
+  "intended_application": "food packaging; suggested as paper coatings for dry foods such as nuts or legumes",
+  "process_steps": [
+    {
+      "order": 1,
+      "stage": "ingredient_preparation",
+      "type": "heating",
+      "description": "Orange residue (peel and pulp) scalded to deactivate enzymes",
+      "source": {
+        "section": "methods",
+        "quote": "the residues (peel and pulp) were scalded to deactivate the endogenous enzymes"
+      }
+    },
+    {
+      "order": 2,
+      "stage": "ingredient_preparation",
+      "type": "drying",
+      "description": "Residue freeze-dried under vacuum",
+      "temperature_c": -50,
+      "source": {
+        "section": "methods",
+        "quote": "freeze-dried at −50 °C under vacuum (30 Pa)"
+      }
+    },
+    {
+      "order": 3,
+      "stage": "ingredient_preparation",
+      "type": "grinding",
+      "description": "Ground and sieved below 0.08 mm",
+      "source": {
+        "section": "methods",
+        "quote": "ground, and sieved (<0.08 mm)"
+      }
+    },
+    {
+      "order": 4,
+      "stage": "ingredient_preparation",
+      "type": "mixing",
+      "description": "Orange residue added to citric acid solution at pH 1.5, solid:liquid 5:300",
+      "ph": 1.5,
+      "source": {
+        "section": "methods",
+        "quote": "the orange residue was poured into a citric acid solution (10% w/v with an adjusted pH of 1.5) respecting a solid:liquid ratio of 5:300"
+      }
+    },
+    {
+      "order": 5,
+      "stage": "ingredient_preparation",
+      "type": "sonicating",
+      "description": "Extraction at 25 °C with 142 W/L acoustic energy, for 30 min",
+      "duration_value": 30,
+      "duration_unit": "min",
+      "temperature_c": 25,
+      "source": {
+        "section": "methods",
+        "quote": "The temperature during the extraction was maintained at 25 ± 2 °C with a thermostatic bath by driving a refrigerant liquid (ethylene glycol) through the double-jacketed vessel where the extraction was carried out. The amount of acoustic energy applied was assessed with the calorimetric method [28] and was found to be 142 ± 5 W/L. The extraction was carried out for 30 min"
+      }
+    },
+    {
+      "order": 6,
+      "stage": "ingredient_preparation",
+      "type": "centrifuging",
+      "description": "Centrifuged and filtered",
+      "duration_value": 20,
+      "duration_unit": "min",
+      "source": {
+        "section": "methods",
+        "quote": "the mix was centrifugated (20 min at 4000 rpm) and filtrated"
+      }
+    },
+    {
+      "order": 7,
+      "stage": "ingredient_preparation",
+      "type": "other",
+      "description": "Pectin precipitated with twice the volume of ethanol and stirred",
+      "duration_value": 10,
+      "duration_unit": "min",
+      "source": {
+        "section": "methods",
+        "quote": "the liquid was treated with twice the volume of ethanol (96% v/v) and stirred for 10 min"
+      }
+    },
+    {
+      "order": 8,
+      "stage": "ingredient_preparation",
+      "type": "centrifuging",
+      "description": "Centrifuged and filtered again; precipitate washed with ethanol and acetone",
+      "duration_value": 20,
+      "duration_unit": "min",
+      "source": {
+        "section": "methods",
+        "quote": "The mixture was centrifugated again (20 min at 4000 rpm) and filtrated, and the precipitated material was washed with absolute ethanol and acetone"
+      }
+    },
+    {
+      "order": 9,
+      "stage": "ingredient_preparation",
+      "type": "drying",
+      "description": "Semi-pure pectin dried under vacuum overnight, ground and sieved below 0.355 mm",
+      "temperature_c": 40,
+      "source": {
+        "section": "methods",
+        "quote": "The extracts were dried in an oven at 40 °C under vacuum overnight, ground, and sieved (<0.355 mm)"
+      }
+    },
+    {
+      "order": 10,
+      "stage": "film_formation",
+      "type": "dissolving",
+      "description": "Semi-pure pectin dissolved at 2% w/w with stirring at 500 rpm",
+      "duration_value": 24,
+      "duration_unit": "h",
+      "source": {
+        "section": "methods",
+        "quote": "Aqueous solutions at 2% w/w of CP and SP pectic materials were prepared by keeping them under agitation for 24 h at 500 rpm"
+      }
+    },
+    {
+      "order": 11,
+      "stage": "film_formation",
+      "type": "mixing",
+      "description": "Chitosan solution added to the pectic solution",
+      "source": {
+        "section": "methods",
+        "quote": "0.4 g of either component was added to 100 g of each pectic solution"
+      }
+    },
+    {
+      "order": 12,
+      "stage": "film_formation",
+      "type": "homogenising",
+      "description": "Homogenised with a rotor–stator homogenizer at 10,000 rpm",
+      "duration_value": 5,
+      "duration_unit": "min",
+      "source": {
+        "section": "methods",
+        "quote": "The mixtures were then homogenized using a rotor–stator homogenizer (Polytron 3100D, Mississauga, ON, Canada) for 5 min at 10,000 rpm"
+      }
+    },
+    {
+      "order": 13,
+      "stage": "film_formation",
+      "type": "degassing",
+      "description": "Ultrasound treatment at 60% amplitude",
+      "duration_value": 1,
+      "duration_unit": "min",
+      "source": {
+        "section": "methods",
+        "quote": "underwent ultrasound treatment for 1 min (60% amplitude)"
+      }
+    },
+    {
+      "order": 14,
+      "stage": "film_formation",
+      "type": "casting",
+      "description": "Drop-cast into 100 mm Teflon moulds",
+      "source": {
+        "section": "methods",
+        "quote": "the solutions were drop-casted into circular Teflon molds of 100 mm in diameter"
+      }
+    },
+    {
+      "order": 15,
+      "stage": "film_formation",
+      "type": "drying",
+      "description": "Dried at room temperature under a fume hood",
+      "duration_value": 72,
+      "duration_unit": "h",
+      "source": {
+        "section": "methods",
+        "quote": "The films were dried for about 72 h at room temperature under a fume hood"
+      }
+    }
+  ],
+  "recipes": [
+    {
+      "code": "SP_Chi",
+      "description": "Semi-pure pectin extracted from orange residue with citric acid, with chitosan added at 20% w/w of the pectic film",
+      "is_control": false,
+      "base_polymers": [
+        "pectin",
+        "chitosan"
+      ],
+      "ingredients": [
+        {
+          "name": "semi-pure pectin (SP)",
+          "role": "matrix",
+          "amount": 2,
+          "unit": "% w/w",
+          "basis": "wt_pct_of_total",
+          "origin": "bio_based",
+          "feedstock": "orange residue (peel and pulp)",
+          "from_waste": true,
+          "source": {
+            "section": "methods",
+            "quote": "Aqueous solutions at 2% w/w of CP and SP pectic materials were prepared by keeping them under agitation for 24 h at 500 rpm"
+          }
+        },
+        {
+          "name": "chitosan (as 1% w/w chitosan solution)",
+          "role": "matrix",
+          "amount": 0.4,
+          "unit": "g per 100 g pectic solution",
+          "basis": "other",
+          "origin": "bio_based",
+          "feedstock": "shrimp chitin",
+          "source": {
+            "section": "methods",
+            "quote": "0.4 g of either component was added to 100 g of each pectic solution"
+          }
+        },
+        {
+          "name": "acetic acid",
+          "role": "ph_adjuster",
+          "amount": 2,
+          "unit": "% w/w in chitosan solution",
+          "basis": "other",
+          "origin": "synthetic",
+          "source": {
+            "section": "methods",
+            "quote": "chitosan solution (1% w/w chitosan in 2% w/w acetic acid aqueous solution)"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "oxygen_permeability",
+          "name_reported": "O2 permeation",
+          "value": 4.37,
+          "unit": "× 10−19 m3·m/Pa·m2·s",
+          "test_standard": "ASTM D3985",
+          "test_details": "manometric method, dry oxygen, films purged with N2 for 15 h",
+          "rh_pct": 0,
+          "temperature_c": 23,
+          "source": {
+            "section": "results",
+            "quote": "O2 permeation of this film (SP_Chi) is in the same order of magnitude as the permeation of its two components at 4.37 × 10−19 m3·m/Pa·m2·s"
+          }
+        }
+      ]
+    }
+  ],
+  "best_recipes": [
+    {
+      "code": "SP_Chi",
+      "criterion": "default: main orange-residue formulation; chitosan improved water resistance and strength while keeping the oxygen barrier",
+      "source": {
+        "section": "other",
+        "quote": "Chitosan improved the water resistance and strength in SP films while maintaining high oxygen barrier properties"
+      }
+    }
+  ]
+}
