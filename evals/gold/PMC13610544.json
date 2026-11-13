@@ -1,0 +1,437 @@
+{
+  "in_scope": true,
+  "out_of_scope_reason": null,
+  "intended_application": "edible coating for postharvest preservation of cherry tomatoes",
+  "process_steps": [
+    {
+      "order": 1,
+      "stage": "ingredient_preparation",
+      "type": "drying",
+      "description": "Orange peel pieces frozen in liquid nitrogen and freeze-dried",
+      "duration_value": 48,
+      "duration_unit": "h",
+      "source": {
+        "section": "methods",
+        "quote": "The prepared peel pieces were rapidly frozen using food-grade liquid nitrogen and subsequently freeze-dried for 48 h"
+      }
+    },
+    {
+      "order": 2,
+      "stage": "ingredient_preparation",
+      "type": "grinding",
+      "description": "Freeze-dried peel ground and sieved through 150 mesh",
+      "source": {
+        "section": "methods",
+        "quote": "A portion of this material (85 g) was ground and passed through a 150-mesh sieve"
+      }
+    },
+    {
+      "order": 3,
+      "stage": "ingredient_preparation",
+      "type": "heating",
+      "description": "Peel powder heated in citric acid solution to extract pectin and bioactives",
+      "temperature_c": 80,
+      "duration_value": 90,
+      "duration_unit": "min",
+      "ph": 2.0,
+      "source": {
+        "section": "methods",
+        "quote": "Orange peel powder (40 g) was mixed with 400 mL of 4% (w/v) citric acid solution (pH 2.0) and heated at 80 °C for 90 min"
+      }
+    },
+    {
+      "order": 4,
+      "stage": "ingredient_preparation",
+      "type": "filtering",
+      "description": "Extract centrifuged and filtered",
+      "source": {
+        "section": "methods",
+        "quote": "The extract was centrifuged and filtered through Whatman No. 1 filter paper"
+      }
+    },
+    {
+      "order": 5,
+      "stage": "ingredient_preparation",
+      "type": "other",
+      "description": "Pectin precipitated from the remaining filtrate with ethanol",
+      "source": {
+        "section": "methods",
+        "quote": "The remaining filtrate was precipitated with 400 mL of 95% ethanol"
+      }
+    },
+    {
+      "order": 6,
+      "stage": "ingredient_preparation",
+      "type": "drying",
+      "description": "Pectin freeze-dried",
+      "temperature_c": -4,
+      "duration_value": 24,
+      "duration_unit": "h",
+      "source": {
+        "section": "methods",
+        "quote": "freeze-dried for 24 h at a shelf temperature of −4 °C"
+      }
+    },
+    {
+      "order": 7,
+      "stage": "film_formation",
+      "type": "dissolving",
+      "description": "Sodium alginate dissolved in distilled water",
+      "temperature_c": 60,
+      "source": {
+        "section": "methods",
+        "quote": "0.30 g sodium alginate was dissolved in 66.7 mL distilled water at 60 °C"
+      }
+    },
+    {
+      "order": 8,
+      "stage": "film_formation",
+      "type": "mixing",
+      "description": "Orange peel extract, glycerol and pectin solution added",
+      "source": {
+        "section": "methods",
+        "quote": "followed by addition of 5.3 mL orange peel extract, 1.4 mL glycerol, and 33.3 mL pectin solution (1.5 g pectin in 100 mL distilled water)"
+      }
+    },
+    {
+      "order": 9,
+      "stage": "film_formation",
+      "type": "homogenising",
+      "description": "Chitosan solution added and homogenised at 10,000 rpm",
+      "duration_value": 3,
+      "duration_unit": "min",
+      "source": {
+        "section": "methods",
+        "quote": "Formulation 2 (F2) incorporated 5.0 mL chitosan solution (1 g chitosan and 1 g citric acid in 100 mL distilled water), homogenised at 10,000 rpm for 3 min"
+      }
+    },
+    {
+      "order": 10,
+      "stage": "ingredient_preparation",
+      "type": "homogenising",
+      "description": "Clove essential oil pre-homogenised with Tween 80 at 8000 rpm",
+      "duration_value": 2,
+      "duration_unit": "min",
+      "source": {
+        "section": "methods",
+        "quote": "0.3 mL clove essential oil pre-homogenised with 0.2 mL Tween 80 at 8000 rpm for 2 min"
+      }
+    },
+    {
+      "order": 11,
+      "stage": "film_formation",
+      "type": "degassing",
+      "description": "Degassed in an open glass vessel",
+      "duration_value": 10,
+      "duration_unit": "min",
+      "source": {
+        "section": "methods",
+        "quote": "The solution (15 mL) was degassed for 10 min in an open glass vessel"
+      }
+    },
+    {
+      "order": 12,
+      "stage": "film_formation",
+      "type": "casting",
+      "description": "20 mL cast into a 90 mm glass Petri dish",
+      "source": {
+        "section": "methods",
+        "quote": "20 mL of each coating solution was poured into sterile 90 mm glass Petri dishes"
+      }
+    },
+    {
+      "order": 13,
+      "stage": "film_formation",
+      "type": "drying",
+      "description": "Dried in a hot-air oven",
+      "temperature_c": 37,
+      "duration_value": 16,
+      "duration_unit": "h",
+      "source": {
+        "section": "methods",
+        "quote": "dried in a hot-air oven at 37 °C for 16 h"
+      }
+    }
+  ],
+  "recipes": [
+    {
+      "code": "F3",
+      "description": "Sodium alginate and orange peel pectin with orange peel extract, glycerol, chitosan and clove essential oil emulsified with Tween 80",
+      "is_control": false,
+      "base_polymers": [
+        "sodium alginate",
+        "pectin",
+        "chitosan"
+      ],
+      "ingredients": [
+        {
+          "name": "sodium alginate",
+          "role": "matrix",
+          "amount": 0.3,
+          "unit": "g",
+          "basis": "g",
+          "origin": "bio_based",
+          "source": {
+            "section": "methods",
+            "quote": "0.30 g sodium alginate was dissolved in 66.7 mL distilled water at 60 °C"
+          }
+        },
+        {
+          "name": "distilled water",
+          "role": "solvent",
+          "amount": 66.7,
+          "unit": "mL",
+          "basis": "ml",
+          "origin": "unknown",
+          "source": {
+            "section": "methods",
+            "quote": "0.30 g sodium alginate was dissolved in 66.7 mL distilled water at 60 °C"
+          }
+        },
+        {
+          "name": "orange peel extract",
+          "role": "active_agent",
+          "amount": 5.3,
+          "unit": "mL",
+          "basis": "ml",
+          "origin": "bio_based",
+          "feedstock": "orange peel",
+          "from_waste": true,
+          "source": {
+            "section": "methods",
+            "quote": "followed by addition of 5.3 mL orange peel extract, 1.4 mL glycerol, and 33.3 mL pectin solution (1.5 g pectin in 100 mL distilled water)"
+          }
+        },
+        {
+          "name": "glycerol",
+          "role": "plasticizer",
+          "amount": 1.4,
+          "unit": "mL",
+          "basis": "ml",
+          "origin": "synthetic",
+          "source": {
+            "section": "methods",
+            "quote": "followed by addition of 5.3 mL orange peel extract, 1.4 mL glycerol, and 33.3 mL pectin solution (1.5 g pectin in 100 mL distilled water)"
+          }
+        },
+        {
+          "name": "pectin solution (1.5 g pectin in 100 mL distilled water)",
+          "role": "matrix",
+          "amount": 33.3,
+          "unit": "mL",
+          "basis": "ml",
+          "origin": "bio_based",
+          "feedstock": "orange peel",
+          "from_waste": true,
+          "source": {
+            "section": "methods",
+            "quote": "followed by addition of 5.3 mL orange peel extract, 1.4 mL glycerol, and 33.3 mL pectin solution (1.5 g pectin in 100 mL distilled water)"
+          }
+        },
+        {
+          "name": "chitosan solution (1 g chitosan in 100 mL distilled water)",
+          "role": "matrix",
+          "amount": 5.0,
+          "unit": "mL",
+          "basis": "ml",
+          "origin": "bio_based",
+          "source": {
+            "section": "methods",
+            "quote": "Formulation 2 (F2) incorporated 5.0 mL chitosan solution (1 g chitosan and 1 g citric acid in 100 mL distilled water), homogenised at 10,000 rpm for 3 min"
+          }
+        },
+        {
+          "name": "citric acid",
+          "role": "ph_adjuster",
+          "amount": 1,
+          "unit": "g per 100 mL chitosan solution",
+          "basis": "other",
+          "origin": "unknown",
+          "source": {
+            "section": "methods",
+            "quote": "Formulation 2 (F2) incorporated 5.0 mL chitosan solution (1 g chitosan and 1 g citric acid in 100 mL distilled water), homogenised at 10,000 rpm for 3 min"
+          }
+        },
+        {
+          "name": "clove essential oil",
+          "role": "active_agent",
+          "amount": 0.3,
+          "unit": "mL",
+          "basis": "ml",
+          "origin": "bio_based",
+          "feedstock": "clove",
+          "source": {
+            "section": "methods",
+            "quote": "0.3 mL clove essential oil pre-homogenised with 0.2 mL Tween 80 at 8000 rpm for 2 min"
+          }
+        },
+        {
+          "name": "Tween 80",
+          "role": "emulsifier",
+          "amount": 0.2,
+          "unit": "mL",
+          "basis": "ml",
+          "origin": "synthetic",
+          "source": {
+            "section": "methods",
+            "quote": "0.3 mL clove essential oil pre-homogenised with 0.2 mL Tween 80 at 8000 rpm for 2 min"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "thickness",
+          "name_reported": "average thickness",
+          "value": 0.07,
+          "std_dev": null,
+          "unit": "mm",
+          "test_details": "approximate, stated for all test strips",
+          "source": {
+            "section": "methods",
+            "quote": "Film strips (1 cm × 4 cm, ~0.07 mm average thickness)"
+          }
+        },
+        {
+          "name": "tensile_strength",
+          "name_reported": "tensile strength",
+          "value": 1.21,
+          "std_dev": 0.58,
+          "unit": "MPa",
+          "n_samples": 3,
+          "test_details": "tensile mode, 1.00 mm/s; films stored in a desiccator at room temperature before testing",
+          "source": {
+            "section": "table",
+            "table_label": "Table 4",
+            "quote": "Tensile Strength (MPa) | 2.90 ± 0.36 a | 0.63 ± 0.31 b | 1.21 ± 0.58 b"
+          }
+        },
+        {
+          "name": "youngs_modulus",
+          "name_reported": "Young’s modulus",
+          "value": 0.023,
+          "std_dev": 0.006,
+          "unit": "MPa",
+          "n_samples": 3,
+          "test_details": "tensile mode, 1.00 mm/s; films stored in a desiccator at room temperature before testing",
+          "source": {
+            "section": "results",
+            "quote": "The low Young’s modulus observed for F3 (0.023 ± 0.006 MPa)"
+          }
+        },
+        {
+          "name": "other",
+          "name_reported": "peak force",
+          "value": 0.85,
+          "std_dev": 0.41,
+          "unit": "N",
+          "n_samples": 3,
+          "test_details": "tensile mode, 1.00 mm/s; films stored in a desiccator at room temperature before testing",
+          "source": {
+            "section": "table",
+            "table_label": "Table 4",
+            "quote": "Peak Force (N) | 2.03 ± 0.25 a | 0.44 ± 0.22 b | 0.85 ± 0.41 b"
+          }
+        },
+        {
+          "name": "moisture_content",
+          "name_reported": "moisture content",
+          "value": 28.03,
+          "std_dev": 1.71,
+          "unit": "%",
+          "n_samples": 3,
+          "test_details": "oven drying at 105 °C to constant weight",
+          "source": {
+            "section": "table",
+            "table_label": "Table 3",
+            "quote": "F3 | 28.03 ± 1.71 b"
+          }
+        },
+        {
+          "name": "colour",
+          "name_reported": "L*",
+          "value": 91.74,
+          "std_dev": 0.23,
+          "unit": "",
+          "source": {
+            "section": "table",
+            "table_label": "Table 2",
+            "quote": "F3 | 91.74 ± 0.23 | −2.28 ± 0.31 | 8.32 ± 1.55 | 2.04"
+          }
+        },
+        {
+          "name": "colour",
+          "name_reported": "a*",
+          "value": -2.28,
+          "std_dev": 0.31,
+          "unit": "",
+          "source": {
+            "section": "table",
+            "table_label": "Table 2",
+            "quote": "F3 | 91.74 ± 0.23 | −2.28 ± 0.31 | 8.32 ± 1.55 | 2.04"
+          }
+        },
+        {
+          "name": "colour",
+          "name_reported": "b*",
+          "value": 8.32,
+          "std_dev": 1.55,
+          "unit": "",
+          "source": {
+            "section": "table",
+            "table_label": "Table 2",
+            "quote": "F3 | 91.74 ± 0.23 | −2.28 ± 0.31 | 8.32 ± 1.55 | 2.04"
+          }
+        },
+        {
+          "name": "antioxidant_activity",
+          "name_reported": "DPPH radical scavenging activity",
+          "value_min": 89.46,
+          "value_max": 94.82,
+          "unit": "%",
+          "n_samples": 3,
+          "test_details": "DPPH, film extract 0.5–3.0 mg/mL in methanol, 1 h dark",
+          "source": {
+            "section": "results",
+            "quote": "F3 exhibited the highest scavenging activity across all concentrations (89.46–94.82%)"
+          }
+        },
+        {
+          "name": "other",
+          "name_reported": "total phenolic content (wet weight)",
+          "value": 3.413,
+          "std_dev": 0.012,
+          "unit": "mg GAE/g coating",
+          "n_samples": 3,
+          "test_details": "Folin–Ciocalteu, wet-weight basis",
+          "source": {
+            "section": "table",
+            "table_label": "Table 6",
+            "quote": "F3 | 1.673 ± 0.006 | 3.413 ± 0.012 c"
+          }
+        },
+        {
+          "name": "other",
+          "name_reported": "total phenolic content (dry weight)",
+          "value": 4.74,
+          "std_dev": 0.02,
+          "unit": "mg GAE/g dry film",
+          "test_details": "Folin–Ciocalteu, dry-weight basis",
+          "source": {
+            "section": "results",
+            "quote": "F3: 4.74 ± 0.02 mg GAE/g dry film"
+          }
+        }
+      ]
+    }
+  ],
+  "best_recipes": [
+    {
+      "code": "F3",
+      "criterion": "most favourable visual preservation of cherry tomatoes",
+      "source": {
+        "section": "other",
+        "quote": "F3 demonstrated the most favourable visual preservation outcome overall"
+      }
+    }
+  ]
+}
