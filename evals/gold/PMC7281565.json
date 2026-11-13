@@ -1,0 +1,290 @@
+{
+  "in_scope": true,
+  "out_of_scope_reason": null,
+  "intended_application": "packaging of food products with low water content",
+  "process_steps": [
+    {
+      "order": 1,
+      "stage": "ingredient_preparation",
+      "type": "filtering",
+      "description": "Arabinoxylan fraction purified by dia-ultrafiltration, no relaxation cycles",
+      "temperature_c": 40,
+      "source": {
+        "section": "other",
+        "quote": "The purification by dia-ultrafiltration under permeate flux conditions (at 40 °C, with no relaxation procedure)"
+      }
+    },
+    {
+      "order": 2,
+      "stage": "film_formation",
+      "type": "other",
+      "description": "Purified solution concentrated in a rotary evaporator at 17 mbar",
+      "temperature_c": 40,
+      "source": {
+        "section": "methods",
+        "quote": "operated under a controlled pressure of 17 mbar and a bath temperature of 40 °C"
+      }
+    },
+    {
+      "order": 3,
+      "stage": "film_formation",
+      "type": "heating",
+      "description": "Stirred on a hot plate",
+      "temperature_c": 90,
+      "duration_value": 15,
+      "duration_unit": "min",
+      "source": {
+        "section": "methods",
+        "quote": "the concentrated AX solution was stirred on a hot plate (Velp Scientifica, Usmate, Italy) at 90 °C for 15 min"
+      }
+    },
+    {
+      "order": 4,
+      "stage": "film_formation",
+      "type": "mixing",
+      "description": "Glycerol added",
+      "source": {
+        "section": "methods",
+        "quote": "followed by the addition of glycerol (30% w/w, dry basis)"
+      }
+    },
+    {
+      "order": 5,
+      "stage": "film_formation",
+      "type": "mixing",
+      "description": "Ferulic acid added",
+      "source": {
+        "section": "methods",
+        "quote": "Ferulic acid was also added at this point up to a final concentration of 10% (w/w dry basis) of ferulic acid equivalents"
+      }
+    },
+    {
+      "order": 6,
+      "stage": "film_formation",
+      "type": "heating",
+      "description": "Heated again under stirring",
+      "temperature_c": 90,
+      "duration_value": 10,
+      "duration_unit": "min",
+      "source": {
+        "section": "methods",
+        "quote": "the film solutions were heated again under stirring for 10 min at 90 °C"
+      }
+    },
+    {
+      "order": 7,
+      "stage": "film_formation",
+      "type": "casting",
+      "description": "30 g of solution cast into a 55 mm polystyrene Petri dish",
+      "source": {
+        "section": "methods",
+        "quote": "a mass of 30 g of each solution was transferred to a 55 mm diameter polystyrene Petri dish"
+      }
+    },
+    {
+      "order": 8,
+      "stage": "film_formation",
+      "type": "drying",
+      "description": "Dried in an oven",
+      "temperature_c": 60,
+      "duration_value": 15,
+      "duration_unit": "h",
+      "source": {
+        "section": "methods",
+        "quote": "dried at 60 °C for 15 h using a thermal oven"
+      }
+    }
+  ],
+  "recipes": [
+    {
+      "code": "Arabinoxylans + 30% (w/w dry basis) glycerol + 10% (w/w dry basis) ferulic acid equivalents",
+      "description": "Purified corn fiber arabinoxylans with 30% glycerol and ferulic acid added up to 10% ferulic acid equivalents, for antioxidant activity",
+      "is_control": false,
+      "base_polymers": [
+        "arabinoxylans"
+      ],
+      "ingredients": [
+        {
+          "name": "arabinoxylans (fraction purified by dia-ultrafiltration)",
+          "role": "matrix",
+          "amount": 1.3,
+          "unit": "% (w/w solution) solids",
+          "basis": "wt_pct_of_total",
+          "origin": "bio_based",
+          "feedstock": "corn fiber",
+          "from_waste": true,
+          "source": {
+            "section": "methods",
+            "quote": "was concentrated to a final solids content of 1.3% (w/w solution)"
+          }
+        },
+        {
+          "name": "glycerol",
+          "role": "plasticizer",
+          "amount": 30,
+          "unit": "% w/w, dry basis",
+          "basis": "wt_pct_of_polymer",
+          "origin": "synthetic",
+          "source": {
+            "section": "methods",
+            "quote": "followed by the addition of glycerol (30% w/w, dry basis)"
+          }
+        },
+        {
+          "name": "ferulic acid",
+          "role": "active_agent",
+          "amount": 10,
+          "unit": "% (w/w dry basis) ferulic acid equivalents",
+          "basis": "wt_pct_of_polymer",
+          "origin": "bio_based",
+          "source": {
+            "section": "methods",
+            "quote": "Ferulic acid was also added at this point up to a final concentration of 10% (w/w dry basis) of ferulic acid equivalents"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "thickness",
+          "name_reported": "thickness",
+          "value": 89.0,
+          "std_dev": 35.8,
+          "unit": "μm",
+          "source": {
+            "section": "table",
+            "table_label": "Table 7",
+            "quote": "Arabinoxylans + 30% (w/w dry basis) glycerol + 10% (w/w dry basis) ferulic acid equivalents | 89.0 ± 35.8 | 25.8 ± 3.1 | 17.0 ± 4.0 | 246.1 ± 35.2"
+          }
+        },
+        {
+          "name": "tensile_strength",
+          "name_reported": "stress at break",
+          "value": 25.8,
+          "std_dev": 3.1,
+          "unit": "MPa",
+          "test_details": "1 mm/s; conditioned 15 h at 52.9% RH (methods 2.4.1), tested at 22 °C",
+          "rh_pct": 52.9,
+          "temperature_c": 22,
+          "source": {
+            "section": "table",
+            "table_label": "Table 7",
+            "quote": "Arabinoxylans + 30% (w/w dry basis) glycerol + 10% (w/w dry basis) ferulic acid equivalents | 89.0 ± 35.8 | 25.8 ± 3.1 | 17.0 ± 4.0 | 246.1 ± 35.2"
+          }
+        },
+        {
+          "name": "elongation_at_break",
+          "name_reported": "deformation at break",
+          "value": 17.0,
+          "std_dev": 4.0,
+          "unit": "%",
+          "test_details": "1 mm/s; conditioned 15 h at 52.9% RH (methods 2.4.1), tested at 22 °C",
+          "rh_pct": 52.9,
+          "temperature_c": 22,
+          "source": {
+            "section": "table",
+            "table_label": "Table 7",
+            "quote": "Arabinoxylans + 30% (w/w dry basis) glycerol + 10% (w/w dry basis) ferulic acid equivalents | 89.0 ± 35.8 | 25.8 ± 3.1 | 17.0 ± 4.0 | 246.1 ± 35.2"
+          }
+        },
+        {
+          "name": "youngs_modulus",
+          "name_reported": "Young modulus",
+          "value": 246.1,
+          "std_dev": 35.2,
+          "unit": "MPa",
+          "test_details": "1 mm/s; conditioned 15 h at 52.9% RH (methods 2.4.1), tested at 22 °C",
+          "rh_pct": 52.9,
+          "temperature_c": 22,
+          "source": {
+            "section": "table",
+            "table_label": "Table 7",
+            "quote": "Arabinoxylans + 30% (w/w dry basis) glycerol + 10% (w/w dry basis) ferulic acid equivalents | 89.0 ± 35.8 | 25.8 ± 3.1 | 17.0 ± 4.0 | 246.1 ± 35.2"
+          }
+        },
+        {
+          "name": "water_vapour_permeability",
+          "name_reported": "WVP",
+          "value": 2.06,
+          "std_dev": 0.29,
+          "unit": "×10−11 mol·m·m−2 s−1 Pa",
+          "test_details": "cup method, aw 0.328 inside (MgCl2), 0.529 outside (Mg(NO3)2), weighed every 2 h for 12 h",
+          "source": {
+            "section": "table",
+            "table_label": "Table 6",
+            "quote": "Arabinoxylans + 30% (w/w dry basis) glycerol + 10% (w/w dry basis) ferulic acid equivalents | 89.0 ± 35.81 | 2.06 ± 0.29"
+          }
+        },
+        {
+          "name": "colour",
+          "name_reported": "a*",
+          "value": 1.78,
+          "std_dev": 0.04,
+          "unit": "",
+          "source": {
+            "section": "table",
+            "table_label": "Table 5",
+            "quote": "Arabinoxylan + 30% (w/w dry basis) glycerol + 10% (w/w solution) ferulic acid | 1.78 ± 0.04 | 37.83 ± 0.51 | 76.27 ± 0.31 | 87.28 ± 0.04"
+          }
+        },
+        {
+          "name": "colour",
+          "name_reported": "b*",
+          "value": 37.83,
+          "std_dev": 0.51,
+          "unit": "",
+          "source": {
+            "section": "table",
+            "table_label": "Table 5",
+            "quote": "Arabinoxylan + 30% (w/w dry basis) glycerol + 10% (w/w solution) ferulic acid | 1.78 ± 0.04 | 37.83 ± 0.51 | 76.27 ± 0.31 | 87.28 ± 0.04"
+          }
+        },
+        {
+          "name": "colour",
+          "name_reported": "L*",
+          "value": 76.27,
+          "std_dev": 0.31,
+          "unit": "",
+          "source": {
+            "section": "table",
+            "table_label": "Table 5",
+            "quote": "Arabinoxylan + 30% (w/w dry basis) glycerol + 10% (w/w solution) ferulic acid | 1.78 ± 0.04 | 37.83 ± 0.51 | 76.27 ± 0.31 | 87.28 ± 0.04"
+          }
+        },
+        {
+          "name": "colour",
+          "name_reported": "h°",
+          "value": 87.28,
+          "std_dev": 0.04,
+          "unit": "°",
+          "source": {
+            "section": "table",
+            "table_label": "Table 5",
+            "quote": "Arabinoxylan + 30% (w/w dry basis) glycerol + 10% (w/w solution) ferulic acid | 1.78 ± 0.04 | 37.83 ± 0.51 | 76.27 ± 0.31 | 87.28 ± 0.04"
+          }
+        },
+        {
+          "name": "antioxidant_activity",
+          "name_reported": "FRAP",
+          "value": 9.16,
+          "std_dev": 1.5,
+          "unit": "×10−5 mmol Trolox.mg−1 film",
+          "test_details": "FRAP, direct immersion, 30 min at 37 °C",
+          "source": {
+            "section": "results",
+            "quote": "The values obtained were (1.56 ± 0.85) × 10−5 and (9.16 ± 1.50) × 10−5 mmol Trolox.mg−1 film"
+          }
+        }
+      ]
+    }
+  ],
+  "best_recipes": [
+    {
+      "code": "Arabinoxylans + 30% (w/w dry basis) glycerol + 10% (w/w dry basis) ferulic acid equivalents",
+      "criterion": "antioxidant activity, the stated aim of adding ferulic acid",
+      "source": {
+        "section": "abstract",
+        "quote": "films with the incorporation of ferulic acid were developed, in order to obtain barriers with antioxidant activity"
+      }
+    }
+  ]
+}
