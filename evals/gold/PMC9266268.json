@@ -1,8 +1,215 @@
 {
   "in_scope": true,
   "out_of_scope_reason": null,
-  "intended_application": null,
-  "process_steps": [],
-  "recipes": [],
-  "best_recipes": []
+  "intended_application": "biofilm to control post-harvest fungal decay of organically grown apples during storage",
+  "process_steps": [
+    {
+      "order": 1,
+      "stage": "film_formation",
+      "type": "heating",
+      "description": "Sodium alginate solution heated with constant agitation until completely dissolved",
+      "temperature_c": 70,
+      "source": {
+        "section": "methods",
+        "quote": "the coating solution (2% sodium alginate) was heated at 70 °C with constant agitation until all of the powder was completely dissolved"
+      }
+    },
+    {
+      "order": 2,
+      "stage": "film_formation",
+      "type": "mixing",
+      "description": "Glycerol added and stirred at room temperature",
+      "duration_value": 1,
+      "duration_unit": "h",
+      "source": {
+        "section": "methods",
+        "quote": "glycerol was added to the solution and the mixture was left to stir for 1 h at room temperature"
+      }
+    },
+    {
+      "order": 3,
+      "stage": "ingredient_preparation",
+      "type": "other",
+      "description": "Yeast cultivated in YPD liquid medium overnight",
+      "source": {
+        "section": "methods",
+        "quote": "Yeasts were cultivated in YPD liquid medium overnight"
+      }
+    },
+    {
+      "order": 4,
+      "stage": "ingredient_preparation",
+      "type": "centrifuging",
+      "description": "Cells harvested by centrifugation at 2500 × g and washed with sterile water",
+      "duration_value": 20,
+      "duration_unit": "min",
+      "source": {
+        "section": "methods",
+        "quote": "cells were harvested by centrifugation at 2500× g for 20 min and washed with sterile water"
+      }
+    },
+    {
+      "order": 5,
+      "stage": "film_formation",
+      "type": "mixing",
+      "description": "Yeast cell suspension added to the alginate solution and stirred",
+      "duration_value": 10,
+      "duration_unit": "min",
+      "source": {
+        "section": "methods",
+        "quote": "the killer strain was incorporated by adding the suspension of yeast cells into the alginate coating solution and the mixture was stirred for 10 min"
+      }
+    },
+    {
+      "order": 6,
+      "stage": "film_formation",
+      "type": "casting",
+      "description": "20 mL poured onto 90 mm Petri dishes",
+      "source": {
+        "section": "methods",
+        "quote": "The film-forming solutions (20 mL) were poured onto Petri dishes (90 mm diameter)"
+      }
+    },
+    {
+      "order": 7,
+      "stage": "film_formation",
+      "type": "drying",
+      "description": "Left to dry",
+      "temperature_c": 30,
+      "source": {
+        "section": "methods",
+        "quote": "allowed to dry at 30 °C"
+      }
+    }
+  ],
+  "recipes": [
+    {
+      "code": "AWA",
+      "description": "Sodium alginate film with glycerol and Wickerhamomyces anomalus CBS 1982 killer yeast cells",
+      "is_control": false,
+      "base_polymers": [
+        "sodium alginate"
+      ],
+      "ingredients": [
+        {
+          "name": "sodium alginate",
+          "role": "matrix",
+          "amount": 2,
+          "unit": "% w/v",
+          "basis": "pct_w_v",
+          "origin": "bio_based",
+          "source": {
+            "section": "methods",
+            "quote": "sodium alginate (CAS No 9005-38-3, Sigma Aldrich: Steinheim, Germany; 2% w/v)"
+          }
+        },
+        {
+          "name": "glycerol",
+          "role": "plasticizer",
+          "amount": 0.24,
+          "unit": "g/g of alginate",
+          "basis": "other",
+          "origin": "unknown",
+          "source": {
+            "section": "methods",
+            "quote": "glycerol (0.24 g/g of alginate)"
+          }
+        },
+        {
+          "name": "Wickerhamomyces anomalus CBS 1982 killer yeast cells",
+          "role": "active_agent",
+          "amount": 6,
+          "unit": "~log CFU/cm2 in the dried film",
+          "basis": "other",
+          "origin": "bio_based",
+          "source": {
+            "section": "methods",
+            "quote": "The concentration of the killer yeast cells was fixed to have a final concentration of ~6 logs CFU/cm2 in the bioactive film"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "thickness",
+          "name_reported": "thickness",
+          "value": 0.044,
+          "std_dev": 0.002,
+          "unit": "mm",
+          "test_details": "digital micrometer, mean of 5 locations",
+          "source": {
+            "section": "table",
+            "table_label": "Table 2",
+            "quote": "AWA | 0.044 ± 0.002 b | 40.18 ± 2.91 a | 5.28 ± 1.46 a"
+          }
+        },
+        {
+          "name": "tensile_strength",
+          "name_reported": "TS",
+          "value": 40.18,
+          "std_dev": 2.91,
+          "unit": "MPa",
+          "n_samples": 8,
+          "test_standard": "ASTM D882",
+          "test_details": "20 mm × 100 mm strips, 50 mm grip separation, 60 mm/min",
+          "source": {
+            "section": "table",
+            "table_label": "Table 2",
+            "quote": "AWA | 0.044 ± 0.002 b | 40.18 ± 2.91 a | 5.28 ± 1.46 a"
+          }
+        },
+        {
+          "name": "elongation_at_break",
+          "name_reported": "%E",
+          "value": 5.28,
+          "std_dev": 1.46,
+          "unit": "%",
+          "n_samples": 8,
+          "test_standard": "ASTM D882",
+          "test_details": "20 mm × 100 mm strips, 50 mm grip separation, 60 mm/min",
+          "source": {
+            "section": "table",
+            "table_label": "Table 2",
+            "quote": "AWA | 0.044 ± 0.002 b | 40.18 ± 2.91 a | 5.28 ± 1.46 a"
+          }
+        },
+        {
+          "name": "other",
+          "name_reported": "W. anomalus survival in the film",
+          "value_min": 75,
+          "unit": "% of initial population",
+          "test_details": "after 28 days at 2 °C then 14 days at 22 °C",
+          "source": {
+            "section": "results",
+            "quote": "The population of W. anomalus immobilized in the alginate film at the end of the storage remained above 75%"
+          }
+        },
+        {
+          "name": "antimicrobial_activity",
+          "name_reported": "P. italicum decay incidence on coated apples",
+          "value": 35,
+          "unit": "%",
+          "test_details": "wounded apples inoculated with P. italicum, dip-coated, 28 days at 2 °C then 14 days at 22 °C; uncoated control about 90%",
+          "source": {
+            "section": "results",
+            "quote": "the decay incidence of fruits coated with alginate biofilms containing W. anomalus or P. membranifaciens was about 35% and 75%, respectively"
+          }
+        }
+      ],
+      "gaps": [
+        "solvent for the 2% sodium alginate solution (not named; type of water matters for alginate)",
+        "drying time at 30 °C",
+        "yeast cell concentration added to the solution (only the target ~6 log CFU/cm2 in the dried film is given)"
+      ]
+    }
+  ],
+  "best_recipes": [
+    {
+      "code": "AWA",
+      "criterion": "limiting post-harvest fungal decay of apples",
+      "source": {
+        "section": "other",
+        "quote": "Alginate biofilms containing W. anomalus killer yeasts could be effective in limiting post-harvest fungal decay losses in organically grown apples"
+      }
+    }
+  ]
 }
