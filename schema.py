@@ -39,6 +39,8 @@ OutOfScope = Literal[
     "review", "not_solution_cast", "coating_only", "medical",
     "no_measured_properties", "other",
 ]
+# how the best recipe was chosen: authors name it, abstract reports it, it meets the stated aim, or default rule
+ChosenBy = Literal["stated", "abstract", "aim", "default"]
 
 
 # where a value was found, with an exact quote so it can be checked later
@@ -123,6 +125,7 @@ class Recipe(BaseModel):
 class BestRecipe(BaseModel):
     code: str = Field(description="must match the code of one of the recipes")
     criterion: str = Field(description="what it was best at, as stated, e.g. 'highest tensile strength'")
+    chosen_by: ChosenBy = Field(description="stated: authors present it as their best or optimized film; abstract: the abstract reports its values; aim: it best meets the paper's stated aim; default: main new formulation")
     source: Source
 
 

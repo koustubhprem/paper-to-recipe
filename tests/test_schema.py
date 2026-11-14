@@ -39,7 +39,7 @@ def example():
                              "std_dev": 0.3, "n_samples": 5, "unit": "MPa", "source": SRC}]},
         ],
         "best_recipes": [
-            {"code": "G30", "criterion": "most flexible", "source": M},
+            {"code": "G30", "criterion": "most flexible", "chosen_by": "stated", "source": M},
         ],
     }
 
@@ -110,3 +110,10 @@ def test_gaps_kept():
     data["recipes"][1]["gaps"] = ["drying temperature"]
     paper = PaperExtraction.model_validate(data)
     assert paper.recipes[1].gaps == ["drying temperature"]
+
+
+def test_chosen_by_must_be_known():
+    data = example()
+    data["best_recipes"][0]["chosen_by"] = "guess"
+    with raises(ValidationError):
+        PaperExtraction.model_validate(data)

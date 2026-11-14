@@ -1,8 +1,392 @@
 {
   "in_scope": true,
   "out_of_scope_reason": null,
-  "intended_application": null,
-  "process_steps": [],
-  "recipes": [],
-  "best_recipes": []
+  "intended_application": "active food packaging, proposed for fish",
+  "process_steps": [
+    {
+      "order": 1,
+      "stage": "ingredient_preparation",
+      "type": "grinding",
+      "description": "Dried lemon balm leaves ground",
+      "source": {
+        "section": "methods",
+        "quote": "The dried lemon balm leaves were ground in a grinder"
+      }
+    },
+    {
+      "order": 2,
+      "stage": "ingredient_preparation",
+      "type": "heating",
+      "description": "Microwave-assisted extraction in water, 0.05 g plant/mL, 500 W",
+      "temperature_c": 70,
+      "duration_value": 10,
+      "duration_unit": "min",
+      "source": {
+        "section": "methods",
+        "quote": "(a) solvent/water; (b) solvent/plant ratio—0.05 g plant/mL; (c) extraction time—10 min; (d) cycle power and temperature—500 W and 70 °C"
+      }
+    },
+    {
+      "order": 3,
+      "stage": "ingredient_preparation",
+      "type": "filtering",
+      "description": "Extract filtered through cellulose filter paper",
+      "source": {
+        "section": "methods",
+        "quote": "the sample was filtered (through 100% cellulose filter paper)"
+      }
+    },
+    {
+      "order": 4,
+      "stage": "film_formation",
+      "type": "dissolving",
+      "description": "Polymer dispersion mixed with a magnetic stirrer until fully dissolved",
+      "source": {
+        "section": "methods",
+        "quote": "the individual polymer dispersions were mixed using a magnetic stirrer (Delab MS-H280-S4, Beijing, China) to achieve complete polymer dissolution"
+      }
+    },
+    {
+      "order": 5,
+      "stage": "film_formation",
+      "type": "homogenising",
+      "description": "Homogenised at 12,000 rpm",
+      "duration_value": 5,
+      "duration_unit": "min",
+      "source": {
+        "section": "methods",
+        "quote": "Homogenization was performed using homogenizer (IKA Ultra turax T18, Staufen, Germany) at 12,000 rpm for 5 min"
+      }
+    },
+    {
+      "order": 6,
+      "stage": "film_formation",
+      "type": "mixing",
+      "description": "Stirred with a magnetic stirrer at 600 rpm",
+      "duration_value": 30,
+      "duration_unit": "min",
+      "source": {
+        "section": "methods",
+        "quote": "followed by continuous stirring in a magnetic stirrer at 600 rpm for 30 min"
+      }
+    },
+    {
+      "order": 7,
+      "stage": "film_formation",
+      "type": "mixing",
+      "description": "Lemon balm extract added to 10% (v/v)",
+      "source": {
+        "section": "methods",
+        "quote": "lemon balm extract (Melissa officinalis) (E) was added to the dispersions to obtain concentration of 10% (v/v)"
+      }
+    },
+    {
+      "order": 8,
+      "stage": "film_formation",
+      "type": "mixing",
+      "description": "Glycerol added as plasticizer",
+      "source": {
+        "section": "methods",
+        "quote": "Afterwards, glycerol was added as a plasticizer"
+      }
+    },
+    {
+      "order": 9,
+      "stage": "film_formation",
+      "type": "mixing",
+      "description": "Final dispersion stirred at room temperature",
+      "temperature_c": 23,
+      "duration_value": 10,
+      "duration_unit": "min",
+      "source": {
+        "section": "methods",
+        "quote": "The final film-forming dispersions were stirred for additional 10 min at room temperature (23 ± 2 °C)"
+      }
+    },
+    {
+      "order": 10,
+      "stage": "film_formation",
+      "type": "casting",
+      "description": "30 mL poured into a 150 mm Petri dish",
+      "source": {
+        "section": "methods",
+        "quote": "a defined volume (30 mL) was poured on a Petri dish (150 mm diameter)"
+      }
+    },
+    {
+      "order": 11,
+      "stage": "film_formation",
+      "type": "drying",
+      "description": "Dried in a ventilated climatic chamber at 40% RH",
+      "temperature_c": 30,
+      "duration_value": 24,
+      "duration_unit": "h",
+      "source": {
+        "section": "methods",
+        "quote": "The films were dried in a ventilated climatic chamber (Binder, KBF240, Binder Germany) for 24 h at 30 °C and 40% RH"
+      }
+    }
+  ],
+  "recipes": [
+    {
+      "code": "CS E",
+      "description": "Chitosan film (2% w/v in 1% v/v acetic acid) with 20% glycerol and 10% v/v lemon balm water extract made by microwave-assisted extraction",
+      "is_control": false,
+      "base_polymers": [
+        "chitosan"
+      ],
+      "ingredients": [
+        {
+          "name": "chitosan",
+          "role": "matrix",
+          "amount": 2,
+          "unit": "% (w/v)",
+          "basis": "pct_w_v",
+          "origin": "bio_based",
+          "source": {
+            "section": "methods",
+            "quote": "Films were prepared from 2% (w/v) chitosan dispersion (CS; dissolved in 1% (v/v) acetic acid)"
+          }
+        },
+        {
+          "name": "acetic acid",
+          "role": "ph_adjuster",
+          "amount": 1,
+          "unit": "% (v/v)",
+          "basis": "pct_v_v",
+          "origin": "unknown",
+          "source": {
+            "section": "methods",
+            "quote": "Films were prepared from 2% (w/v) chitosan dispersion (CS; dissolved in 1% (v/v) acetic acid)"
+          }
+        },
+        {
+          "name": "lemon balm extract (Melissa officinalis L.)",
+          "role": "active_agent",
+          "amount": 10,
+          "unit": "% (v/v)",
+          "basis": "pct_v_v",
+          "origin": "bio_based",
+          "feedstock": "dried lemon balm leaves",
+          "source": {
+            "section": "methods",
+            "quote": "lemon balm extract (Melissa officinalis) (E) was added to the dispersions to obtain concentration of 10% (v/v)"
+          }
+        },
+        {
+          "name": "vegetable glycerol",
+          "role": "plasticizer",
+          "amount": 20,
+          "unit": "% (w/pdm, relative to the polymer dry weight)",
+          "basis": "wt_pct_of_polymer",
+          "origin": "bio_based",
+          "feedstock": "vegetable",
+          "source": {
+            "section": "methods",
+            "quote": "glycerol was added as a plasticizer at 20% (w/pdm relative to the polymer dry weight for chitosan and chitosan–gelatine formulations or 0.4 g/100 mL for CS"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "thickness",
+          "name_reported": "l",
+          "value": 73.0,
+          "std_dev": 17.22,
+          "unit": "µm",
+          "test_details": "micrometer, mean of 5 random points",
+          "source": {
+            "section": "table",
+            "table_label": "Table 3",
+            "quote": "CS E | 73.00 ± 17.22 bc | 3.23 ± 0.33 a | 10.20 ± 1.05 a"
+          }
+        },
+        {
+          "name": "water_vapour_permeability",
+          "name_reported": "WVP",
+          "value": 3.23,
+          "std_dev": 0.33,
+          "unit": "g m−1 s−1 Pa−1 ∙10−10",
+          "n_samples": 9,
+          "test_details": "gravimetric cup method, 100% → 25% RH; samples kept at 33% RH before testing",
+          "temperature_c": 23,
+          "source": {
+            "section": "table",
+            "table_label": "Table 3",
+            "quote": "CS E | 73.00 ± 17.22 bc | 3.23 ± 0.33 a | 10.20 ± 1.05 a"
+          }
+        },
+        {
+          "name": "other",
+          "name_reported": "WVTR",
+          "value": 10.2,
+          "std_dev": 1.05,
+          "unit": "g m−2 s−1 ∙10−3",
+          "n_samples": 9,
+          "test_details": "gravimetric cup method, 100% → 25% RH; samples kept at 33% RH before testing",
+          "temperature_c": 23,
+          "source": {
+            "section": "table",
+            "table_label": "Table 3",
+            "quote": "CS E | 73.00 ± 17.22 bc | 3.23 ± 0.33 a | 10.20 ± 1.05 a"
+          }
+        },
+        {
+          "name": "moisture_content",
+          "name_reported": "M",
+          "value": 24.51,
+          "std_dev": 2.43,
+          "unit": "%",
+          "rh_pct": 33,
+          "test_details": "film equilibrated at 33% RH",
+          "source": {
+            "section": "table",
+            "table_label": "Table 1",
+            "quote": "CS E | 24.51 ± 2.43 a | 37.80 ± 3.37 a | 466.24 ± 144.22 a"
+          }
+        },
+        {
+          "name": "water_solubility",
+          "name_reported": "S",
+          "value": 37.8,
+          "std_dev": 3.37,
+          "unit": "%",
+          "test_details": "30 mL distilled water, 24 h",
+          "temperature_c": 25,
+          "source": {
+            "section": "table",
+            "table_label": "Table 1",
+            "quote": "CS E | 24.51 ± 2.43 a | 37.80 ± 3.37 a | 466.24 ± 144.22 a"
+          }
+        },
+        {
+          "name": "swelling",
+          "name_reported": "WA",
+          "value": 466.24,
+          "std_dev": 144.22,
+          "unit": "%",
+          "test_details": "immersed in water for 24 h",
+          "source": {
+            "section": "table",
+            "table_label": "Table 1",
+            "quote": "CS E | 24.51 ± 2.43 a | 37.80 ± 3.37 a | 466.24 ± 144.22 a"
+          }
+        },
+        {
+          "name": "colour",
+          "name_reported": "L*",
+          "value": 72.66,
+          "std_dev": 2.91,
+          "unit": "",
+          "source": {
+            "section": "table",
+            "table_label": "Table 2",
+            "quote": "CS E | 72.66 ± 2.91 b | 0.37 ± 0.28 ab | 13.80 ± 1.87 b | 20.06 ± 3.45 b | 2.00 ± 0.20 a"
+          }
+        },
+        {
+          "name": "colour",
+          "name_reported": "a*",
+          "value": 0.37,
+          "std_dev": 0.28,
+          "unit": "",
+          "source": {
+            "section": "table",
+            "table_label": "Table 2",
+            "quote": "CS E | 72.66 ± 2.91 b | 0.37 ± 0.28 ab | 13.80 ± 1.87 b | 20.06 ± 3.45 b | 2.00 ± 0.20 a"
+          }
+        },
+        {
+          "name": "colour",
+          "name_reported": "b*",
+          "value": 13.8,
+          "std_dev": 1.87,
+          "unit": "",
+          "source": {
+            "section": "table",
+            "table_label": "Table 2",
+            "quote": "CS E | 72.66 ± 2.91 b | 0.37 ± 0.28 ab | 13.80 ± 1.87 b | 20.06 ± 3.45 b | 2.00 ± 0.20 a"
+          }
+        },
+        {
+          "name": "colour",
+          "name_reported": "ΔE",
+          "value": 20.06,
+          "std_dev": 3.45,
+          "unit": "",
+          "test_details": "relative to the CS film without extract",
+          "source": {
+            "section": "table",
+            "table_label": "Table 2",
+            "quote": "CS E | 72.66 ± 2.91 b | 0.37 ± 0.28 ab | 13.80 ± 1.87 b | 20.06 ± 3.45 b | 2.00 ± 0.20 a"
+          }
+        },
+        {
+          "name": "opacity",
+          "name_reported": "T600 (transparency)",
+          "value": 2.0,
+          "std_dev": 0.2,
+          "unit": "mm−1",
+          "test_details": "absorbance at 600 nm divided by thickness",
+          "source": {
+            "section": "table",
+            "table_label": "Table 2",
+            "quote": "CS E | 72.66 ± 2.91 b | 0.37 ± 0.28 ab | 13.80 ± 1.87 b | 20.06 ± 3.45 b | 2.00 ± 0.20 a"
+          }
+        },
+        {
+          "name": "antioxidant_activity",
+          "name_reported": "DPPH inhibition",
+          "value": 59.06,
+          "std_dev": 3.35,
+          "unit": "%",
+          "test_details": "DPPH, about 0.2 g film, 30 min in the dark",
+          "source": {
+            "section": "table",
+            "table_label": "Table 4",
+            "quote": "CS E | 59.06 ± 3.35 a | 44.05 ± 10.94 a"
+          }
+        },
+        {
+          "name": "antioxidant_activity",
+          "name_reported": "FRAP",
+          "value": 44.05,
+          "std_dev": 10.94,
+          "unit": "mg AAE/g film",
+          "n_samples": 3,
+          "test_details": "FRAP on water extract of the film (0.2 g in 20 mL, overnight)",
+          "source": {
+            "section": "table",
+            "table_label": "Table 4",
+            "quote": "CS E | 59.06 ± 3.35 a | 44.05 ± 10.94 a"
+          }
+        },
+        {
+          "name": "other",
+          "name_reported": "dry film density",
+          "value": 1093.03,
+          "unit": "kg/dm3",
+          "source": {
+            "section": "results",
+            "quote": "CS (1502.68 kg/dm3) vs. CS E (1093.03 kg/dm3)"
+          }
+        }
+      ],
+      "gaps": [
+        "time and temperature for dissolving chitosan in acetic acid",
+        "whether the homogenisation and 30 min stirring apply to the single-polymer CS films (described after the blend step)"
+      ]
+    }
+  ],
+  "best_recipes": [
+    {
+      "code": "CS E",
+      "criterion": "highest antioxidant activity (DPPH and FRAP); antioxidant properties are the stated focus of the study, no overall best is named",
+      "chosen_by": "aim",
+      "source": {
+        "section": "results",
+        "quote": "The highest antioxidant activity, as determined by both DPPH and FRAP assays, was observed for the chitosan-based film containing lemon balm extract"
+      }
+    }
+  ]
 }

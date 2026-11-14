@@ -223,10 +223,11 @@
   "best_recipes": [
     {
       "code": "SA2.5 − G1y − MAX1.5",
-      "criterion": "highest tensile strength",
+      "criterion": "the authors' optimized composition; highest tensile strength",
+      "chosen_by": "stated",
       "source": {
-        "section": "results",
-        "quote": "Among all the films, SA2.5 G1y MAX1.5 had the highest tensile strength"
+        "section": "abstract",
+        "quote": "Using an optimized composition (2.5% alginate, 1% glycerol and 1.5% maize arabinoxylans)"
       }
     }
   ]

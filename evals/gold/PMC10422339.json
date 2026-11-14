@@ -395,6 +395,7 @@
     {
       "code": "VCO 3 wt%",
       "criterion": "lowest water vapour transmission rate",
+      "chosen_by": "stated",
       "source": {
         "section": "other",
         "quote": "adding 3 wt% VCO could reduce the value of WVTR. This treatment had the lowest WVTR"

@@ -227,6 +227,7 @@
     {
       "code": "CRG‐ST",
       "criterion": "starch improved tensile strength, elongation, WVP and dry content over carrageenan alone",
+      "chosen_by": "stated",
       "source": {
         "section": "other",
         "quote": "To enhance their properties, starch powder was added as an additive, which resulted in improved tensile strength, percent elongation, water vapor permeability, and dry content"

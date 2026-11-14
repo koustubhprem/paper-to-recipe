@@ -7,7 +7,7 @@
       "order": 1,
       "stage": "film_formation",
       "type": "heating",
-      "description": "Sodium alginate solution heated with constant agitation until completely dissolved",
+      "description": "Sodium alginate solution heated with constant agitation until fully dissolved",
       "temperature_c": 70,
       "source": {
         "section": "methods",
@@ -196,7 +196,7 @@
         }
       ],
       "gaps": [
-        "solvent for the 2% sodium alginate solution (not named; type of water matters for alginate)",
+        "solvent for the 2% sodium alginate solution (not named)",
         "drying time at 30 °C",
         "yeast cell concentration added to the solution (only the target ~6 log CFU/cm2 in the dried film is given)"
       ]
@@ -206,6 +206,7 @@
     {
       "code": "AWA",
       "criterion": "limiting post-harvest fungal decay of apples",
+      "chosen_by": "stated",
       "source": {
         "section": "other",
         "quote": "Alginate biofilms containing W. anomalus killer yeasts could be effective in limiting post-harvest fungal decay losses in organically grown apples"

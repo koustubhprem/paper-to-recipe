@@ -368,6 +368,7 @@
     {
       "code": "EDCA3",
       "criterion": "headline film in the abstract: improved extensibility and water resistance",
+      "chosen_by": "abstract",
       "source": {
         "section": "abstract",
         "quote": "with an elongation at break (EB) of 103.56 ± 3.13%"

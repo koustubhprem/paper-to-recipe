@@ -249,6 +249,7 @@
     {
       "code": "SP_Chi",
       "criterion": "default: main orange-residue formulation; chitosan improved water resistance and strength while keeping the oxygen barrier",
+      "chosen_by": "default",
       "source": {
         "section": "other",
         "quote": "Chitosan improved the water resistance and strength in SP films while maintaining high oxygen barrier properties"

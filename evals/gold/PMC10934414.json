@@ -236,6 +236,7 @@
     {
       "code": "Chit-MCC-Gly-MA",
       "criterion": "better thermal behaviour and photo-oxidation resistance than the acetic acid film",
+      "chosen_by": "stated",
       "source": {
         "section": "other",
         "quote": "the replacement of AA by MA was advantageous in terms of the thermal behavior and photo-oxidation resistance of the films"

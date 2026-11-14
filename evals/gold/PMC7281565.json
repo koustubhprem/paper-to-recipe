@@ -284,6 +284,7 @@
     {
       "code": "Arabinoxylans + 30% (w/w dry basis) glycerol + 10% (w/w dry basis) ferulic acid equivalents",
       "criterion": "antioxidant activity, the stated aim of adding ferulic acid",
+      "chosen_by": "aim",
       "source": {
         "section": "abstract",
         "quote": "films with the incorporation of ferulic acid were developed, in order to obtain barriers with antioxidant activity"

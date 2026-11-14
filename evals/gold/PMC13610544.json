@@ -432,6 +432,7 @@
     {
       "code": "F3",
       "criterion": "most favourable visual preservation of cherry tomatoes",
+      "chosen_by": "stated",
       "source": {
         "section": "other",
         "quote": "F3 demonstrated the most favourable visual preservation outcome overall"
