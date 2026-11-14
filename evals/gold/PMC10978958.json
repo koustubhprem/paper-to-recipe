@@ -1,8 +1,374 @@
 {
   "in_scope": true,
   "out_of_scope_reason": null,
-  "intended_application": null,
-  "process_steps": [],
-  "recipes": [],
-  "best_recipes": []
+  "intended_application": "antibacterial food packaging",
+  "process_steps": [
+    {
+      "order": 1,
+      "stage": "ingredient_preparation",
+      "type": "mixing",
+      "description": "Nickel nitrate and copper nitrate solutions mixed 1:1",
+      "source": {
+        "section": "methods",
+        "quote": "10 mL of nickel nitrate solution (0.25 M) and 10 mL of copper nitrate solution (0.25 M) were mixed in a 1:1 ratio"
+      }
+    },
+    {
+      "order": 2,
+      "stage": "ingredient_preparation",
+      "type": "heating",
+      "description": "Sodium hydroxide added dropwise with vigorous stirring on a heating stirrer",
+      "temperature_c": 60,
+      "duration_value": 2,
+      "duration_unit": "h",
+      "source": {
+        "section": "methods",
+        "quote": "100 mL of 0.5 M sodium hydroxide solution was added dropwise to the solution on a heating stirrer with vigorous stirring at 60 °C for 2 h"
+      }
+    },
+    {
+      "order": 3,
+      "stage": "ingredient_preparation",
+      "type": "filtering",
+      "description": "Precipitate washed four times with water and ethanol on Whatman paper",
+      "source": {
+        "section": "methods",
+        "quote": "the precipitate on the Whatman paper was washed four times with water and ethanol to remove unreacted substances"
+      }
+    },
+    {
+      "order": 4,
+      "stage": "ingredient_preparation",
+      "type": "drying",
+      "description": "Sediment dried in an oven",
+      "temperature_c": 80,
+      "duration_value": 3,
+      "duration_unit": "h",
+      "source": {
+        "section": "methods",
+        "quote": "The obtained sediment was heated in an oven at 80 °C for 3 h to remove excess water"
+      }
+    },
+    {
+      "order": 5,
+      "stage": "ingredient_preparation",
+      "type": "grinding",
+      "description": "Dried sediment crushed in a porcelain mortar",
+      "source": {
+        "section": "methods",
+        "quote": "the dried sediment was crushed in a porcelain mortar"
+      }
+    },
+    {
+      "order": 6,
+      "stage": "ingredient_preparation",
+      "type": "heating",
+      "description": "Powder fired to form NiO–CuO nanoparticles",
+      "temperature_c": 400,
+      "duration_value": 4,
+      "duration_unit": "h",
+      "source": {
+        "section": "methods",
+        "quote": "The sample was then fired at a temperature of 400 °C for 4 h"
+      }
+    },
+    {
+      "order": 7,
+      "stage": "film_formation",
+      "type": "dissolving",
+      "description": "Chitosan stirred in distilled water with 1% v/v acetic acid at room temperature",
+      "duration_value": 1,
+      "duration_unit": "h",
+      "source": {
+        "section": "methods",
+        "quote": "1 g of chitosan was stirred in distilled water containing 1% v/v acetic acid for 1 h at room temperature"
+      }
+    },
+    {
+      "order": 8,
+      "stage": "film_formation",
+      "type": "heating",
+      "description": "Starch stirred in distilled water to a 1.5% w/v solution",
+      "temperature_c": 90,
+      "duration_value": 1,
+      "duration_unit": "h",
+      "source": {
+        "section": "methods",
+        "quote": "0.375 g of starch was stirred in distilled water at a temperature at 90 °C for 1 h to obtain a 1.5% w/v starch solution"
+      }
+    },
+    {
+      "order": 9,
+      "stage": "film_formation",
+      "type": "heating",
+      "description": "PVA stirred in distilled water to a 1% w/v solution",
+      "temperature_c": 70,
+      "duration_value": 1,
+      "duration_unit": "h",
+      "source": {
+        "section": "methods",
+        "quote": "0.5 g of PVA was stirred in distilled water at 70 °C for 1 h until a solution of 1% w/v was obtained"
+      }
+    },
+    {
+      "order": 10,
+      "stage": "film_formation",
+      "type": "mixing",
+      "description": "PVA, starch and chitosan solutions combined in a 4:2:4 ratio",
+      "source": {
+        "section": "methods",
+        "quote": "Next, we prepared a PVA/ST/CS 1% solution in a 4:2:4 ratio"
+      }
+    },
+    {
+      "order": 11,
+      "stage": "film_formation",
+      "type": "mixing",
+      "description": "NiO–CuO nanoparticles added to the mixture",
+      "source": {
+        "section": "methods",
+        "quote": "different percentages of NiO–CuONPs (0.5%, 1%, and 2% w/w) based on dry chitosan, starch, and PVA were added to the prepared mixture"
+      }
+    },
+    {
+      "order": 12,
+      "stage": "film_formation",
+      "type": "heating",
+      "description": "Stirred until homogeneous",
+      "temperature_c": 70,
+      "duration_value": 1,
+      "duration_unit": "h",
+      "source": {
+        "section": "methods",
+        "quote": "The solution was stirred at 70 °C for 1 h until a homogeneous solution was obtained"
+      }
+    },
+    {
+      "order": 13,
+      "stage": "film_formation",
+      "type": "casting",
+      "description": "15 mL poured into an 8 cm polystyrene plate",
+      "source": {
+        "section": "methods",
+        "quote": "15 mL of the mixture was poured into a polystyrene plate with a diameter of 8 cm"
+      }
+    },
+    {
+      "order": 14,
+      "stage": "film_formation",
+      "type": "drying",
+      "description": "Dried at laboratory temperature",
+      "temperature_c": 25,
+      "source": {
+        "section": "methods",
+        "quote": "dried at laboratory temperature, e.g. 25 °C"
+      }
+    }
+  ],
+  "recipes": [
+    {
+      "code": "PVA/ST/CS/NiO-CuONP 1%",
+      "description": "PVA, potato starch and chitosan (4:2:4) blend film with 1% w/w NiO–CuO nanoparticles made in the paper",
+      "is_control": false,
+      "base_polymers": [
+        "polyvinyl alcohol",
+        "potato starch",
+        "chitosan"
+      ],
+      "ingredients": [
+        {
+          "name": "polyvinyl alcohol (1% w/v solution)",
+          "role": "matrix",
+          "amount": 4,
+          "unit": "parts in the 4:2:4 PVA:ST:CS blend",
+          "basis": "other",
+          "origin": "synthetic",
+          "source": {
+            "section": "methods",
+            "quote": "Next, we prepared a PVA/ST/CS 1% solution in a 4:2:4 ratio"
+          }
+        },
+        {
+          "name": "potato starch (1.5% w/v solution)",
+          "role": "matrix",
+          "amount": 2,
+          "unit": "parts in the 4:2:4 PVA:ST:CS blend",
+          "basis": "other",
+          "origin": "bio_based",
+          "feedstock": "potato",
+          "source": {
+            "section": "methods",
+            "quote": "Next, we prepared a PVA/ST/CS 1% solution in a 4:2:4 ratio"
+          }
+        },
+        {
+          "name": "chitosan (1% w/v solution)",
+          "role": "matrix",
+          "amount": 4,
+          "unit": "parts in the 4:2:4 PVA:ST:CS blend",
+          "basis": "other",
+          "origin": "bio_based",
+          "source": {
+            "section": "methods",
+            "quote": "Next, we prepared a PVA/ST/CS 1% solution in a 4:2:4 ratio"
+          }
+        },
+        {
+          "name": "acetic acid",
+          "role": "ph_adjuster",
+          "amount": 1,
+          "unit": "% v/v in the chitosan solution",
+          "basis": "pct_v_v",
+          "origin": "unknown",
+          "source": {
+            "section": "methods",
+            "quote": "1 g of chitosan was stirred in distilled water containing 1% v/v acetic acid for 1 h at room temperature"
+          }
+        },
+        {
+          "name": "NiO–CuO nanoparticles",
+          "role": "active_agent",
+          "amount": 1,
+          "unit": "% w/w of dry chitosan, starch and PVA",
+          "basis": "wt_pct_of_polymer",
+          "origin": "synthetic",
+          "source": {
+            "section": "methods",
+            "quote": "different percentages of NiO–CuONPs (0.5%, 1%, and 2% w/w) based on dry chitosan, starch, and PVA were added to the prepared mixture"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "tensile_strength",
+          "name_reported": "TS",
+          "value": 31.94,
+          "std_dev": 1.58,
+          "unit": "MPa",
+          "n_samples": 3,
+          "test_details": "10 × 60 mm strips, 40 mm gauge length, 1 mm/min",
+          "source": {
+            "section": "table",
+            "table_label": "Table 1",
+            "quote": "PVA/ST/CS /NiO-CuONP 1% | 0.45 ± 0.05c | 2.68 ± 0.58c | 27.0 ± 1.26c | 15.28 ± 0.97b | 31.94 ± 1.58c | 0.03"
+          }
+        },
+        {
+          "name": "elongation_at_break",
+          "name_reported": "EAB",
+          "value": 15.28,
+          "std_dev": 0.97,
+          "unit": "%",
+          "n_samples": 3,
+          "test_details": "10 × 60 mm strips, 40 mm gauge length, 1 mm/min",
+          "source": {
+            "section": "table",
+            "table_label": "Table 1",
+            "quote": "PVA/ST/CS /NiO-CuONP 1% | 0.45 ± 0.05c | 2.68 ± 0.58c | 27.0 ± 1.26c | 15.28 ± 0.97b | 31.94 ± 1.58c | 0.03"
+          }
+        },
+        {
+          "name": "water_vapour_permeability",
+          "name_reported": "WVP",
+          "value": 0.45,
+          "std_dev": 0.05,
+          "unit": "g mm/m2 day kPa",
+          "n_samples": 3,
+          "test_standard": "ASTM E96-05",
+          "test_details": "CaSO4 inside (0% RH), saturated K2SO4 outside (97% RH), 7 days",
+          "temperature_c": 25,
+          "source": {
+            "section": "table",
+            "table_label": "Table 1",
+            "quote": "PVA/ST/CS /NiO-CuONP 1% | 0.45 ± 0.05c | 2.68 ± 0.58c | 27.0 ± 1.26c | 15.28 ± 0.97b | 31.94 ± 1.58c | 0.03"
+          }
+        },
+        {
+          "name": "other",
+          "name_reported": "MA (moisture absorption)",
+          "value": 2.68,
+          "std_dev": 0.58,
+          "unit": "%",
+          "n_samples": 3,
+          "test_details": "dried at 0% RH for 24 h, then 55% RH to constant weight",
+          "rh_pct": 55,
+          "temperature_c": 25,
+          "source": {
+            "section": "table",
+            "table_label": "Table 1",
+            "quote": "PVA/ST/CS /NiO-CuONP 1% | 0.45 ± 0.05c | 2.68 ± 0.58c | 27.0 ± 1.26c | 15.28 ± 0.97b | 31.94 ± 1.58c | 0.03"
+          }
+        },
+        {
+          "name": "water_solubility",
+          "name_reported": "WS",
+          "value": 27.0,
+          "std_dev": 1.26,
+          "unit": "%",
+          "n_samples": 3,
+          "test_details": "50 mL distilled water, 24 h",
+          "source": {
+            "section": "table",
+            "table_label": "Table 1",
+            "quote": "PVA/ST/CS /NiO-CuONP 1% | 0.45 ± 0.05c | 2.68 ± 0.58c | 27.0 ± 1.26c | 15.28 ± 0.97b | 31.94 ± 1.58c | 0.03"
+          }
+        },
+        {
+          "name": "thickness",
+          "name_reported": "thickness",
+          "value": 0.03,
+          "unit": "mm",
+          "test_details": "same value reported for all films",
+          "source": {
+            "section": "table",
+            "table_label": "Table 1",
+            "quote": "PVA/ST/CS /NiO-CuONP 1% | 0.45 ± 0.05c | 2.68 ± 0.58c | 27.0 ± 1.26c | 15.28 ± 0.97b | 31.94 ± 1.58c | 0.03"
+          }
+        },
+        {
+          "name": "antimicrobial_activity",
+          "name_reported": "inhibitory zone, S. aureus",
+          "value": 11.5,
+          "std_dev": 0.25,
+          "unit": "mm",
+          "test_details": "disk diffusion, 5 mm film disks, 37 °C for 24 h",
+          "source": {
+            "section": "table",
+            "table_label": "Table 2",
+            "quote": "PVA/ST/CS/NiO–CuONP 1% | 11.50 ± 0.25c | 10.50 ± 0.12c"
+          }
+        },
+        {
+          "name": "antimicrobial_activity",
+          "name_reported": "inhibitory zone, E. coli",
+          "value": 10.5,
+          "std_dev": 0.12,
+          "unit": "mm",
+          "test_details": "disk diffusion, 5 mm film disks, 37 °C for 24 h",
+          "source": {
+            "section": "table",
+            "table_label": "Table 2",
+            "quote": "PVA/ST/CS/NiO–CuONP 1% | 11.50 ± 0.25c | 10.50 ± 0.12c"
+          }
+        }
+      ],
+      "gaps": [
+        "water volumes for the polymer solutions (only polymer mass and final concentration are given; 1 g chitosan is given for both the 1% and 2% solutions)",
+        "whether the 4:2:4 ratio is by volume or by mass",
+        "whether glycerol was used (listed in materials but not in the film method)",
+        "drying time"
+      ]
+    }
+  ],
+  "best_recipes": [
+    {
+      "code": "PVA/ST/CS/NiO-CuONP 1%",
+      "criterion": "good mechanical strength, water resistance and antibacterial activity; recommended for food packaging",
+      "chosen_by": "stated",
+      "source": {
+        "section": "other",
+        "quote": "In general, among the films prepared, the PVA/ST/CS/NiO-CuONP 1% film showed good mechanical strength, water resistance and antibacterial activity and can be recommended for food packaging"
+      }
+    }
+  ]
 }

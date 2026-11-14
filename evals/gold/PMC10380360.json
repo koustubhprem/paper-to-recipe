@@ -1,8 +1,364 @@
 {
   "in_scope": true,
   "out_of_scope_reason": null,
-  "intended_application": null,
-  "process_steps": [],
-  "recipes": [],
-  "best_recipes": []
+  "intended_application": "acid–base-sensitive active and/or smart packaging, proposed as food freshness sensors",
+  "process_steps": [
+    {
+      "order": 1,
+      "stage": "ingredient_preparation",
+      "type": "sonicating",
+      "description": "Deionised water added to dried hibiscus flowers in an ultrasound bath",
+      "temperature_c": 40,
+      "duration_value": 10,
+      "duration_unit": "min",
+      "source": {
+        "section": "methods",
+        "quote": "50 g of deionised water was added to 10 g of dried hibiscus flowers, and the mixture was placed in an ultrasound bath (Sonic 10, Polsonic, Warsaw, Poland) for 10 min at 40 °C"
+      }
+    },
+    {
+      "order": 2,
+      "stage": "ingredient_preparation",
+      "type": "sonicating",
+      "description": "Extract filtered, olive oil added, and emulsified with a 20 kHz ultrasonic processor",
+      "duration_value": 5,
+      "duration_unit": "min",
+      "source": {
+        "section": "methods",
+        "quote": "After filtration, 50 g of oil was added to the filtrate, and emulsification was performed using a 20 kHz low-frequency ultrasonic processor (Sonopuls HD 4200, Bandelin, Berlin, Germany) for 5 min"
+      }
+    },
+    {
+      "order": 3,
+      "stage": "film_formation",
+      "type": "mixing",
+      "description": "Sodium alginate suspended in water",
+      "source": {
+        "section": "methods",
+        "quote": "A suspension of 40.0 g of sodium alginate in 940 g of water was prepared"
+      }
+    },
+    {
+      "order": 4,
+      "stage": "film_formation",
+      "type": "heating",
+      "description": "Stirred at 700 rpm until a homogeneous gel formed",
+      "temperature_c": 70,
+      "source": {
+        "section": "methods",
+        "quote": "The resulting suspension was stirred with a magnetic stirrer (Heidolph RZR 2020, Heidolph Instruments GmbH & Co. KG, Schwabach, Deutschland) at 70 °C, 700 RPM, until a homogeneous gel was obtained"
+      }
+    },
+    {
+      "order": 5,
+      "stage": "film_formation",
+      "type": "mixing",
+      "description": "Glycerine added as plasticiser",
+      "source": {
+        "section": "methods",
+        "quote": "Then, 20 g of glycerine was added as a plasticiser"
+      }
+    },
+    {
+      "order": 6,
+      "stage": "film_formation",
+      "type": "dissolving",
+      "description": "Chitosan mixture stirred at 700 rpm until a clear gel formed",
+      "temperature_c": 70,
+      "source": {
+        "section": "methods",
+        "quote": "The mixture was placed on a magnetic stirrer (700 rpm, temperature: 70 °C; Heidolph RZR 2020, Heidolph Instruments GmbH & Co. KG, Schwabach, Deutschland) until a clear gel was obtained"
+      }
+    },
+    {
+      "order": 7,
+      "stage": "film_formation",
+      "type": "homogenising",
+      "description": "Emulsion 1 added to the chitosan hydrogel and homogenised until uniform",
+      "source": {
+        "section": "methods",
+        "quote": "5.0 g of emulsion 1 was added to a 150 g 2% chitosan hydrogel and mixed with a mechanical homogeniser (Polytron PT 2500 E, Kinematica AG, Malters, Switzerland) until a uniform mixture was produced"
+      }
+    },
+    {
+      "order": 8,
+      "stage": "film_formation",
+      "type": "homogenising",
+      "description": "Chitosan mixture added to the sodium alginate suspension while homogenising",
+      "duration_value": 15,
+      "duration_unit": "min",
+      "source": {
+        "section": "methods",
+        "quote": "the resulting hydrogel was added to a 300 g 2% sodium alginate suspension while stirring with the mechanical homogeniser for a further 15 min"
+      }
+    },
+    {
+      "order": 9,
+      "stage": "film_formation",
+      "type": "casting",
+      "description": "Poured into a 250 × 200 mm polypropylene tray",
+      "source": {
+        "section": "methods",
+        "quote": "The resulting hydrogel was poured into a 250 × 200 mm polypropylene tray and dried at room temperature (25 ± 2 °C) for 48 h"
+      }
+    },
+    {
+      "order": 10,
+      "stage": "film_formation",
+      "type": "drying",
+      "description": "Dried at room temperature",
+      "temperature_c": 25,
+      "duration_value": 48,
+      "duration_unit": "h",
+      "source": {
+        "section": "methods",
+        "quote": "The resulting hydrogel was poured into a 250 × 200 mm polypropylene tray and dried at room temperature (25 ± 2 °C) for 48 h"
+      }
+    }
+  ],
+  "recipes": [
+    {
+      "code": "CA-1",
+      "description": "Chitosan hydrogel with olive oil and hibiscus water-extract emulsion (emulsion 1), added to sodium alginate suspension with glycerine",
+      "is_control": false,
+      "base_polymers": [
+        "chitosan",
+        "sodium alginate"
+      ],
+      "ingredients": [
+        {
+          "name": "2% chitosan hydrogel (40.0 g chitosan in 940 g of 0.5% acetic acid)",
+          "role": "matrix",
+          "amount": 150,
+          "unit": "g",
+          "basis": "g",
+          "origin": "bio_based",
+          "feedstock": "shrimp shells",
+          "source": {
+            "section": "methods",
+            "quote": "added to a 150 g 2% chitosan hydrogel"
+          }
+        },
+        {
+          "name": "acetic acid",
+          "role": "ph_adjuster",
+          "amount": 0.5,
+          "unit": "% solution used to dissolve chitosan",
+          "basis": "other",
+          "origin": "unknown",
+          "source": {
+            "section": "methods",
+            "quote": "weighing out 40.0 g chitosan and dissolving it in 940 g of 0.5% acetic acid solution"
+          }
+        },
+        {
+          "name": "2% sodium alginate suspension (40.0 g sodium alginate in 940 g water, with 20 g glycerine)",
+          "role": "matrix",
+          "amount": 300,
+          "unit": "g",
+          "basis": "g",
+          "origin": "bio_based",
+          "source": {
+            "section": "methods",
+            "quote": "added to a 300 g 2% sodium alginate suspension"
+          }
+        },
+        {
+          "name": "glycerine",
+          "role": "plasticizer",
+          "amount": 20,
+          "unit": "g per 40.0 g sodium alginate in 940 g water",
+          "basis": "other",
+          "origin": "unknown",
+          "source": {
+            "section": "methods",
+            "quote": "Then, 20 g of glycerine was added as a plasticiser"
+          }
+        },
+        {
+          "name": "emulsion 1 (water extract of 10 g dried hibiscus flowers in 50 g deionised water, filtered, with 50 g olive oil)",
+          "role": "active_agent",
+          "amount": 5.0,
+          "unit": "g",
+          "basis": "g",
+          "origin": "bio_based",
+          "feedstock": "extra virgin olive oil and dried hibiscus flower calyx",
+          "source": {
+            "section": "methods",
+            "quote": "5.0 g of emulsion 1 was added to a 150 g 2% chitosan hydrogel"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "thickness",
+          "name_reported": "thickness",
+          "value": 0.192,
+          "std_dev": 0.005,
+          "unit": "mm",
+          "test_details": "micrometer, mean of 5 points in the gauge length",
+          "source": {
+            "section": "table",
+            "table_label": "Table 4",
+            "quote": "CA-1 | 0.192 ± 0.005 b | 43.22 ± 3.12 b | 22.61 ± 1.94 b"
+          }
+        },
+        {
+          "name": "tensile_strength",
+          "name_reported": "TS",
+          "value": 43.22,
+          "std_dev": 3.12,
+          "unit": "MPa",
+          "n_samples": 10,
+          "test_details": "35 × 6 mm strips, 20 mm grip distance, 2 mm/min",
+          "source": {
+            "section": "table",
+            "table_label": "Table 4",
+            "quote": "CA-1 | 0.192 ± 0.005 b | 43.22 ± 3.12 b | 22.61 ± 1.94 b"
+          }
+        },
+        {
+          "name": "elongation_at_break",
+          "name_reported": "EAB",
+          "value": 22.61,
+          "std_dev": 1.94,
+          "unit": "%",
+          "n_samples": 10,
+          "test_details": "35 × 6 mm strips, 20 mm grip distance, 2 mm/min",
+          "source": {
+            "section": "table",
+            "table_label": "Table 4",
+            "quote": "CA-1 | 0.192 ± 0.005 b | 43.22 ± 3.12 b | 22.61 ± 1.94 b"
+          }
+        },
+        {
+          "name": "moisture_content",
+          "name_reported": "water content",
+          "value": 9.72,
+          "std_dev": 0.09,
+          "unit": "%",
+          "test_details": "oven at 130 °C for 2 h",
+          "source": {
+            "section": "table",
+            "table_label": "Table 1",
+            "quote": "CA-1 | 9.72 ± 0.09 b | 47.54 ± 0.98 b"
+          }
+        },
+        {
+          "name": "water_solubility",
+          "name_reported": "water solubility",
+          "value": 47.54,
+          "std_dev": 0.98,
+          "unit": "%",
+          "test_details": "30 mL distilled water, 24 h",
+          "temperature_c": 25,
+          "source": {
+            "section": "table",
+            "table_label": "Table 1",
+            "quote": "CA-1 | 9.72 ± 0.09 b | 47.54 ± 0.98 b"
+          }
+        },
+        {
+          "name": "colour",
+          "name_reported": "L* (D65)",
+          "value": 81.64,
+          "std_dev": 0.21,
+          "unit": "",
+          "source": {
+            "section": "table",
+            "table_label": "Table 5",
+            "quote": "CA-1 | 81.64 ± 0.21 d | 0.82 ± 0.05 c | 17.22 ± 0.12 b | 8.78"
+          }
+        },
+        {
+          "name": "colour",
+          "name_reported": "a* (D65)",
+          "value": 0.82,
+          "std_dev": 0.05,
+          "unit": "",
+          "source": {
+            "section": "table",
+            "table_label": "Table 5",
+            "quote": "CA-1 | 81.64 ± 0.21 d | 0.82 ± 0.05 c | 17.22 ± 0.12 b | 8.78"
+          }
+        },
+        {
+          "name": "colour",
+          "name_reported": "b* (D65)",
+          "value": 17.22,
+          "std_dev": 0.12,
+          "unit": "",
+          "source": {
+            "section": "table",
+            "table_label": "Table 5",
+            "quote": "CA-1 | 81.64 ± 0.21 d | 0.82 ± 0.05 c | 17.22 ± 0.12 b | 8.78"
+          }
+        },
+        {
+          "name": "opacity",
+          "name_reported": "opacity",
+          "value": 8.78,
+          "unit": "",
+          "test_details": "absorbance at 600 nm divided by thickness (mm)",
+          "source": {
+            "section": "table",
+            "table_label": "Table 5",
+            "quote": "CA-1 | 81.64 ± 0.21 d | 0.82 ± 0.05 c | 17.22 ± 0.12 b | 8.78"
+          }
+        },
+        {
+          "name": "degradation_temperature",
+          "name_reported": "Tm, 2nd decomposition (TGA)",
+          "value": 211.57,
+          "unit": "°C",
+          "test_details": "TGA, 30–500 °C at 10 °C/min, inert gas",
+          "source": {
+            "section": "table",
+            "table_label": "Table 3",
+            "quote": "CA-1 | 108.21 | 34.56–175.23 | 211.57 | 177.40–309.23 | 331.23 | 310.05–387.19 | 463.18–477.76 | 388.50–499.84"
+          }
+        },
+        {
+          "name": "degradation_temperature",
+          "name_reported": "Tm, 3rd decomposition (TGA)",
+          "value": 331.23,
+          "unit": "°C",
+          "test_details": "TGA, 30–500 °C at 10 °C/min, inert gas",
+          "source": {
+            "section": "table",
+            "table_label": "Table 3",
+            "quote": "CA-1 | 108.21 | 34.56–175.23 | 211.57 | 177.40–309.23 | 331.23 | 310.05–387.19 | 463.18–477.76 | 388.50–499.84"
+          }
+        },
+        {
+          "name": "degradation_temperature",
+          "name_reported": "Tm, 4th decomposition (TGA)",
+          "value_min": 463.18,
+          "value_max": 477.76,
+          "unit": "°C",
+          "test_details": "TGA, 30–500 °C at 10 °C/min, inert gas",
+          "source": {
+            "section": "table",
+            "table_label": "Table 3",
+            "quote": "CA-1 | 108.21 | 34.56–175.23 | 211.57 | 177.40–309.23 | 331.23 | 310.05–387.19 | 463.18–477.76 | 388.50–499.84"
+          }
+        }
+      ],
+      "gaps": [
+        "actual polymer concentration of the hydrogels: called 2%, but 40.0 g in 940 g (plus 20 g glycerine) works out at about 4%",
+        "chitosan hydrogel batch size: 2000 g stated, but 40.0 g chitosan in 940 g acetic acid adds up to 980 g"
+      ]
+    }
+  ],
+  "best_recipes": [
+    {
+      "code": "CA-1",
+      "criterion": "highest emission intensity, the basis of the acid–base sensing the title and conclusion highlight (proposed freshness sensors); in the CA series the conclusion prefers for encapsulation; no single best film is named",
+      "chosen_by": "aim",
+      "source": {
+        "section": "results",
+        "quote": "for both series (CA and AC), the highest intensity was observed for composites containing emulsion no. 1 (CA-1 and AC-1)"
+      }
+    }
+  ]
 }

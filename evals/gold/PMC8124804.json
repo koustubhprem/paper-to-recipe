@@ -1,8 +1,461 @@
 {
   "in_scope": true,
   "out_of_scope_reason": null,
-  "intended_application": null,
-  "process_steps": [],
-  "recipes": [],
-  "best_recipes": []
+  "intended_application": "packaging (antifungal), or medical and pharmaceutical uses",
+  "process_steps": [
+    {
+      "order": 1,
+      "stage": "ingredient_preparation",
+      "type": "other",
+      "description": "Chitin extraction: deproteinised with NaOH, calcium carbonate removed with HCl, lipids and pigments removed with acetone",
+      "source": {
+        "section": "methods",
+        "quote": "the first step was deproteinization with 1M NaOH, in the second step calcium carbonate was removed by using 1 M HCl and, in the last step, lipids and pigments were removed by acetone"
+      }
+    },
+    {
+      "order": 2,
+      "stage": "ingredient_preparation",
+      "type": "heating",
+      "description": "Chitin deacetylated in 60% NaOH (1:15 w/v) in an oil bath under nitrogen",
+      "temperature_c": 130,
+      "duration_value": 4,
+      "duration_unit": "h",
+      "source": {
+        "section": "methods",
+        "quote": "chitin powder was treated with a NaOH solution (60% w/v) using a CH: NaOH ratio of 1:15 w/v at 130 °C in an oil bath for 4 h under N2 atmosphere"
+      }
+    },
+    {
+      "order": 3,
+      "stage": "ingredient_preparation",
+      "type": "filtering",
+      "description": "Chitosan filtered and washed",
+      "source": {
+        "section": "methods",
+        "quote": "The obtained CS was filtered and washed"
+      }
+    },
+    {
+      "order": 4,
+      "stage": "ingredient_preparation",
+      "type": "drying",
+      "description": "Chitosan dried in an oven overnight",
+      "temperature_c": 106,
+      "source": {
+        "section": "methods",
+        "quote": "it was dried in an oven at 106 °C overnight"
+      }
+    },
+    {
+      "order": 5,
+      "stage": "ingredient_preparation",
+      "type": "other",
+      "description": "Microwave-assisted acid hydrolysis in 1 M HCl at 79.08 W",
+      "duration_value": 29.08,
+      "duration_unit": "min",
+      "source": {
+        "section": "methods",
+        "quote": "acid hydrolysis using the microwave-assisted technique (Discover system, CEM, Matthews, NC, USA) under the following conditions: 1 M of HCl for 29.08 min at 79.08 W"
+      }
+    },
+    {
+      "order": 6,
+      "stage": "ingredient_preparation",
+      "type": "other",
+      "description": "Essential oil fractionated into deterpenated fractions by reduced pressure steam distillation",
+      "source": {
+        "section": "methods",
+        "quote": "The essential oil (EO) and the 3 deterpenated fractions (F1, F2 and F3) of Origanum majorana L. (OM) were extracted by reduced pressure steam distillation as a function of boiling temperature"
+      }
+    },
+    {
+      "order": 7,
+      "stage": "film_formation",
+      "type": "dissolving",
+      "description": "Chitosan dissolved in acetic acid overnight with stirring, then filtered",
+      "source": {
+        "section": "methods",
+        "quote": "CS (1% w/v) was dissolved in acetic acid solution (1% v/v) overnight with stirring, and the solution was then filtered to remove potential impurities"
+      }
+    },
+    {
+      "order": 8,
+      "stage": "film_formation",
+      "type": "homogenising",
+      "description": "Glycerol added and mixed at 14,600 rpm at room temperature",
+      "duration_value": 5,
+      "duration_unit": "min",
+      "source": {
+        "section": "methods",
+        "quote": "0.16% v/v glycerol (CS-based) was added to chitosan solution as a plasticizer and the mixture was stirred for 5 min at 14,600 rpm at room temperature"
+      }
+    },
+    {
+      "order": 9,
+      "stage": "film_formation",
+      "type": "mixing",
+      "description": "Tween 20 added as emulsifier",
+      "source": {
+        "section": "methods",
+        "quote": "Tween 20 (0.016% v/v, CS-based) was added as an emulsifier to assist essential oil dispersion in the film-forming solutions"
+      }
+    },
+    {
+      "order": 10,
+      "stage": "film_formation",
+      "type": "homogenising",
+      "description": "Oil fraction added and mixed at 14,600 rpm",
+      "duration_value": 10,
+      "duration_unit": "min",
+      "source": {
+        "section": "methods",
+        "quote": "oil fractions (0.25% v/v F1, F2 and F3, CS-based) and essential oil (0.25% v/v OM, CS-based) were added and mixed at 14,600 rpm for 10 min"
+      }
+    },
+    {
+      "order": 11,
+      "stage": "film_formation",
+      "type": "homogenising",
+      "description": "β-chitin nanofibers added and mixed at 14,600 rpm",
+      "duration_value": 10,
+      "duration_unit": "min",
+      "source": {
+        "section": "methods",
+        "quote": "β-CHNF (0.5% w/v, CS-based) was added to each solution and mixed for 10 min at 14,600 rpm"
+      }
+    },
+    {
+      "order": 12,
+      "stage": "film_formation",
+      "type": "degassing",
+      "description": "Suspension degassed to remove air bubbles",
+      "source": {
+        "section": "methods",
+        "quote": "All suspensions were degassed to remove the air bubbles"
+      }
+    },
+    {
+      "order": 13,
+      "stage": "film_formation",
+      "type": "casting",
+      "description": "Cast in 50 mm Petri dishes",
+      "source": {
+        "section": "methods",
+        "quote": "The films were prepared by the casting method overnight at 30 °C using 50-mm diameter Petri dishes"
+      }
+    },
+    {
+      "order": 14,
+      "stage": "film_formation",
+      "type": "drying",
+      "description": "Dried overnight",
+      "temperature_c": 30,
+      "source": {
+        "section": "methods",
+        "quote": "The films were prepared by the casting method overnight at 30 °C using 50-mm diameter Petri dishes"
+      }
+    }
+  ],
+  "recipes": [
+    {
+      "code": "CSNF-F1",
+      "description": "Chitosan from spider crab shell waste with β-chitin nanofibers, glycerol, Tween 20 and the Origanum majorana L. essential oil fraction F1 (87.92% terpenic hydrocarbons)",
+      "is_control": false,
+      "base_polymers": [
+        "chitosan"
+      ],
+      "ingredients": [
+        {
+          "name": "chitosan",
+          "role": "matrix",
+          "amount": 1,
+          "unit": "% w/v",
+          "basis": "pct_w_v",
+          "origin": "bio_based",
+          "feedstock": "spider crab shells",
+          "from_waste": true,
+          "source": {
+            "section": "methods",
+            "quote": "CS (1% w/v) was dissolved in acetic acid solution (1% v/v) overnight with stirring, and the solution was then filtered to remove potential impurities"
+          }
+        },
+        {
+          "name": "acetic acid",
+          "role": "ph_adjuster",
+          "amount": 1,
+          "unit": "% v/v",
+          "basis": "pct_v_v",
+          "origin": "unknown",
+          "source": {
+            "section": "methods",
+            "quote": "CS (1% w/v) was dissolved in acetic acid solution (1% v/v) overnight with stirring, and the solution was then filtered to remove potential impurities"
+          }
+        },
+        {
+          "name": "glycerol",
+          "role": "plasticizer",
+          "amount": 0.16,
+          "unit": "% v/v (CS-based)",
+          "basis": "other",
+          "origin": "unknown",
+          "source": {
+            "section": "methods",
+            "quote": "0.16% v/v glycerol (CS-based) was added to chitosan solution as a plasticizer and the mixture was stirred for 5 min at 14,600 rpm at room temperature"
+          }
+        },
+        {
+          "name": "Tween 20",
+          "role": "emulsifier",
+          "amount": 0.016,
+          "unit": "% v/v (CS-based)",
+          "basis": "other",
+          "origin": "unknown",
+          "source": {
+            "section": "methods",
+            "quote": "Tween 20 (0.016% v/v, CS-based) was added as an emulsifier to assist essential oil dispersion in the film-forming solutions"
+          }
+        },
+        {
+          "name": "Origanum majorana L. essential oil, deterpenated fraction F1 (87.92% terpenic hydrocarbons)",
+          "role": "active_agent",
+          "amount": 0.25,
+          "unit": "% v/v (CS-based)",
+          "basis": "other",
+          "origin": "bio_based",
+          "feedstock": "Origanum majorana L. essential oil",
+          "source": {
+            "section": "methods",
+            "quote": "oil fractions (0.25% v/v F1, F2 and F3, CS-based) and essential oil (0.25% v/v OM, CS-based) were added and mixed at 14,600 rpm for 10 min"
+          }
+        },
+        {
+          "name": "β-chitin nanofibers (β-CHNF)",
+          "role": "filler",
+          "amount": 0.5,
+          "unit": "% w/v (CS-based)",
+          "basis": "other",
+          "origin": "bio_based",
+          "feedstock": "squid pen β-chitin",
+          "source": {
+            "section": "methods",
+            "quote": "β-CHNF (0.5% w/v, CS-based) was added to each solution and mixed for 10 min at 14,600 rpm"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "thickness",
+          "name_reported": "thickness",
+          "value": 45.0,
+          "std_dev": 3.03,
+          "unit": "μm",
+          "test_details": "micrometer, 6 random points",
+          "source": {
+            "section": "table",
+            "table_label": "Table 2",
+            "quote": "CSNF-F1 | 45.00 ± 3.03 b | 40.41 ± 7.96 b | 32.53 ± 1.30 b"
+          }
+        },
+        {
+          "name": "moisture_content",
+          "name_reported": "moisture content",
+          "value": 40.41,
+          "std_dev": 7.96,
+          "unit": "%",
+          "test_details": "dried 24 h at 106 °C",
+          "source": {
+            "section": "table",
+            "table_label": "Table 2",
+            "quote": "CSNF-F1 | 45.00 ± 3.03 b | 40.41 ± 7.96 b | 32.53 ± 1.30 b"
+          }
+        },
+        {
+          "name": "water_solubility",
+          "name_reported": "water solubility",
+          "value": 32.53,
+          "std_dev": 1.3,
+          "unit": "%",
+          "test_details": "50 mL distilled water, stirred 24 h",
+          "temperature_c": 25,
+          "source": {
+            "section": "table",
+            "table_label": "Table 2",
+            "quote": "CSNF-F1 | 45.00 ± 3.03 b | 40.41 ± 7.96 b | 32.53 ± 1.30 b"
+          }
+        },
+        {
+          "name": "tensile_strength",
+          "name_reported": "TS",
+          "value": 17.88,
+          "std_dev": 5.32,
+          "unit": "MPa",
+          "n_samples": 8,
+          "test_details": "0.5 × 4.5 cm strips, 3 mm/min; conditioned at 50 ± 5% RH and 25 °C (methods 2.2)",
+          "rh_pct": 50,
+          "temperature_c": 25,
+          "source": {
+            "section": "table",
+            "table_label": "Table 4",
+            "quote": "CSNF-F1 | 17.88 ± 5.32 b | 310.98 ± 61.05 b | 64.40 ± 14.64 b"
+          }
+        },
+        {
+          "name": "youngs_modulus",
+          "name_reported": "YM",
+          "value": 310.98,
+          "std_dev": 61.05,
+          "unit": "MPa",
+          "n_samples": 8,
+          "test_details": "0.5 × 4.5 cm strips, 3 mm/min; conditioned at 50 ± 5% RH and 25 °C (methods 2.2)",
+          "rh_pct": 50,
+          "temperature_c": 25,
+          "source": {
+            "section": "table",
+            "table_label": "Table 4",
+            "quote": "CSNF-F1 | 17.88 ± 5.32 b | 310.98 ± 61.05 b | 64.40 ± 14.64 b"
+          }
+        },
+        {
+          "name": "elongation_at_break",
+          "name_reported": "E",
+          "value": 64.4,
+          "std_dev": 14.64,
+          "unit": "%",
+          "n_samples": 8,
+          "test_details": "0.5 × 4.5 cm strips, 3 mm/min; conditioned at 50 ± 5% RH and 25 °C (methods 2.2)",
+          "rh_pct": 50,
+          "temperature_c": 25,
+          "source": {
+            "section": "table",
+            "table_label": "Table 4",
+            "quote": "CSNF-F1 | 17.88 ± 5.32 b | 310.98 ± 61.05 b | 64.40 ± 14.64 b"
+          }
+        },
+        {
+          "name": "colour",
+          "name_reported": "L*",
+          "value": 90.2,
+          "std_dev": 0.23,
+          "unit": "",
+          "source": {
+            "section": "table",
+            "table_label": "Table 3",
+            "quote": "CSNF-F1 | 90.20 ± 0.23 a | 1.35 ± 0.12 a | 11.02 ± 0.51 b | 6.68 ± 1.05 b | 7.08 ± 0.78 b"
+          }
+        },
+        {
+          "name": "colour",
+          "name_reported": "a*",
+          "value": 1.35,
+          "std_dev": 0.12,
+          "unit": "",
+          "source": {
+            "section": "table",
+            "table_label": "Table 3",
+            "quote": "CSNF-F1 | 90.20 ± 0.23 a | 1.35 ± 0.12 a | 11.02 ± 0.51 b | 6.68 ± 1.05 b | 7.08 ± 0.78 b"
+          }
+        },
+        {
+          "name": "colour",
+          "name_reported": "b*",
+          "value": 11.02,
+          "std_dev": 0.51,
+          "unit": "",
+          "source": {
+            "section": "table",
+            "table_label": "Table 3",
+            "quote": "CSNF-F1 | 90.20 ± 0.23 a | 1.35 ± 0.12 a | 11.02 ± 0.51 b | 6.68 ± 1.05 b | 7.08 ± 0.78 b"
+          }
+        },
+        {
+          "name": "colour",
+          "name_reported": "ΔE",
+          "value": 6.68,
+          "std_dev": 1.05,
+          "unit": "",
+          "source": {
+            "section": "table",
+            "table_label": "Table 3",
+            "quote": "CSNF-F1 | 90.20 ± 0.23 a | 1.35 ± 0.12 a | 11.02 ± 0.51 b | 6.68 ± 1.05 b | 7.08 ± 0.78 b"
+          }
+        },
+        {
+          "name": "opacity",
+          "name_reported": "opacity",
+          "value": 7.08,
+          "std_dev": 0.78,
+          "unit": "",
+          "test_details": "absorbance at 600 nm divided by thickness (mm)",
+          "source": {
+            "section": "table",
+            "table_label": "Table 3",
+            "quote": "CSNF-F1 | 90.20 ± 0.23 a | 1.35 ± 0.12 a | 11.02 ± 0.51 b | 6.68 ± 1.05 b | 7.08 ± 0.78 b"
+          }
+        },
+        {
+          "name": "antimicrobial_activity",
+          "name_reported": "fungal growth inhibition (FGI), A. niger",
+          "value": 72.7,
+          "unit": "%",
+          "n_samples": 3,
+          "test_details": "agar plate method, 1 × 1 cm film, 40 μL spore suspension, 1 week at 25 °C",
+          "source": {
+            "section": "results",
+            "quote": "(83.9, 72.7, 85.5 and 85.9% for CSNF-OM, CSNF-F1, CSNF-F2 and CSNF-F3, respectively)"
+          }
+        },
+        {
+          "name": "other",
+          "name_reported": "L929 fibroblast cell viability",
+          "value": 90,
+          "unit": "%",
+          "test_details": "MTT assay, film at 8 mg/mL, after 48 and 72 h; around 90%",
+          "source": {
+            "section": "other",
+            "quote": "showed no cytotoxicity on the viability of L929 fibroblast cells after 48 and 72 h, with a cell viability of around 90%"
+          }
+        },
+        {
+          "name": "degradation_temperature",
+          "name_reported": "maximum degradation temperature, chitosan (TGA)",
+          "value": 250,
+          "unit": "°C",
+          "test_details": "TGA under nitrogen, 10 °C/min",
+          "source": {
+            "section": "results",
+            "quote": "The maximum degradation temperatures of chitosan and nanochitin were 250 and 300 °C, respectively"
+          }
+        },
+        {
+          "name": "degradation_temperature",
+          "name_reported": "maximum degradation temperature, nanochitin (TGA)",
+          "value": 300,
+          "unit": "°C",
+          "test_details": "TGA under nitrogen, 10 °C/min",
+          "source": {
+            "section": "results",
+            "quote": "The maximum degradation temperatures of chitosan and nanochitin were 250 and 300 °C, respectively"
+          }
+        }
+      ],
+      "gaps": [
+        "what the 'CS-based' percentages are relative to (glycerol, Tween 20, oil fraction, nanofibers)",
+        "volume of solution cast into each 50 mm Petri dish",
+        "conditions of the steam distillation used to make fraction F1 (described in earlier work)",
+        "how the suspensions were degassed"
+      ]
+    }
+  ],
+  "best_recipes": [
+    {
+      "code": "CSNF-F1",
+      "criterion": "the only film that is non-cytotoxic while still improving antifungal activity over the control; the paper's aim is antifungal activity and cell viability, and F2/F3 (higher antifungal) are cytotoxic",
+      "chosen_by": "aim",
+      "source": {
+        "section": "abstract",
+        "quote": "the only nanocomposite film that does not present cytotoxicity on the viability of L929 fibroblast cells after 48 and 72 h is the one prepared with the fraction presenting the higher terpenic hydrocarbon content (87.92%)"
+      }
+    }
+  ]
 }
