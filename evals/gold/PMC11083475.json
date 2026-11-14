@@ -357,6 +357,10 @@
             "quote": "EDCA3 | 99.35 ± 0.91 a | 99.66 ± 0.71 a | 3.68 ± 0.17 a | 82.30 ± 0.75 c | 41.16 ± 5.21 a | 70.40 ± 1.36 ab | 70.88 ± 4.34 a | 130.31 ± 4.08 a"
           }
         }
+      ],
+      "gaps": [
+        "curcumin amount (methods say 2 mg/mL, Table 1 says 0.03% w/v)",
+        "volume of solution cast onto the PTFE plate"
       ]
     }
   ],

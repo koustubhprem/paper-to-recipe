@@ -109,12 +109,12 @@
       "order": 10,
       "stage": "ingredient_preparation",
       "type": "homogenising",
-      "description": "Clove essential oil pre-homogenised with Tween 80 at 8000 rpm",
+      "description": "F3 made as F2, plus clove essential oil pre-homogenised with Tween 80 at 8000 rpm",
       "duration_value": 2,
       "duration_unit": "min",
       "source": {
         "section": "methods",
-        "quote": "0.3 mL clove essential oil pre-homogenised with 0.2 mL Tween 80 at 8000 rpm for 2 min"
+        "quote": "Formulation 3 (F3) was prepared as F2, with the further addition of 0.3 mL clove essential oil pre-homogenised with 0.2 mL Tween 80 at 8000 rpm for 2 min"
       }
     },
     {
@@ -262,7 +262,7 @@
           "feedstock": "clove",
           "source": {
             "section": "methods",
-            "quote": "0.3 mL clove essential oil pre-homogenised with 0.2 mL Tween 80 at 8000 rpm for 2 min"
+            "quote": "Formulation 3 (F3) was prepared as F2, with the further addition of 0.3 mL clove essential oil pre-homogenised with 0.2 mL Tween 80 at 8000 rpm for 2 min"
           }
         },
         {
@@ -274,7 +274,7 @@
           "origin": "synthetic",
           "source": {
             "section": "methods",
-            "quote": "0.3 mL clove essential oil pre-homogenised with 0.2 mL Tween 80 at 8000 rpm for 2 min"
+            "quote": "Formulation 3 (F3) was prepared as F2, with the further addition of 0.3 mL clove essential oil pre-homogenised with 0.2 mL Tween 80 at 8000 rpm for 2 min"
           }
         }
       ],
@@ -421,6 +421,10 @@
             "quote": "F3: 4.74 ± 0.02 mg GAE/g dry film"
           }
         }
+      ],
+      "gaps": [
+        "volume cast (15 mL degassed but 20 mL poured)",
+        "mixing times and temperature after adding the extract, glycerol and pectin solution"
       ]
     }
   ],

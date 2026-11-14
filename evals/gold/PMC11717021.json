@@ -1,0 +1,236 @@
+{
+  "in_scope": true,
+  "out_of_scope_reason": null,
+  "intended_application": "food packaging films to replace single-use plastic packaging",
+  "process_steps": [
+    {
+      "order": 1,
+      "stage": "ingredient_preparation",
+      "type": "other",
+      "description": "Dried seaweed washed repeatedly with running deionized water to remove sodium chloride",
+      "source": {
+        "section": "methods",
+        "quote": "Dried Eucheuma denticulatam seaweed was repeatedly washed with running deionized water to remove sodium chloride"
+      }
+    },
+    {
+      "order": 2,
+      "stage": "ingredient_preparation",
+      "type": "drying",
+      "description": "Seaweed dried in an oven to constant weight",
+      "temperature_c": 60,
+      "source": {
+        "section": "methods",
+        "quote": "then dried in an oven at 60°C to constant weight"
+      }
+    },
+    {
+      "order": 3,
+      "stage": "ingredient_preparation",
+      "type": "mixing",
+      "description": "35 g of seaweed in 1 L of liquid",
+      "source": {
+        "section": "methods",
+        "quote": "35 g of dried seaweed in 1 L"
+      }
+    },
+    {
+      "order": 4,
+      "stage": "ingredient_preparation",
+      "type": "heating",
+      "description": "Seaweed heated to extract carrageenan",
+      "temperature_c": 90,
+      "duration_value": 3,
+      "duration_unit": "h",
+      "source": {
+        "section": "methods",
+        "quote": "heated at 90°C for 3 h"
+      }
+    },
+    {
+      "order": 5,
+      "stage": "ingredient_preparation",
+      "type": "other",
+      "description": "Polymer precipitated, filtered and dried to constant weight",
+      "source": {
+        "section": "methods",
+        "quote": "to precipitate the polymer, filtered, and dried to constant weight"
+      }
+    },
+    {
+      "order": 6,
+      "stage": "film_formation",
+      "type": "heating",
+      "description": "Carrageenan dissolved in deionized water containing starch and heated",
+      "temperature_c": 80,
+      "duration_value": 3,
+      "duration_unit": "h",
+      "source": {
+        "section": "methods",
+        "quote": "10 g of powdered carrageenan was dissolved in 250 mL deionized water containing starch (1%–50% w/w), heated to 80°C for 3 h"
+      }
+    },
+    {
+      "order": 7,
+      "stage": "film_formation",
+      "type": "casting",
+      "description": "Cast in plastic moulds",
+      "source": {
+        "section": "methods",
+        "quote": "cast in plastic molds and dried in an oven for 24 h to constant weight"
+      }
+    },
+    {
+      "order": 8,
+      "stage": "film_formation",
+      "type": "drying",
+      "description": "Dried in an oven to constant weight",
+      "duration_value": 24,
+      "duration_unit": "h",
+      "source": {
+        "section": "methods",
+        "quote": "cast in plastic molds and dried in an oven for 24 h to constant weight"
+      }
+    }
+  ],
+  "recipes": [
+    {
+      "code": "CRG‐ST",
+      "description": "Kappa-carrageenan isolated from Eucheuma denticulatam blended with starch; starch level for this film not stated (range 1–50% w/w)",
+      "is_control": false,
+      "base_polymers": [
+        "kappa-carrageenan",
+        "starch"
+      ],
+      "ingredients": [
+        {
+          "name": "kappa-carrageenan (isolated from Eucheuma denticulatam)",
+          "role": "matrix",
+          "amount": 10,
+          "unit": "g",
+          "basis": "g",
+          "origin": "bio_based",
+          "feedstock": "Eucheuma denticulatam seaweed",
+          "source": {
+            "section": "methods",
+            "quote": "10 g of powdered carrageenan was dissolved in 250 mL deionized water containing starch (1%–50% w/w), heated to 80°C for 3 h"
+          }
+        },
+        {
+          "name": "starch",
+          "role": "matrix",
+          "amount": null,
+          "unit": "1%–50% w/w",
+          "basis": "unknown",
+          "origin": "bio_based",
+          "source": {
+            "section": "methods",
+            "quote": "10 g of powdered carrageenan was dissolved in 250 mL deionized water containing starch (1%–50% w/w), heated to 80°C for 3 h"
+          }
+        },
+        {
+          "name": "deionized water",
+          "role": "solvent",
+          "amount": 250,
+          "unit": "mL",
+          "basis": "ml",
+          "origin": "unknown",
+          "source": {
+            "section": "methods",
+            "quote": "10 g of powdered carrageenan was dissolved in 250 mL deionized water containing starch (1%–50% w/w), heated to 80°C for 3 h"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "thickness",
+          "name_reported": "thickness",
+          "value": 100,
+          "unit": "μM",
+          "test_details": "same value reported for all three films",
+          "source": {
+            "section": "table",
+            "table_label": "TABLE 1",
+            "quote": "CRG‐ST | 100 | Nil | 2.73 × 10−7 | 23.80 ± 4.12 | 65.57"
+          }
+        },
+        {
+          "name": "water_vapour_permeability",
+          "name_reported": "WVP",
+          "value": 2.73,
+          "unit": "× 10−7 gs−1m−1Pa−1",
+          "test_standard": "ASTM E96-95 (modified)",
+          "test_details": "silica gel inside (0% RH), saturated NaCl outside (75% RH)",
+          "source": {
+            "section": "table",
+            "table_label": "TABLE 1",
+            "quote": "CRG‐ST | 100 | Nil | 2.73 × 10−7 | 23.80 ± 4.12 | 65.57"
+          }
+        },
+        {
+          "name": "other",
+          "name_reported": "moisture absorption (MA)",
+          "value": 23.8,
+          "std_dev": 4.12,
+          "unit": "%",
+          "test_details": "dried at 60 °C, then 24 h at 75% RH (NaCl)",
+          "rh_pct": 75,
+          "source": {
+            "section": "table",
+            "table_label": "TABLE 1",
+            "quote": "CRG‐ST | 100 | Nil | 2.73 × 10−7 | 23.80 ± 4.12 | 65.57"
+          }
+        },
+        {
+          "name": "contact_angle",
+          "name_reported": "contact angle",
+          "value": 65.57,
+          "unit": "°",
+          "source": {
+            "section": "table",
+            "table_label": "TABLE 1",
+            "quote": "CRG‐ST | 100 | Nil | 2.73 × 10−7 | 23.80 ± 4.12 | 65.57"
+          }
+        },
+        {
+          "name": "opacity",
+          "name_reported": "opacity",
+          "value": 42.23,
+          "unit": "",
+          "test_details": "absorbance at 600 nm divided by thickness (mm)",
+          "source": {
+            "section": "results",
+            "quote": "the opacity of the films was found to be 18.62, 41.02, 79.89, and 42.23 for LDPE, SWF, CRG, and CRG‐ST, respectively"
+          }
+        },
+        {
+          "name": "degradation_temperature",
+          "name_reported": "second degradation temperature (TGA)",
+          "value": 230,
+          "unit": "°C",
+          "test_details": "TGA, 25–500 °C",
+          "source": {
+            "section": "results",
+            "quote": "The second degradation temperature that occurred at 250°C for the case of CRG neat films and 230°C for the case of CRG‐ST films"
+          }
+        }
+      ],
+      "gaps": [
+        "starch amount for this film (only a 1%–50% range is given)",
+        "extraction liquid: deionized water or 0.01 M KOH",
+        "whether glycerol was added",
+        "oven drying temperature"
+      ]
+    }
+  ],
+  "best_recipes": [
+    {
+      "code": "CRG‐ST",
+      "criterion": "starch improved tensile strength, elongation, WVP and dry content over carrageenan alone",
+      "source": {
+        "section": "other",
+        "quote": "To enhance their properties, starch powder was added as an additive, which resulted in improved tensile strength, percent elongation, water vapor permeability, and dry content"
+      }
+    }
+  ]
+}

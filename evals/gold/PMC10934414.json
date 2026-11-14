@@ -225,6 +225,10 @@
             "quote": "Chit-MCC-Gly-MA film | 75.1 | 120.0 | 114.54"
           }
         }
+      ],
+      "gaps": [
+        "drying time at 50 °C",
+        "volume of solution cast and dish size"
       ]
     }
   ],

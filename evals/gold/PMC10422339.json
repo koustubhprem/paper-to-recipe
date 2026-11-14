@@ -345,12 +345,12 @@
           "test_standard": "ASTM D882-10",
           "rh_pct": 50,
           "temperature_c": 23,
+          "test_details": "conditioned ±23 °C, ~50% RH, at least 24 h (methods 2.4.5)",
           "source": {
             "section": "table",
             "table_label": "Table 3",
             "quote": "VCO 3 wt% | 4.243 ± 0.3 a | 69.28 ± 1.83 b | 0.062 ± 0.01 a"
-          },
-          "test_details": "conditioned ±23 °C, ~50% RH, at least 24 h (methods 2.4.5)"
+          }
         },
         {
           "name": "elongation_at_break",
@@ -361,12 +361,12 @@
           "test_standard": "ASTM D882-10",
           "rh_pct": 50,
           "temperature_c": 23,
+          "test_details": "conditioned ±23 °C, ~50% RH, at least 24 h (methods 2.4.5)",
           "source": {
             "section": "table",
             "table_label": "Table 3",
             "quote": "VCO 3 wt% | 4.243 ± 0.3 a | 69.28 ± 1.83 b | 0.062 ± 0.01 a"
-          },
-          "test_details": "conditioned ±23 °C, ~50% RH, at least 24 h (methods 2.4.5)"
+          }
         },
         {
           "name": "youngs_modulus",
@@ -377,13 +377,17 @@
           "test_standard": "ASTM D882-10",
           "rh_pct": 50,
           "temperature_c": 23,
+          "test_details": "conditioned ±23 °C, ~50% RH, at least 24 h (methods 2.4.5)",
           "source": {
             "section": "table",
             "table_label": "Table 3",
             "quote": "VCO 3 wt% | 4.243 ± 0.3 a | 69.28 ± 1.83 b | 0.062 ± 0.01 a"
-          },
-          "test_details": "conditioned ±23 °C, ~50% RH, at least 24 h (methods 2.4.5)"
+          }
         }
+      ],
+      "gaps": [
+        "what the NCC and VCO wt% are relative to",
+        "how long the dispersion was held at 62 °C and 80 °C"
       ]
     }
   ],

@@ -116,6 +116,7 @@ class Recipe(BaseModel):
     base_polymers: list[str] = Field(description="e.g. ['potato starch'] or ['chitosan', 'pectin']")
     ingredients: list[Ingredient]
     properties: list[Property]
+    gaps: list[str] = Field([], description="what a reader would need to make this film that the paper does not state, e.g. 'starch amount', 'extraction liquid'")
 
 
 # a formulation the authors themselves say performed best, and at what

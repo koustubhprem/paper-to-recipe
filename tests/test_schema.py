@@ -98,3 +98,15 @@ def test_scope_must_be_consistent():
     with pytest.raises(ValidationError):
         PaperExtraction(in_scope=True, out_of_scope_reason="review")
     assert PaperExtraction(in_scope=False, out_of_scope_reason="review").recipes == []
+
+
+def test_gaps_default_empty():
+    paper = PaperExtraction.model_validate(example())
+    assert paper.recipes[0].gaps == []
+
+
+def test_gaps_kept():
+    data = example()
+    data["recipes"][1]["gaps"] = ["drying temperature"]
+    paper = PaperExtraction.model_validate(data)
+    assert paper.recipes[1].gaps == ["drying temperature"]

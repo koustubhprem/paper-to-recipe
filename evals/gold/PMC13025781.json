@@ -137,12 +137,12 @@
           "unit": "MPa",
           "rh_pct": 65,
           "temperature_c": 20,
+          "test_details": "conditioned 20 ± 1 °C, 65 ± 4% RH, 24 h; 10 mm/min (methods 2.3)",
           "source": {
             "section": "table",
             "table_label": "Table 2",
             "quote": "SA + Gly + MAX 2.5 | 6.63 ± 0.06 | 96.4 ± 9.9"
-          },
-          "test_details": "conditioned 20 ± 1 °C, 65 ± 4% RH, 24 h; 10 mm/min (methods 2.3)"
+          }
         },
         {
           "name": "elongation_at_break",
@@ -152,12 +152,12 @@
           "unit": "%",
           "rh_pct": 65,
           "temperature_c": 20,
+          "test_details": "conditioned 20 ± 1 °C, 65 ± 4% RH, 24 h; 10 mm/min (methods 2.3)",
           "source": {
             "section": "table",
             "table_label": "Table 2",
             "quote": "SA + Gly + MAX 2.5 | 6.63 ± 0.06 | 96.4 ± 9.9"
-          },
-          "test_details": "conditioned 20 ± 1 °C, 65 ± 4% RH, 24 h; 10 mm/min (methods 2.3)"
+          }
         },
         {
           "name": "thickness",
@@ -214,6 +214,9 @@
             "table_label": "Table 3"
           }
         }
+      ],
+      "gaps": [
+        "supplier or product name of the maize arabinoxylans (described as commercial food grade, but provided by another lab)"
       ]
     }
   ],
