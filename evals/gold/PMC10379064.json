@@ -1,8 +1,253 @@
 {
   "in_scope": true,
   "out_of_scope_reason": null,
-  "intended_application": null,
-  "process_steps": [],
-  "recipes": [],
-  "best_recipes": []
+  "intended_application": "active and intelligent (pH-sensitive) packaging films and edible coatings",
+  "process_steps": [
+    {
+      "order": 1,
+      "stage": "ingredient_preparation",
+      "type": "other",
+      "description": "Anthocyanin solutions prepared from the cabbage and grape marc extracts at 3.6 mg anthocyanins/mL",
+      "source": {
+        "section": "methods",
+        "quote": "The anthocyanin solutions for the FFS were prepared from the extracts of cabbage and grape marc at an equal concentration of 3.6 ± 0.2 mg anthocyanins/mL"
+      }
+    },
+    {
+      "order": 2,
+      "stage": "film_formation",
+      "type": "mixing",
+      "description": "Reagents mixed with a magnetic stirrer",
+      "temperature_c": 25,
+      "duration_value": 5,
+      "duration_unit": "min",
+      "source": {
+        "section": "methods",
+        "quote": "reagents were mixed with a magnetic stirrer (AREX Heating Magnetic Stirrer, Velp Scientifica, Usmate (MB) Italy) at 25 °C for 5 min"
+      }
+    },
+    {
+      "order": 3,
+      "stage": "film_formation",
+      "type": "sonicating",
+      "description": "Sonicated at 35 kHz",
+      "temperature_c": 25,
+      "duration_value": 10,
+      "duration_unit": "min",
+      "source": {
+        "section": "methods",
+        "quote": "the system was sonicated (Bandelin Sonorex, RH 102 K, Milano, Italy) for 10 min at 25 °C and 35 kHz"
+      }
+    },
+    {
+      "order": 4,
+      "stage": "film_formation",
+      "type": "heating",
+      "description": "Heated to gelatinise the starch while stirring with an overhead stirrer at 150 rpm",
+      "temperature_c": 80,
+      "duration_value": 45,
+      "duration_unit": "min",
+      "source": {
+        "section": "methods",
+        "quote": "The obtained suspensions were heated to 80 °C for 45 min to allow starch gelatinization, while mixing was carried out with an overhead stirrer (RW20, IKA, Staufen, Germany) at 150 rpm"
+      }
+    },
+    {
+      "order": 5,
+      "stage": "film_formation",
+      "type": "casting",
+      "description": "Tape-cast with a knife",
+      "temperature_c": 40,
+      "source": {
+        "section": "methods",
+        "quote": "The FFS was used to form related films using the tape-casting method, according to previous studies [21], at 40 °C using a knife"
+      }
+    },
+    {
+      "order": 6,
+      "stage": "film_formation",
+      "type": "drying",
+      "description": "Dried in a forced convection oven",
+      "temperature_c": 65,
+      "duration_value": 3,
+      "duration_unit": "h",
+      "source": {
+        "section": "methods",
+        "quote": "The casted film was then dried for about 3 h at 65 °C in a forced convection oven"
+      }
+    }
+  ],
+  "recipes": [
+    {
+      "code": "G1.5_75",
+      "description": "Potato starch film with 3 g glycerol per 10 g starch, made with 75% anthocyanin solution (from red cabbage or grape marc waste) in place of water",
+      "is_control": false,
+      "base_polymers": [
+        "potato starch"
+      ],
+      "ingredients": [
+        {
+          "name": "potato starch",
+          "role": "matrix",
+          "amount": 10,
+          "unit": "g",
+          "basis": "g",
+          "origin": "bio_based",
+          "feedstock": "potato",
+          "source": {
+            "section": "table",
+            "table_label": "Table 1",
+            "quote": "G1.5_75 | 3 | 10 | 46.75 | 140.25"
+          }
+        },
+        {
+          "name": "glycerol",
+          "role": "plasticizer",
+          "amount": 3,
+          "unit": "g",
+          "basis": "g",
+          "origin": "unknown",
+          "source": {
+            "section": "table",
+            "table_label": "Table 1",
+            "quote": "G1.5_75 | 3 | 10 | 46.75 | 140.25"
+          }
+        },
+        {
+          "name": "distilled water",
+          "role": "solvent",
+          "amount": 46.75,
+          "unit": "mL",
+          "basis": "ml",
+          "origin": "unknown",
+          "source": {
+            "section": "table",
+            "table_label": "Table 1",
+            "quote": "G1.5_75 | 3 | 10 | 46.75 | 140.25"
+          }
+        },
+        {
+          "name": "anthocyanin solution (3.6 mg anthocyanins/mL, from cabbage and grape marc extracts)",
+          "role": "active_agent",
+          "amount": 140.25,
+          "unit": "mL",
+          "basis": "ml",
+          "origin": "bio_based",
+          "feedstock": "red cabbage waste and grape marc",
+          "from_waste": true,
+          "source": {
+            "section": "table",
+            "table_label": "Table 1",
+            "quote": "G1.5_75 | 3 | 10 | 46.75 | 140.25"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "youngs_modulus",
+          "name_reported": "E (elastic modulus)",
+          "value": 7.3,
+          "std_dev": 0.7,
+          "unit": "MPa",
+          "test_details": "100 × 20 mm strips, 50 mm initial clamp distance, 50 mm/min",
+          "source": {
+            "section": "table",
+            "table_label": "Table 3",
+            "quote": "G1.5_75 | 7.3 ± 0.7 | 126 ± 21"
+          }
+        },
+        {
+          "name": "elongation_at_break",
+          "name_reported": "EAB%",
+          "value": 126,
+          "std_dev": 21,
+          "unit": "%",
+          "test_details": "100 × 20 mm strips, 50 mm initial clamp distance, 50 mm/min",
+          "source": {
+            "section": "table",
+            "table_label": "Table 3",
+            "quote": "G1.5_75 | 7.3 ± 0.7 | 126 ± 21"
+          }
+        },
+        {
+          "name": "thickness",
+          "name_reported": "thickness",
+          "value": 0.13,
+          "std_dev": 0.01,
+          "unit": "",
+          "test_details": "unit not given in the table",
+          "source": {
+            "section": "table",
+            "table_label": "Table 4",
+            "quote": "G1.5_75 | 75 ± 1 | 15.3 ± 0.8 | −10.0 ± 0.3 | 21 ± 1 | 0.13 ± 0.01"
+          }
+        },
+        {
+          "name": "colour",
+          "name_reported": "L*",
+          "value": 75,
+          "std_dev": 1,
+          "unit": "",
+          "source": {
+            "section": "table",
+            "table_label": "Table 4",
+            "quote": "G1.5_75 | 75 ± 1 | 15.3 ± 0.8 | −10.0 ± 0.3 | 21 ± 1 | 0.13 ± 0.01"
+          }
+        },
+        {
+          "name": "colour",
+          "name_reported": "a*",
+          "value": 15.3,
+          "std_dev": 0.8,
+          "unit": "",
+          "source": {
+            "section": "table",
+            "table_label": "Table 4",
+            "quote": "G1.5_75 | 75 ± 1 | 15.3 ± 0.8 | −10.0 ± 0.3 | 21 ± 1 | 0.13 ± 0.01"
+          }
+        },
+        {
+          "name": "colour",
+          "name_reported": "b*",
+          "value": -10.0,
+          "std_dev": 0.3,
+          "unit": "",
+          "source": {
+            "section": "table",
+            "table_label": "Table 4",
+            "quote": "G1.5_75 | 75 ± 1 | 15.3 ± 0.8 | −10.0 ± 0.3 | 21 ± 1 | 0.13 ± 0.01"
+          }
+        },
+        {
+          "name": "colour",
+          "name_reported": "ΔE",
+          "value": 21,
+          "std_dev": 1,
+          "unit": "",
+          "test_details": "colour change relative to the film without anthocyanins",
+          "source": {
+            "section": "table",
+            "table_label": "Table 4",
+            "quote": "G1.5_75 | 75 ± 1 | 15.3 ± 0.8 | −10.0 ± 0.3 | 21 ± 1 | 0.13 ± 0.01"
+          }
+        }
+      ],
+      "gaps": [
+        "which extract (red cabbage, grape marc or both) was used for this film's anthocyanin solution",
+        "for grape marc, which extraction (acidified methanol or supercritical CO2) gave the solution used",
+        "knife (blade) gap or cast thickness for tape casting"
+      ]
+    }
+  ],
+  "best_recipes": [
+    {
+      "code": "G1.5_75",
+      "criterion": "anthocyanin film for active and pH-sensitive packaging, the paper's aim; G1.5 is only the base formulation, G1.5_100 lacked structure, and 75% is the anthocyanin level the authors chose for coatings",
+      "chosen_by": "aim",
+      "source": {
+        "section": "other",
+        "quote": "Their antioxidant effect and structuring capacity in starch-based packaging films make the anthocyanin–starch–glycerol system suitable for the preparation of active packaging films and intelligent packaging films"
+      }
+    }
+  ]
 }
