@@ -1,4 +1,7 @@
+import json
 import unittest
+from pathlib import Path
+
 from pydantic import ValidationError
 import pytest
 
@@ -117,3 +120,38 @@ def test_chosen_by_must_be_known():
     data["best_recipes"][0]["chosen_by"] = "guess"
     with raises(ValidationError):
         PaperExtraction.model_validate(data)
+
+
+def test_example_label_is_valid():
+    data = json.loads(Path("evals/example.json").read_text(encoding="utf-8"))
+    paper = PaperExtraction.model_validate(data)
+    assert len(paper.recipes) == 1
+
+
+def test_in_scope_needs_best_recipe():
+    data = example()
+    data["best_recipes"] = []
+    with raises(ValidationError):
+        PaperExtraction.model_validate(data)
+
+
+def test_in_scope_needs_steps():
+    data = example()
+    data["process_steps"] = []
+    with raises(ValidationError):
+        PaperExtraction.model_validate(data)
+
+
+def test_in_scope_needs_ingredients():
+    data = example()
+    data["recipes"][1]["ingredients"] = []
+    with raises(ValidationError):
+        PaperExtraction.model_validate(data)
+
+
+def test_critical_gap_allows_no_steps():
+    data = example()
+    data["process_steps"] = []
+    data["recipes"][1]["gaps"] = ["critical: film preparation method not given"]
+    paper = PaperExtraction.model_validate(data)
+    assert paper.process_steps == []

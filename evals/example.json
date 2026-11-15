@@ -1,0 +1,101 @@
+{
+  "in_scope": true,
+  "out_of_scope_reason": null,
+  "intended_application": "active packaging for fresh-cut fruit",
+  "process_steps": [
+    {
+      "order": 1,
+      "stage": "ingredient_preparation",
+      "type": "heating",
+      "description": "Beetroot peel powder extracted in water and filtered",
+      "temperature_c": 60,
+      "duration_value": 1,
+      "duration_unit": "h",
+      "source": {
+        "section": "methods",
+        "quote": "10 g of beetroot peel powder was stirred in 100 mL of distilled water at 60 °C for 1 h and filtered"
+      }
+    },
+    {
+      "order": 2,
+      "stage": "film_formation",
+      "type": "mixing",
+      "description": "Beetroot extract added to the starch solution",
+      "source": {
+        "section": "methods",
+        "quote": "the beetroot extract was added to the starch solution at 10% (v/v)"
+      }
+    }
+  ],
+  "recipes": [
+    {
+      "code": "PS-B10",
+      "description": "Pea starch film with 30% glycerol and 10% beetroot peel extract",
+      "is_control": false,
+      "base_polymers": [
+        "pea starch"
+      ],
+      "ingredients": [
+        {
+          "name": "beetroot peel extract",
+          "role": "active_agent",
+          "amount": 10,
+          "unit": "% (v/v)",
+          "basis": "pct_v_v",
+          "origin": "bio_based",
+          "feedstock": "beetroot peel",
+          "from_waste": true,
+          "source": {
+            "section": "methods",
+            "quote": "the beetroot extract was added to the starch solution at 10% (v/v)"
+          }
+        },
+        {
+          "name": "citric acid",
+          "role": "ph_adjuster",
+          "amount": null,
+          "unit": "added to pH 4.5",
+          "basis": "other",
+          "origin": "unknown",
+          "source": {
+            "section": "methods",
+            "quote": "the pH was adjusted to 4.5 with citric acid"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "tensile_strength",
+          "name_reported": "TS",
+          "value": 8.4,
+          "std_dev": 0.7,
+          "unit": "MPa",
+          "n_samples": 5,
+          "test_standard": "ASTM D882",
+          "test_details": "50 mm/min; conditioned at 23 °C and 50% RH for 48 h (methods)",
+          "rh_pct": 50,
+          "temperature_c": 23,
+          "source": {
+            "section": "table",
+            "table_label": "Table 2",
+            "quote": "PS-B10 | 0.092 ± 0.006 | 8.4 ± 0.7 | 46.2 ± 3.1 | 1.85 ± 0.12"
+          }
+        }
+      ],
+      "gaps": [
+        "amount of citric acid (only the target pH is given)"
+      ]
+    }
+  ],
+  "best_recipes": [
+    {
+      "code": "PS-B10",
+      "criterion": "best balance of strength and antioxidant activity",
+      "chosen_by": "stated",
+      "source": {
+        "section": "abstract",
+        "quote": "The PS-B10 film showed the best balance of strength and antioxidant activity and is recommended for fresh-cut fruit packaging"
+      }
+    }
+  ]
+}

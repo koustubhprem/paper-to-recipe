@@ -161,6 +161,21 @@ class PaperExtraction(BaseModel):
                 raise ValueError(f"best_recipes code '{best.code}' is not one of the recipes")
         return self
 
+    # an in-scope paper needs a best recipe, and steps and ingredients unless a critical gap explains why
+    @model_validator(mode="after")
+    def best_recipe_complete(self):
+        if not self.in_scope:
+            return self
+        if len(self.best_recipes) != 1:
+            raise ValueError(f"in-scope paper needs exactly 1 best_recipes entry, got {len(self.best_recipes)}")
+        best = next(r for r in self.recipes if r.code == self.best_recipes[0].code)
+        critical = any(g.lower().startswith("critical:") for g in best.gaps)
+        if not self.steps_for(best.code) and not critical:
+            raise ValueError("no process steps for the best recipe; add a gap starting with 'critical:' if the paper gives none")
+        if not best.ingredients and not critical:
+            raise ValueError("best recipe has no ingredients; add a gap starting with 'critical:' if the paper gives none")
+        return self
+
     # the full procedure for one recipe: shared steps plus the ones meant for it
     def steps_for(self, code):
         return sorted(
