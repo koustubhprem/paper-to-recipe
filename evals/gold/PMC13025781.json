@@ -7,10 +7,11 @@
       "order": 1,
       "stage": "film_formation",
       "type": "dissolving",
-      "description": "Sodium alginate dissolved in deionized water with magnetic stirring",
+      "description": "Sodium alginate dissolved in deionized water with magnetic stirring at 300 rpm",
       "temperature_c": 23,
       "duration_value": 2,
       "duration_unit": "h",
+      "applies_to": [],
       "source": {
         "section": "methods",
         "quote": "under magnetic stirring at 300 rpm for 2 h at 23 ± 2 °C"
@@ -23,6 +24,7 @@
       "description": "Arabinoxylans sprinkled into the vortex and mixed",
       "duration_value": 60,
       "duration_unit": "min",
+      "applies_to": [],
       "source": {
         "section": "methods",
         "quote": "MAX/WAX (20–100 wt.%) was sprinkled into the vortex and mixed for 60 min"
@@ -35,6 +37,7 @@
       "description": "Glycerol added dropwise with further stirring",
       "duration_value": 30,
       "duration_unit": "min",
+      "applies_to": [],
       "source": {
         "section": "methods",
         "quote": "dropwise addition of glycerol (50.4 wt.%) with an additional 30 min of stirring"
@@ -42,22 +45,53 @@
     },
     {
       "order": 4,
-      "stage": "film_formation",
-      "type": "casting",
-      "description": "25.0 g of solution cast into 9 cm polystyrene Petri dishes",
+      "stage": "ingredient_preparation",
+      "type": "sonicating",
+      "description": "Clove oil, water and vegetable oil (1:8:1, v/v/v) sonicated with a probe sonicator at 60% amplitude, 15 s on/10 s off, in an ice–water bath (<30 °C)",
+      "duration_value": 30,
+      "duration_unit": "min",
+      "applies_to": [],
       "source": {
         "section": "methods",
-        "quote": "Exactly 25.0 g of the homogenized solution was weighed"
+        "quote": "sonicating clove oil:water:vegetable oil (1:8:1, v/v/v) with a probe sonicator (Vibra-Cell™, 130 W, 20 kHz) at 60% amplitude for 30 min using a 15 s on/10 s off duty cycle in an ice–water bath (<30 °C)"
       }
     },
     {
       "order": 5,
+      "stage": "film_formation",
+      "type": "mixing",
+      "description": "Clove-oil nano-emulsion added last under gentle stirring",
+      "duration_value": 15,
+      "duration_unit": "min",
+      "applies_to": [],
+      "source": {
+        "section": "methods",
+        "quote": "then added last under gentle stirring for 15 min"
+      }
+    },
+    {
+      "order": 6,
+      "stage": "film_formation",
+      "type": "casting",
+      "description": "25.0 g of solution cast into 9 cm polystyrene Petri dishes",
+      "temperature_c": null,
+      "duration_value": null,
+      "duration_unit": null,
+      "applies_to": [],
+      "source": {
+        "section": "methods",
+        "quote": "Exactly 25.0 g of the homogenized solution was weighed (KERN PFB 120-3) into 9 cm-diameter polystyrene Petri dishes"
+      }
+    },
+    {
+      "order": 7,
       "stage": "film_formation",
       "type": "drying",
       "description": "Dried in a forced-air oven",
       "temperature_c": 40,
       "duration_value": 15,
       "duration_unit": "h",
+      "applies_to": [],
       "source": {
         "section": "methods",
         "quote": "Films were dried in a forced-air oven at 40 °C for 15 h"
@@ -66,8 +100,8 @@
   ],
   "recipes": [
     {
-      "code": "SA2.5 − G1y − MAX1.5",
-      "description": "Sodium alginate, glycerol and 60 wt.% maize arabinoxylans; authors report tensile strength 4.9 times that of alginate alone",
+      "code": "SA + Gly + MAX1.5 + CONE",
+      "description": "Sodium alginate film with glycerol, 60 wt.% maize arabinoxylans and 20 wt.% clove-oil nano-emulsion; no bacterial growth on wrapped raw chicken after 5 days at room temperature and 4 °C",
       "is_control": false,
       "base_polymers": [
         "sodium alginate",
@@ -84,8 +118,8 @@
           "feedstock": "brown algae",
           "source": {
             "section": "table",
-            "quote": "SA2.5 − G1y − MAX1.5 | 2.50 | 1.26 | 1.50 | – | MAX = 60 wt.%; Gly = 50.4 wt.%",
-            "table_label": "Table 1"
+            "table_label": "Table 1",
+            "quote": "SA − Gly − MAX2.5 − CONE | 2.50 | 1.26 | 1.50 | 0.50 | MAX = 60 wt.%; CONE = 20 wt.%; Gly = 50.4 wt.%"
           }
         },
         {
@@ -95,10 +129,11 @@
           "unit": "g",
           "basis": "g",
           "origin": "synthetic",
+          "feedstock": null,
           "source": {
             "section": "table",
-            "quote": "SA2.5 − G1y − MAX1.5 | 2.50 | 1.26 | 1.50 | – | MAX = 60 wt.%; Gly = 50.4 wt.%",
-            "table_label": "Table 1"
+            "table_label": "Table 1",
+            "quote": "SA − Gly − MAX2.5 − CONE | 2.50 | 1.26 | 1.50 | 0.50 | MAX = 60 wt.%; CONE = 20 wt.%; Gly = 50.4 wt.%"
           }
         },
         {
@@ -111,8 +146,22 @@
           "feedstock": "maize bran",
           "source": {
             "section": "table",
-            "quote": "SA2.5 − G1y − MAX1.5 | 2.50 | 1.26 | 1.50 | – | MAX = 60 wt.%; Gly = 50.4 wt.%",
-            "table_label": "Table 1"
+            "table_label": "Table 1",
+            "quote": "SA − Gly − MAX2.5 − CONE | 2.50 | 1.26 | 1.50 | 0.50 | MAX = 60 wt.%; CONE = 20 wt.%; Gly = 50.4 wt.%"
+          }
+        },
+        {
+          "name": "clove-oil nano-emulsion (CONE)",
+          "role": "active_agent",
+          "amount": 0.5,
+          "unit": "g",
+          "basis": "g",
+          "origin": "bio_based",
+          "feedstock": "clove essential oil",
+          "source": {
+            "section": "table",
+            "table_label": "Table 1",
+            "quote": "SA − Gly − MAX2.5 − CONE | 2.50 | 1.26 | 1.50 | 0.50 | MAX = 60 wt.%; CONE = 20 wt.%; Gly = 50.4 wt.%"
           }
         },
         {
@@ -132,102 +181,203 @@
         {
           "name": "tensile_strength",
           "name_reported": "tensile strength",
-          "value": 6.63,
-          "std_dev": 0.06,
+          "value": 5.61,
+          "value_min": null,
+          "value_max": null,
+          "std_dev": 0.26,
+          "n_samples": null,
           "unit": "MPa",
+          "test_standard": null,
+          "test_details": "conditioned 20 ± 1 °C, 65 ± 4% RH, 24 h; 10 mm/min (methods 2.3)",
           "rh_pct": 65,
           "temperature_c": 20,
-          "test_details": "conditioned 20 ± 1 °C, 65 ± 4% RH, 24 h; 10 mm/min (methods 2.3)",
           "source": {
             "section": "table",
             "table_label": "Table 2",
-            "quote": "SA + Gly + MAX 2.5 | 6.63 ± 0.06 | 96.4 ± 9.9"
+            "quote": "SA + Gly + MAX 2.5 + CONE | 5.61 ± 0.26 | 64.8 ± 6.5"
           }
         },
         {
           "name": "elongation_at_break",
           "name_reported": "elongation",
-          "value": 96.4,
-          "std_dev": 9.9,
+          "value": 64.8,
+          "value_min": null,
+          "value_max": null,
+          "std_dev": 6.5,
+          "n_samples": null,
           "unit": "%",
+          "test_standard": null,
+          "test_details": "conditioned 20 ± 1 °C, 65 ± 4% RH, 24 h; 10 mm/min (methods 2.3)",
           "rh_pct": 65,
           "temperature_c": 20,
-          "test_details": "conditioned 20 ± 1 °C, 65 ± 4% RH, 24 h; 10 mm/min (methods 2.3)",
           "source": {
             "section": "table",
             "table_label": "Table 2",
-            "quote": "SA + Gly + MAX 2.5 | 6.63 ± 0.06 | 96.4 ± 9.9"
+            "quote": "SA + Gly + MAX 2.5 + CONE | 5.61 ± 0.26 | 64.8 ± 6.5"
           }
         },
         {
           "name": "thickness",
           "name_reported": "thickness",
-          "value": 0.17,
+          "value": 0.188,
+          "value_min": null,
+          "value_max": null,
+          "std_dev": null,
+          "n_samples": null,
           "unit": "mm",
+          "test_standard": null,
+          "test_details": null,
+          "rh_pct": null,
+          "temperature_c": null,
           "source": {
             "section": "results",
-            "quote": "The film thickness increased from 0.120 mm to 0.170 mm with an increase in SA concentration from 20 wt.% to 100 wt.%"
+            "quote": "The thickness of the film with oil nano-emulsion increased slightly to 0.188 mm"
           }
         },
         {
           "name": "swelling",
           "name_reported": "water-holding capacity",
-          "value": 27.6,
+          "value": 10.6,
+          "value_min": null,
+          "value_max": null,
+          "std_dev": null,
+          "n_samples": null,
           "unit": "times dry weight",
-          "test_details": "deionized water, 50 min",
+          "test_standard": null,
+          "test_details": "deionized water, 37 °C; disintegrated after 35 min",
+          "rh_pct": null,
+          "temperature_c": null,
           "source": {
             "section": "results",
-            "quote": "The film SA + Gly + MAX 1.5 absorbed 27.6 times of water after soaking for 50 min"
+            "quote": "When essential oil was added to the film, the water-holding capacity dropped to 10.6 and the film disintegrated after 35 min."
+          }
+        },
+        {
+          "name": "swelling",
+          "name_reported": "saline-holding capacity",
+          "value": 17.5,
+          "value_min": null,
+          "value_max": null,
+          "std_dev": null,
+          "n_samples": null,
+          "unit": "times",
+          "test_standard": null,
+          "test_details": "saline (CaCl2·2H2O and NaCl), 37 °C",
+          "rh_pct": null,
+          "temperature_c": null,
+          "source": {
+            "section": "results",
+            "quote": "the film SA + Gly + MAX 1.5 + CONE showed the highest saline-holding capacity of 17.5 times"
+          }
+        },
+        {
+          "name": "moisture_content",
+          "name_reported": "moisture content",
+          "value": 27.5,
+          "value_min": null,
+          "value_max": null,
+          "std_dev": null,
+          "n_samples": null,
+          "unit": "%",
+          "test_standard": null,
+          "test_details": null,
+          "rh_pct": null,
+          "temperature_c": null,
+          "source": {
+            "section": "results",
+            "quote": "The film SA + Gly + MAX1.5 + CONE showed a moisture content of 27.5%"
+          }
+        },
+        {
+          "name": "water_solubility",
+          "name_reported": "water solubility",
+          "value": 98.9,
+          "value_min": null,
+          "value_max": null,
+          "std_dev": null,
+          "n_samples": null,
+          "unit": "%",
+          "test_standard": null,
+          "test_details": null,
+          "rh_pct": null,
+          "temperature_c": null,
+          "source": {
+            "section": "results",
+            "quote": "The incorporation of essential oil nano-emulsion did not alter the water solubility, which remained at 98.9%."
           }
         },
         {
           "name": "degradation_temperature",
           "name_reported": "Td5%",
-          "value": 75.2,
+          "value": 76.2,
+          "value_min": null,
+          "value_max": null,
+          "std_dev": null,
+          "n_samples": null,
           "unit": "°C",
+          "test_standard": null,
+          "test_details": "TGA under nitrogen, 25 to 600 °C at 20 °C/min",
+          "rh_pct": null,
+          "temperature_c": null,
           "source": {
             "section": "table",
-            "quote": "SA + Gly + MAX1.5 | 75.2 | 509.5 | 21.2",
-            "table_label": "Table 3"
+            "table_label": "Table 3",
+            "quote": "SA + Gly + MAX1.5 + CONE | 76.2 | 517.5 | 25.2"
           }
         },
         {
           "name": "degradation_temperature",
           "name_reported": "Tmax",
-          "value": 509.5,
+          "value": 517.5,
+          "value_min": null,
+          "value_max": null,
+          "std_dev": null,
+          "n_samples": null,
           "unit": "°C",
+          "test_standard": null,
+          "test_details": "TGA under nitrogen, 25 to 600 °C at 20 °C/min",
+          "rh_pct": null,
+          "temperature_c": null,
           "source": {
             "section": "table",
-            "quote": "SA + Gly + MAX1.5 | 75.2 | 509.5 | 21.2",
-            "table_label": "Table 3"
+            "table_label": "Table 3",
+            "quote": "SA + Gly + MAX1.5 + CONE | 76.2 | 517.5 | 25.2"
           }
         },
         {
           "name": "other",
           "name_reported": "residual mass",
-          "value": 21.2,
+          "value": 25.2,
+          "value_min": null,
+          "value_max": null,
+          "std_dev": null,
+          "n_samples": null,
           "unit": "%",
+          "test_standard": null,
           "test_details": "TGA residue at 600 °C",
+          "rh_pct": null,
+          "temperature_c": null,
           "source": {
             "section": "table",
-            "quote": "SA + Gly + MAX1.5 | 75.2 | 509.5 | 21.2",
-            "table_label": "Table 3"
+            "table_label": "Table 3",
+            "quote": "SA + Gly + MAX1.5 + CONE | 76.2 | 517.5 | 25.2"
           }
         }
       ],
       "gaps": [
-        "supplier or product name of the maize arabinoxylans (described as commercial food grade, but provided by another lab)"
+        "supplier or product name of the maize arabinoxylans (provided by another lab)",
+        "type of vegetable oil used in the clove-oil nano-emulsion"
       ]
     }
   ],
   "best_recipes": [
     {
-      "code": "SA2.5 − G1y − MAX1.5",
-      "criterion": "the authors' optimized composition; highest tensile strength",
-      "chosen_by": "stated",
+      "code": "SA + Gly + MAX1.5 + CONE",
+      "criterion": "antimicrobial packaging is the paper's focus (abstract, keywords: antimicrobial, shelf life); this film kept raw meat free of bacteria for five days, while the base film without clove oil did not",
+      "chosen_by": "aim",
       "source": {
         "section": "abstract",
-        "quote": "Using an optimized composition (2.5% alginate, 1% glycerol and 1.5% maize arabinoxylans)"
+        "quote": "When 0.5% clove essential oil was incorporated into the composite film, the biofilm exhibited excellent anti-microbial property, keeping raw meat free of bacteria for five days"
       }
     }
   ]
