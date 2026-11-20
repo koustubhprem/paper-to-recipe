@@ -42,7 +42,7 @@ def rows_for(pmcid, data):
 
 
 def main():
-    split = sys.argv[1] if len(sys.argv) > 1 else "dev"
+    split = sys.argv[1] if len(sys.argv) > 1 else "test"
     selection = json.loads((GOLD_DIR / "selection.json").read_text(encoding="utf-8"))
     pmcids = [item["pmcid"] for item in selection if item["split"] == split]
 
@@ -53,7 +53,7 @@ def main():
         if path.exists():
             gemini.append(rows_for(pmcid, json.loads(path.read_text(encoding="utf-8"))))
 
-    out = Path("evals") / f"gold_vs_gemini_{split}.xlsx"
+    out = Path("evals") / f"gold_vs_gemini_v5_{split}.xlsx"
     with pd.ExcelWriter(out, engine="openpyxl") as writer:
         pd.concat(gold, ignore_index=True).to_excel(writer, sheet_name="gold", index=False)
         pd.concat(gemini, ignore_index=True).to_excel(writer, sheet_name="gemini", index=False)
