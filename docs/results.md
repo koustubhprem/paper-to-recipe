@@ -84,3 +84,67 @@ Not graded: descriptions, criterion, name_reported, test details, test standard,
 - Gemini rarely adds anything it should not: item precision is 0.94 - 1.00.
 - Most misses are preparation steps. Nothing critical as such in the data. Not critical because, anyways all the data is being captured and stored correctly in right steps.
 - The power-of-ten conversion matters most for the data, because the same quantity would be stored two different ways across papers. Prompt v4 adds one line to rule 3 to fix it. This is somehting that is recurring but fixable
+
+## Test results, prompt v4
+
+Setup: the 6 held-out test papers, run once with the frozen prompt v4 (gemini-3.8-flash), graded by hand with the same rules as dev.
+
+| Category | Gold | Gemini | Matched | Recall / accuracy | Precision |
+|---|---|---|---|---|---|
+| in_scope | 6 | 6 | 6 | 1.00 | |
+| best film | 6 | 6 | 6 | 1.00 | |
+| chosen_by | 6 | 6 | 5 | 0.83 | |
+| base polymers | 10 | 10 | 10 | 1.00 | 1.00 |
+| ingredients | 27 | 25 | 25 | 0.93 | 1.00 |
+| ingredient fields | 125 | 125 | 125 | 1.00 | |
+| steps | 61 | 55 | 58 | 0.95 | 1.00 |
+| step fields | 174 | 174 | 155 | 0.89 | |
+| properties | 63 | 62 | 59 | 0.94 | 0.95 |
+| property fields | 177 | 177 | 175 | 0.99 | |
+
+Values correct: 455 of 476 (96%). Wrong items added: 3 of 152.
+
+### Per paper
+
+| Paper | Film | chosen_by | Ingredients | Ingredient fields | Steps | Step fields | Properties | Property fields |
+|---|---|---|---|---|---|---|---|---|
+| PMC9266268 | ok | abstract vs stated | 3/3 | 15/15 | 7/7 | 18/21 | 3/5 | 9/9 |
+| PMC13209360 | ok | ok | 4/4 | 20/20 | 9/11 | 27/27 | 14/14 | 42/42 |
+| PMC10379064 | ok | ok | 4/4 | 20/20 | 5/5 | 15/15 | 7/7 | 21/21 |
+| PMC10380360 | ok | ok | 3/5 | 15/15 | 10/10 | 26/30 | 13/14 | 38/39 |
+| PMC8124804 | ok | ok | 6/6 | 30/30 | 13/14 | 30/39 | 14/15 | 41/42 |
+| PMC10978958 | ok | ok | 5/5 | 25/25 | 14/14 | 39/42 | 8/8 | 24/24 |
+
+### Recipe completeness
+
+A recipe is complete when every ingredient and every step is found.
+
+| Paper | Complete | Missing |
+|---|---|---|
+| PMC9266268 | yes | |
+| PMC13209360 | partly | two steps the paper itself is unclear about |
+| PMC10379064 | yes | |
+| PMC10380360 | no | glycerine and acetic acid not listed as ingredients |
+| PMC8124804 | no | chitin extraction step; three chitosan steps merged, drying at 106 °C lost |
+| PMC10978958 | yes | |
+
+3 of 6 recipes are complete (4 counting the ambiguous paper).
+
+### Dev vs test
+
+| | Dev (9 papers, v3) | Test (6 papers, v4) |
+|---|---|---|
+| best film | 9/9 | 6/6 |
+| chosen_by | 0.88 | 0.83 |
+| ingredients found | 0.98 | 0.93 |
+| steps found | 0.94 | 0.95 |
+| properties found | 1.00 | 0.94 |
+| values correct | 94% | 96% |
+
+Dev was graded on v3 and test on v4; v4 only changed how powers of ten are stored.
+
+### What the test showed
+
+- Most misses come from labelling rules that were in the notes but not in the prompt: listing the acid and plasticizer of a solution, measurements on coated food, "above X" values, water-loss stages near 100 °C.
+- The two critical errors are an incomplete ingredient list (PMC10380360) and missing or merged preparation steps (PMC8124804).
+- Steps merged when the actions had different temperatures are the main source of step-field errors.
